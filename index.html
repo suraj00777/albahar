@@ -3,145 +3,136 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Hotel Al-Bahar · Royal Biryani, Tandoor & Chinese · Belagavi</title>
-    <meta name="description" content="Hotel Al-Bahar, Camp, Belagavi. Veg & Non-Veg. Order biryani, tandoor and Chinese online for delivery, takeaway or dine-in." />
-    <meta name="theme-color" content="#0c1210" />
+    <title>Hotel Al-Bahar · Biryani, Tandoori and Chinese · Camp, Belagavi</title>
+    <meta name="description" content="Hotel Al-Bahar, Khanapur Road, Camp, Belagavi. Biryani, tandoori and Chinese, veg and non-veg. Dine-in, takeaway and home delivery, open 11 am to 11 pm." />
+    <meta name="theme-color" content="#163a2c" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&family=Playfair+Display:wght@600;700&display=swap"
     />
     <link rel="stylesheet" href="hark.css" />
     <link rel="stylesheet" href="hark-hero.css" />
     <style>
+      /* Flat warm palette. --x-night is the cream page, --x-cream is the body text colour (names kept from the first build). */
       :root {
-        color-scheme: dark;
-        --x-night: #0c1210; --x-night2: #131d19; --x-card: #18241f; --x-line: rgb(217 166 65 / 0.22);
-        --x-emerald: #0f5a43; --x-emerald2: #1f8a64; --x-gold: #d9a641; --x-gold2: #f3d27a;
-        --x-crimson: #b3202c; --x-cream: #f6ecd6; --x-muted: #c8bda5; --x-veg: #1fa35c; --x-nonveg: #d23a3a;
-        --x-serif: "Playfair Display", Georgia, serif; --x-ui: "Poppins", var(--sans);
+        color-scheme: light;
+        --x-night: #f6f0e3; --x-night2: #fbf7ee; --x-card: #fffdf8; --x-line: #e3d9c4;
+        --x-emerald: #1f4d3a; --x-emerald2: #2e6a51; --x-deep: #163a2c; --x-gold: #b38a3e; --x-gold2: #7d5819; --x-brass: #d9b462;
+        --x-crimson: #a3262f; --x-cream: #1f2a24; --x-muted: #5a5f56; --x-light: #f6ecd6; --x-veg: #1d8a4f; --x-nonveg: #b8322f;
+        --x-serif: "Playfair Display", Georgia, serif; --x-ui: var(--sans);
         --x-navh: 64px;
       }
-      body { background: var(--x-night); color: var(--x-cream); font-family: var(--x-ui); }
+      body { background: var(--x-night); color: var(--x-cream); font-family: var(--x-ui); letter-spacing: normal; }
       .x-app { max-width: none; padding: 0; display: block; }
       .x-app a { text-decoration: none; }
-      .x-app :focus-visible { outline: 2px solid var(--x-gold2); outline-offset: 3px; }
+      .x-app :focus-visible { outline: 2px solid var(--x-gold); outline-offset: 3px; }
       .x-wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; }
       .x-serif { font-family: var(--x-serif); }
       .x-gold { color: var(--x-gold2); }
-      .x-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: var(--tap); padding: 0 22px; border-radius: var(--r-pill); border: 1px solid var(--x-gold); background: transparent; color: var(--x-cream); font: 500 15px/1 var(--x-ui); cursor: pointer; transition: transform var(--dur-quick) var(--ease-out), background var(--dur-quick); }
-      .x-btn:hover { transform: translateY(-2px); background: rgb(217 166 65 / 0.12); }
-      .x-btn--gold { background: var(--x-gold2) linear-gradient(135deg, var(--x-gold2), var(--x-gold) 55%, #b9822a); color: #1d1405; border-color: transparent; box-shadow: 0 8px 30px rgb(217 166 65 / 0.3); }
-      .x-btn--gold:hover { background: var(--x-gold2) linear-gradient(135deg, #fbe39b, var(--x-gold2)); }
-      .x-btn--sm { min-height: var(--tap); padding: 0 14px; font-size: 13px; }
+      .x-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: var(--tap); padding: 0 20px; border-radius: 8px; border: 1px solid var(--x-emerald); background: transparent; color: var(--x-emerald); font: 500 15px/1 var(--x-ui); cursor: pointer; transition: transform var(--dur-quick) var(--ease-out), background var(--dur-quick); }
+      .x-btn:hover { transform: translateY(-1px); background: rgb(31 77 58 / 0.08); }
+      .x-btn--gold { background: var(--x-emerald); color: #fff; border-color: var(--x-emerald); }
+      .x-btn--gold:hover { background: var(--x-deep); }
+      .x-btn--sm { min-height: var(--tap); padding: 0 14px; font-size: 14px; }
       .x-tap { display: inline-flex; align-items: center; min-height: var(--tap); }
       .x-btn[disabled] { opacity: .45; pointer-events: none; }
-      .x-prog { position: fixed; inset: 0 0 auto; height: 3px; z-index: 90; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--x-gold), var(--x-gold2)); }
       .x-ann { position: relative; z-index: 31; background: var(--x-crimson); color: #fff; text-align: center; padding: 8px 16px; font-size: 14px; }
-      .x-ribbon { position: fixed; z-index: 95; right: 10px; top: calc(var(--x-navh) + 10px); background: var(--x-crimson); color: #fff; font: 600 12px/1 var(--x-ui); letter-spacing: .08em; text-transform: uppercase; padding: 7px 10px; border-radius: 8px; pointer-events: none; opacity: .92; }
       /* nav */
-      .x-nav { position: sticky; top: 0; z-index: 30; height: var(--x-navh); display: flex; align-items: center; gap: 14px; padding: 0 16px; background: rgb(12 18 16 / 0.72); -webkit-backdrop-filter: var(--hark-blur); backdrop-filter: var(--hark-blur); border-bottom: 1px solid var(--x-line); }
-      .x-nav__brand { display: flex; align-items: center; gap: 10px; color: var(--x-cream); font: 700 18px/1 var(--x-serif); }
+      .x-nav { position: sticky; top: 0; z-index: 30; height: var(--x-navh); display: flex; align-items: center; gap: 14px; padding: 0 16px; background: var(--x-deep); border-bottom: 1px solid #0f2a20; }
+      .x-nav__brand { display: flex; align-items: center; gap: 10px; color: var(--x-light); font: 700 18px/1 var(--x-serif); }
       .x-badge3d { width: 74px; height: 38px; perspective: 300px; }
-      .x-badge3d div { width: 100%; height: 100%; transform-style: preserve-3d; animation: x-badge 6s ease-in-out infinite; }
+      .x-badge3d div { width: 100%; height: 100%; transform-style: preserve-3d; transform: rotateY(-10deg); }
       .x-badge3d img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-      @keyframes x-badge { 0%,100% { transform: rotateY(-18deg) rotateX(6deg); } 50% { transform: rotateY(18deg) rotateX(-6deg); } }
       .x-nav__links { display: flex; gap: 4px; margin-left: auto; }
-      .x-nav__links a { color: var(--x-muted); padding: 10px 12px; border-radius: var(--r-pill); font-size: 14px; }
-      .x-nav__links a:hover { color: var(--x-cream); background: rgb(246 236 214 / 0.06); }
+      .x-nav__links a { color: #d8cfb8; padding: 10px 12px; border-radius: 6px; font-size: 14px; }
+      .x-nav__links a:hover { color: #fff; background: rgb(255 255 255 / 0.07); }
+      .x-nav .x-btn { color: var(--x-light); border-color: rgb(246 236 214 / 0.5); }
+      .x-nav .x-btn:hover { background: rgb(255 255 255 / 0.08); }
       .x-cartbtn { position: relative; }
       .x-cartbtn b { position: absolute; top: -4px; right: -4px; min-width: 20px; height: 20px; border-radius: 10px; background: var(--x-crimson); color: #fff; font-size: 12px; display: grid; place-items: center; padding: 0 5px; }
       @media (max-width: 760px) { .x-nav__links { display: none; } .x-nav .x-cartbtn { margin-left: auto; } .x-nav__brand span { display: none; } }
       /* hero */
-      .x-hero { position: relative; min-height: calc(100svh - var(--x-navh)); overflow: hidden; display: grid; align-items: center; isolation: isolate; }
-      .x-hero__bg { position: absolute; inset: -6%; z-index: -3; will-change: transform; }
-      .x-hero__bg img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.1) brightness(.62); }
-      .x-hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: radial-gradient(ellipse at 70% 40%, transparent 0, rgb(12 18 16 / .55) 60%), linear-gradient(180deg, rgb(12 18 16 / .25), rgb(12 18 16 / .2) 50%, var(--x-night)); }
-      .x-steam { position: absolute; inset: 0; z-index: -1; pointer-events: none; will-change: transform; }
-      .x-steam i { position: absolute; bottom: -60px; width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle, rgb(255 255 255 / .16), transparent 65%); filter: blur(8px); animation: x-rise 9s linear infinite; opacity: 0; }
-      @keyframes x-rise { 0% { transform: translateY(0) scale(.6); opacity: 0; } 15% { opacity: .9; } 100% { transform: translateY(-80vh) translateX(40px) scale(2.2); opacity: 0; } }
-      .x-hero__grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; padding-block: 48px 72px; will-change: transform; }
-      .x-eyebrow { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--x-gold2); }
-      .x-hero h1 { font: 700 clamp(44px, 7vw, 84px)/1.02 var(--x-serif); margin: 14px 0 12px; color: var(--x-gold2); text-shadow: 0 2px 0 #9a6a1f, 0 10px 30px rgb(0 0 0 / .55); text-wrap: balance; }
-      .x-hero__tag { font: italic 600 clamp(19px, 2.4vw, 26px)/1.3 var(--x-serif); color: var(--x-cream); }
-      .x-hero__svc { margin-top: 10px; color: var(--x-muted); font-size: 15px; }
-      .x-hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 18px; }
-      .x-live { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: var(--r-pill); background: rgb(12 18 16 / .6); border: 1px solid var(--x-line); font-size: 14px; }
-      .x-live i { width: 9px; height: 9px; border-radius: 50%; background: var(--x-nonveg); box-shadow: 0 0 0 4px rgb(210 58 58 / .2); }
-      .x-live.is-open i { background: var(--x-veg); box-shadow: 0 0 0 4px rgb(31 163 92 / .25); animation: x-ping 2s infinite; }
-      @keyframes x-ping { 50% { box-shadow: 0 0 0 8px rgb(31 163 92 / 0); } }
-      .x-plaque { perspective: 1100px; justify-self: center; width: min(520px, 88vw); aspect-ratio: 900 / 464; animation: x-float 7s ease-in-out infinite; }
-      @keyframes x-float { 50% { transform: translateY(-14px); } }
-      .x-plaque__body { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .25s var(--ease-out); }
+      .x-hero { position: relative; min-height: min(76svh, 680px); overflow: hidden; display: grid; align-items: center; isolation: isolate; background: var(--x-deep); color: var(--x-light); }
+      .x-hero__bg { position: absolute; inset: 0; z-index: -2; }
+      .x-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+      .x-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgb(14 32 25 / .74); }
+      .x-hero__grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding-block: 56px; }
+      .x-eyebrow { margin: 0; font-size: 14px; font-weight: 500; color: var(--x-gold2); }
+      .x-hero .x-eyebrow { color: #e2c78c; }
+      .x-hero h1 { font: 700 clamp(40px, 6vw, 72px)/1.05 var(--x-serif); margin: 8px 0 12px; color: var(--x-light); }
+      .x-hero__tag { font: 600 clamp(19px, 2.2vw, 24px)/1.35 var(--x-serif); color: var(--x-light); }
+      .x-hero__svc { margin-top: 10px; color: #d8cfb8; font-size: 15px; }
+      .x-hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 18px; }
+      .x-hero .x-btn { color: var(--x-light); border-color: rgb(246 236 214 / .6); }
+      .x-hero .x-btn:hover { background: rgb(255 255 255 / .08); }
+      .x-hero .x-btn--gold, .x-cartbar .x-btn--gold { background: var(--x-brass); color: #1d1405; border-color: var(--x-brass); }
+      .x-hero .x-btn--gold:hover, .x-cartbar .x-btn--gold:hover { background: #e4c47a; }
+      .x-live { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: var(--r-pill); background: var(--x-card); border: 1px solid var(--x-line); font-size: 14px; }
+      .x-hero .x-live { background: rgb(0 0 0 / .25); border-color: rgb(246 236 214 / .25); color: var(--x-light); }
+      .x-live i { width: 9px; height: 9px; border-radius: 50%; background: var(--x-nonveg); }
+      .x-live.is-open i { background: var(--x-veg); }
+      .x-hero .x-live.is-open i { background: #3fbf74; }
+      .x-plaque { perspective: 1100px; justify-self: center; width: min(440px, 80vw); aspect-ratio: 900 / 464; }
+      .x-plaque__body { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, -6deg)); transition: transform .5s var(--ease-out); }
       .x-plaque__body img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-      .x-plaque__layer { filter: brightness(.55) sepia(1) saturate(2.6) hue-rotate(-8deg); }
-      .x-plaque__shadow { position: absolute; left: 10%; right: 10%; bottom: -14%; height: 18%; border-radius: 50%; background: radial-gradient(rgb(0 0 0 / .6), transparent 70%); transform: translateZ(-60px); filter: blur(6px); }
-      .x-sheen { position: absolute; inset: 0; transform: translateZ(1px); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; background: linear-gradient(105deg, transparent 35%, rgb(255 244 200 / .55) 48%, transparent 60%) no-repeat; background-size: 250% 100%; animation: x-sheen 5.5s ease-in-out infinite; mix-blend-mode: screen; pointer-events: none; }
-      @keyframes x-sheen { 0% { background-position: 130% 0; } 55%,100% { background-position: -30% 0; } }
-      @media (max-width: 860px) { .x-hero__grid { grid-template-columns: 1fr; gap: 28px; padding-block: 28px 56px; text-align: center; } .x-hero__cta { justify-content: center; } .x-plaque { order: -1; width: min(360px, 82vw); } }
+      .x-plaque__layer { filter: brightness(.5) sepia(1) saturate(1.6) hue-rotate(-8deg); }
+      @media (max-width: 860px) { .x-hero__grid { grid-template-columns: 1fr; gap: 24px; padding-block: 32px 48px; } .x-plaque { order: -1; justify-self: start; width: min(300px, 70vw); } }
       /* sections */
-      .x-sec { padding-block: 80px; position: relative; }
-      .x-sec__head { text-align: center; margin-bottom: 36px; }
-      .x-sec__head h2 { font: 700 clamp(30px, 4.4vw, 48px)/1.1 var(--x-serif); margin: 8px 0 10px; }
-      .x-sec__head p { color: var(--x-muted); }
-      .x-rv { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
-      .x-rv.is-in { opacity: 1; transform: none; }
+      .x-sec { padding-block: 64px; position: relative; }
+      .x-sec__head { margin-bottom: 24px; }
+      .x-sec__head h2 { font: 700 clamp(28px, 3.6vw, 40px)/1.15 var(--x-serif); margin: 0 0 6px; color: var(--x-emerald); }
+      .x-sec__head p { color: var(--x-muted); max-width: 62ch; }
       /* carousel */
-      .x-sig { background: radial-gradient(ellipse at 50% 70%, rgb(15 90 67 / .45), transparent 65%); }
-      .x-stage { position: relative; height: 400px; perspective: 1200px; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+      .x-sig { background: var(--x-night2); border-bottom: 1px solid var(--x-line); }
+      .x-stage { position: relative; height: 330px; perspective: 1200px; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
       .x-stage:active { cursor: grabbing; }
-      .x-ring { position: absolute; left: 50%; top: 42%; width: 0; height: 0; transform-style: preserve-3d; }
-      .x-dish { position: absolute; width: var(--d, 200px); height: var(--d, 200px); margin: calc(var(--d, 200px) / -2) 0 0 calc(var(--d, 200px) / -2); transform-style: preserve-3d; }
-      .x-dish img { width: 100%; height: 100%; object-fit: contain; animation: x-spin 28s linear infinite; filter: drop-shadow(0 18px 24px rgb(0 0 0 / .55)); -webkit-box-reflect: below 4px linear-gradient(transparent 62%, rgb(255 255 255 / .18)); pointer-events: none; }
-      .x-dish::after { content: ""; position: absolute; left: 12%; right: 12%; bottom: -10%; height: 14%; border-radius: 50%; background: radial-gradient(rgb(217 166 65 / .35), transparent 70%); transform: rotateX(80deg); }
-      @keyframes x-spin { to { transform: rotate(360deg); } }
-      .x-front { text-align: center; min-height: 120px; }
-      .x-front h3 { font: 700 26px/1.2 var(--x-serif); }
-      .x-front p { color: var(--x-gold2); font-size: 20px; font-weight: 600; margin: 4px 0 12px; }
-      .x-hint { text-align: center; color: var(--x-muted); font-size: 13px; margin-top: 10px; }
-      @media (max-width: 640px) { .x-stage { height: 300px; } }
+      .x-ring { position: absolute; left: 50%; top: 38%; width: 0; height: 0; transform-style: preserve-3d; }
+      .x-dish { position: absolute; width: var(--d, 160px); height: var(--d, 160px); margin: calc(var(--d, 160px) / -2) 0 0 calc(var(--d, 160px) / -2); transform-style: preserve-3d; }
+      .x-dish img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+      .x-dish__cap { position: absolute; top: 100%; left: -30px; right: -30px; margin: 8px 0 0; text-align: center; font-size: 14px; line-height: 1.35; color: var(--x-cream); }
+      .x-dish__cap b { display: block; font-weight: 500; }
+      .x-dish__cap span { color: var(--x-gold2); font-weight: 600; }
+      .x-front { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: var(--tap); margin-top: 8px; }
+      .x-arrow { width: var(--tap); height: var(--tap); border-radius: 50%; border: 1px solid var(--x-line); background: var(--x-card); color: var(--x-cream); font-size: 20px; line-height: 1; cursor: pointer; transition: background var(--dur-quick); }
+      .x-arrow:hover { background: var(--x-night); }
+      @media (max-width: 640px) { .x-stage { height: 280px; } }
       /* menu */
-      .x-tools { position: sticky; top: var(--x-navh); z-index: 20; background: rgb(12 18 16 / .9); -webkit-backdrop-filter: var(--hark-blur); backdrop-filter: var(--hark-blur); border-bottom: 1px solid var(--x-line); padding: 10px 0; }
+      .x-tools { position: sticky; top: var(--x-navh); z-index: 20; background: var(--x-night); border-bottom: 1px solid var(--x-line); padding: 10px 0; }
       .x-tools__row { display: flex; gap: 10px; align-items: center; }
-      .x-search { flex: 1; min-width: 0; min-height: var(--tap); border-radius: var(--r-pill); border: 1px solid var(--x-line); background: var(--x-night2); color: var(--x-cream); padding: 0 18px; font: 15px var(--x-ui); }
-      .x-switch { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); padding: 0 14px; border-radius: var(--r-pill); border: 1px solid var(--x-line); cursor: pointer; font-size: 14px; white-space: nowrap; }
+      .x-search { flex: 1; min-width: 0; min-height: var(--tap); border-radius: 8px; border: 1px solid var(--x-line); background: #fff; color: var(--x-cream); padding: 0 14px; font: 15px var(--x-ui); }
+      .x-switch { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); padding: 0 14px; border-radius: 8px; border: 1px solid var(--x-line); background: var(--x-card); cursor: pointer; font-size: 14px; white-space: nowrap; }
       .x-switch input { accent-color: var(--x-veg); width: 18px; height: 18px; }
       .x-tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin-top: 10px; }
       .x-tabs::-webkit-scrollbar { display: none; }
-      .x-tabs a { flex: none; display: inline-flex; align-items: center; min-height: var(--tap); box-sizing: border-box; padding: 0 14px; border-radius: var(--r-pill); color: var(--x-muted); font-size: 14px; border: 1px solid transparent; }
-      .x-tabs a.is-on { color: #1d1405; background: var(--x-gold2); }
-      .x-cat { padding-top: 34px; scroll-margin-top: calc(var(--x-navh) + 120px); }
-      .x-cat__head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
-      .x-cat__head h3 { font: 700 26px/1.2 var(--x-serif); }
-      .x-cat__head small { color: var(--x-muted); display: block; font-size: 13px; }
-      .x-plate { width: 64px; height: 64px; flex: none; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, rgb(217 166 65 / .2), transparent 70%); }
-      .x-plate img { width: 64px; height: 64px; object-fit: contain; animation: x-spin 18s linear infinite; }
-      .x-plate svg { width: 34px; height: 34px; color: var(--x-gold2); }
-      .x-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; perspective: 900px; }
+      .x-tabs a { flex: none; display: inline-flex; align-items: center; min-height: var(--tap); box-sizing: border-box; padding: 0 12px; border-radius: 6px; color: var(--x-muted); font-size: 14px; border: 1px solid transparent; }
+      .x-tabs a:hover { color: var(--x-cream); }
+      .x-tabs a.is-on { color: #fff; background: var(--x-emerald); }
+      .x-cat { padding-top: 32px; scroll-margin-top: calc(var(--x-navh) + 120px); }
+      .x-cat__head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--x-line); }
+      .x-cat__head h3 { font: 700 24px/1.2 var(--x-serif); color: var(--x-emerald); }
+      .x-cat__head small { color: var(--x-muted); font-size: 14px; }
+      .x-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
       @media (max-width: 1024px) { .x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
       @media (max-width: 640px) { .x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
-      .x-item { position: relative; display: flex; flex-direction: column; border-radius: var(--r-m); background: linear-gradient(160deg, var(--x-card), var(--x-night2)); border: 1px solid var(--x-line); transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .3s var(--ease-out), box-shadow .3s; overflow: hidden; }
+      .x-item { position: relative; display: flex; flex-direction: column; border-radius: 8px; background: var(--x-card); border: 1px solid var(--x-line); overflow: hidden; transition: border-color var(--dur-quick); }
       .x-item[hidden] { display: none; }
-      .x-item:hover { box-shadow: 0 16px 40px rgb(0 0 0 / .45); }
-      .x-item::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgb(243 210 122 / .14), transparent 60%); opacity: 0; transition: opacity .3s; }
-      .x-item:hover::after { opacity: 1; }
-      .x-item__ph { position: relative; display: block; width: 100%; aspect-ratio: 4 / 3; padding: 0; margin: 0; border: 0; background: var(--x-night); cursor: zoom-in; overflow: hidden; }
-      .x-item__ph img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease-out), filter .3s; }
+      .x-item:hover { border-color: #cdbf9f; }
+      .x-item__ph { position: relative; display: block; width: 100%; aspect-ratio: 4 / 3; padding: 0; margin: 0; border: 0; background: var(--x-night2); cursor: pointer; overflow: hidden; }
+      .x-item__ph img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--ease-out); }
       .x-item__ph img.is-plate { object-fit: contain; padding: 12%; box-sizing: border-box; }
-      .x-item__ph::after { content: ""; position: absolute; inset: auto 0 0; height: 40%; background: linear-gradient(transparent, rgb(12 18 16 / .45)); pointer-events: none; }
-      .x-item:hover .x-item__ph img { transform: scale(1.07); }
-      .x-item__ph .x-vd { position: absolute; top: 10px; left: 10px; z-index: 1; background: rgb(255 255 255 / .94); box-shadow: 0 2px 8px rgb(0 0 0 / .35); }
-      .x-rib { position: absolute; z-index: 1; top: 10px; right: 0; padding: 6px 10px 6px 12px; border-radius: var(--r-pill) 0 0 var(--r-pill); background: var(--x-gold2) linear-gradient(135deg, var(--x-gold2), var(--x-gold)); color: #1d1405; font: 600 12px/1 var(--x-ui); letter-spacing: .03em; box-shadow: 0 4px 14px rgb(0 0 0 / .35); }
-      .x-rib--chef { background: var(--x-crimson); color: #fff; }
+      .x-item:hover .x-item__ph img { transform: scale(1.03); }
+      .x-item__ph .x-vd { position: absolute; top: 8px; left: 8px; z-index: 1; background: #fff; }
+      .x-rib { position: absolute; z-index: 1; top: 8px; right: 8px; padding: 4px 8px; border-radius: 4px; background: var(--x-gold2); color: #fff; font: 500 12px/1.2 var(--x-ui); }
       .x-out { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; }
-      .x-out span { padding: 7px 14px; border-radius: var(--r-pill); background: rgb(12 18 16 / .82); border: 1px solid var(--x-line); color: var(--x-cream); font: 600 13px/1 var(--x-ui); }
-      .x-item.is-out .x-item__ph img, .x-sheet__ph.is-out { filter: grayscale(1) brightness(.6); }
+      .x-out span { padding: 6px 12px; border-radius: 6px; background: var(--x-card); border: 1px solid var(--x-line); color: var(--x-cream); font: 600 13px/1 var(--x-ui); }
+      .x-item.is-out .x-item__ph img, .x-sheet__ph.is-out { opacity: .45; }
       .x-item__body { display: flex; flex-direction: column; gap: 6px; flex: 1; padding: 12px 14px 14px; }
       .x-item h4 { margin: 0; font: 500 15px/1.3 var(--x-ui); }
       .x-desc { margin: 0; color: var(--x-muted); font-size: 13px; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
       .x-item__foot { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
-      .x-item .x-price { margin: 0; color: var(--x-gold2); font-weight: 600; font-size: 16px; }
+      .x-item .x-price { margin: 0; color: var(--x-cream); font-weight: 600; font-size: 16px; }
       .x-item .x-ctl { margin-left: auto; }
       @media (max-width: 640px) {
         .x-item__body { padding: 10px; gap: 4px; }
@@ -153,12 +144,12 @@
         .x-item__ph .x-vd { top: 8px; left: 8px; }
       }
       /* dish sheet */
-      .x-sheet__ph { display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 46svh; object-fit: cover; border-radius: var(--r-m); border: 1px solid var(--x-line); }
-      .x-sheet__tags { display: flex; align-items: center; gap: 10px; margin: 14px 0 8px; font-size: 13px; color: var(--x-muted); }
-      .x-sheet__tags .x-rib { position: static; border-radius: var(--r-pill); box-shadow: none; }
+      .x-sheet__ph { display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 46svh; object-fit: cover; border-radius: 8px; border: 1px solid var(--x-line); }
+      .x-sheet__tags { display: flex; align-items: center; gap: 10px; margin: 14px 0 8px; font-size: 14px; color: var(--x-muted); }
+      .x-sheet__tags .x-rib { position: static; }
       .x-sheet__desc { color: var(--x-muted); font-size: 15px; line-height: 1.55; margin: 0 0 14px; }
       .x-sheet__buy { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-      .x-sheet__price { color: var(--x-gold2); font: 600 24px var(--x-ui); margin: 0; }
+      .x-sheet__price { color: var(--x-cream); font: 600 22px var(--x-ui); margin: 0; }
       /* cart + admin thumbnails */
       .x-thumb { position: relative; width: 52px; height: 52px; border-radius: 10px; overflow: hidden; flex: none; background: var(--x-night); }
       .x-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -169,168 +160,162 @@
       .x-vd::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--x-nonveg); }
       .x-vd.is-veg { border-color: var(--x-veg); }
       .x-vd.is-veg::after { background: var(--x-veg); }
-      .x-add { min-width: 88px; min-height: var(--tap); border-radius: 10px; border: 1px solid var(--x-gold); background: #221d10; color: var(--x-gold2); font: 600 14px var(--x-ui); letter-spacing: .06em; cursor: pointer; }
-      .x-add:hover { background: #2e2715; }
-      .x-step { display: inline-grid; grid-template-columns: 44px 28px 44px; align-items: center; min-height: var(--tap); border-radius: 10px; background: var(--x-gold2); color: #1d1405; font-weight: 600; text-align: center; }
+      .x-add { min-width: 80px; min-height: var(--tap); border-radius: 8px; border: 1px solid var(--x-emerald); background: var(--x-card); color: var(--x-emerald); font: 600 14px var(--x-ui); cursor: pointer; transition: background var(--dur-quick); }
+      .x-add:hover { background: rgb(31 77 58 / .08); }
+      .x-step { display: inline-grid; grid-template-columns: 44px 28px 44px; align-items: center; min-height: var(--tap); border-radius: 8px; background: var(--x-emerald); color: #fff; font-weight: 600; text-align: center; }
       .x-step button { height: var(--tap); border: 0; background: none; color: inherit; font: 600 20px var(--x-ui); cursor: pointer; }
       .x-sold { font-size: 13px; color: var(--x-muted); }
       .x-empty { text-align: center; color: var(--x-muted); padding: 30px; }
       /* about */
       .x-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-      .x-card { padding: 22px; border-radius: var(--r-l); background: linear-gradient(160deg, rgb(15 90 67 / .35), var(--x-night2)); border: 1px solid var(--x-line); }
-      .x-card h3 { font: 700 20px/1.2 var(--x-serif); margin: 10px 0 6px; }
+      .x-card { padding: 20px; border-radius: 8px; background: var(--x-card); border: 1px solid var(--x-line); }
+      .x-card h3 { font: 700 20px/1.2 var(--x-serif); margin: 10px 0 6px; color: var(--x-emerald); }
       .x-card p { color: var(--x-muted); font-size: 14px; }
-      .x-card svg { width: 30px; height: 30px; color: var(--x-gold2); }
-      .x-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 24px; }
-      .x-chips span { padding: 8px 16px; border-radius: var(--r-pill); border: 1px solid var(--x-gold); color: var(--x-gold2); font-size: 14px; }
+      .x-card svg { width: 28px; height: 28px; color: var(--x-emerald); }
+      .x-kinds { margin-top: 18px; color: var(--x-muted); font-size: 14px; }
       /* forms */
-      .x-panel { max-width: 560px; margin: 0 auto; padding: 24px; border-radius: var(--r-l); background: var(--x-night2); border: 1px solid var(--x-line); }
+      .x-panel { max-width: 560px; margin: 0 auto; padding: 24px; border-radius: 8px; background: var(--x-card); border: 1px solid var(--x-line); }
+      #x-trackf { margin: 0; }
       .x-field { display: grid; gap: 6px; margin-bottom: 14px; font-size: 14px; color: var(--x-muted); }
-      .x-field input, .x-field textarea, .x-field select, .x-in { min-height: var(--tap); border-radius: 12px; border: 1px solid var(--x-line); background: var(--x-night); color: var(--x-cream); padding: 10px 14px; font: 15px var(--x-ui); width: 100%; box-sizing: border-box; }
+      .x-field input, .x-field textarea, .x-field select, .x-in { min-height: var(--tap); border-radius: 8px; border: 1px solid var(--x-line); background: #fff; color: var(--x-cream); padding: 10px 14px; font: 15px var(--x-ui); width: 100%; box-sizing: border-box; }
       .x-field textarea { min-height: 72px; resize: vertical; }
       .x-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
       .x-seg { display: flex; flex-wrap: wrap; gap: 8px; }
       .x-seg label { flex: 1; min-width: 96px; position: relative; }
       .x-seg input { position: absolute; opacity: 0; }
-      .x-seg span { display: flex; align-items: center; justify-content: center; min-height: var(--tap); padding: 0 10px; border-radius: 12px; border: 1px solid var(--x-line); color: var(--x-cream); font-size: 14px; cursor: pointer; text-align: center; }
-      .x-seg input:checked + span { background: var(--x-emerald); border-color: var(--x-gold); }
-      .x-seg input:focus-visible + span { outline: 2px solid var(--x-gold2); }
-      .x-err { color: #ff8a8a; font-size: 14px; min-height: 1em; margin: 6px 0; }
+      .x-seg span { display: flex; align-items: center; justify-content: center; min-height: var(--tap); padding: 0 10px; border-radius: 8px; border: 1px solid var(--x-line); background: #fff; color: var(--x-cream); font-size: 14px; cursor: pointer; text-align: center; }
+      .x-seg input:checked + span { background: var(--x-emerald); border-color: var(--x-emerald); color: #fff; }
+      .x-seg input:focus-visible + span { outline: 2px solid var(--x-gold); }
+      .x-err { color: var(--x-crimson); font-size: 14px; min-height: 1em; margin: 6px 0; }
       .x-note { color: var(--x-muted); font-size: 13px; }
-      .x-warn { padding: 12px 14px; border-radius: 12px; background: rgb(179 32 44 / .2); border: 1px solid rgb(179 32 44 / .5); font-size: 14px; margin-bottom: 12px; }
+      .x-warn { padding: 12px 14px; border-radius: 8px; background: #f8e6e2; border: 1px solid #e6bdb5; color: #5e1a16; font-size: 14px; margin-bottom: 12px; }
       /* tracking timeline */
       .x-tl { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 0; }
       .x-tl li { position: relative; padding: 0 0 18px 34px; color: var(--x-muted); }
-      .x-tl li::before { content: ""; position: absolute; left: 6px; top: 4px; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--x-line); background: var(--x-night); }
+      .x-tl li::before { content: ""; position: absolute; left: 6px; top: 4px; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--x-line); background: var(--x-card); }
       .x-tl li::after { content: ""; position: absolute; left: 13px; top: 22px; bottom: 0; width: 2px; background: var(--x-line); }
       .x-tl li:last-child::after { display: none; }
       .x-tl li.is-done { color: var(--x-cream); }
       .x-tl li.is-done::before { background: var(--x-veg); border-color: var(--x-veg); }
-      .x-tl li.is-now::before { background: var(--x-gold2); border-color: var(--x-gold2); box-shadow: 0 0 0 5px rgb(243 210 122 / .25); }
+      .x-tl li.is-now { color: var(--x-cream); font-weight: 500; }
+      .x-tl li.is-now::before { background: var(--x-gold); border-color: var(--x-gold); }
       /* visit */
       .x-visit { display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; }
       .x-visit dl { display: grid; gap: 14px; margin: 0; }
-      .x-visit dt { color: var(--x-gold2); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
+      .x-visit dt { color: var(--x-muted); font-size: 14px; font-weight: 500; }
       .x-visit dd { margin: 4px 0 0; font-size: 16px; }
       .x-nowrap { white-space: nowrap; }
       @media (max-width: 760px) { .x-visit { grid-template-columns: 1fr; } }
       /* footer */
-      .x-foot { border-top: 1px solid var(--x-line); background: #090e0c; padding: 48px 0 110px; font-size: 14px; color: var(--x-muted); }
+      .x-foot { background: var(--x-deep); padding: 44px 0 110px; font-size: 14px; color: #cfc6b0; }
       .x-foot__grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 28px; }
-      .x-foot h4 { color: var(--x-gold2); font: 600 15px var(--x-ui); margin: 0 0 10px; }
-      .x-foot a { color: var(--x-cream); }
+      .x-foot h4 { color: #e2c78c; font: 600 15px var(--x-ui); margin: 0 0 10px; }
+      .x-foot a { color: var(--x-light); }
       .x-foot ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
-      .x-foot ul a { display: inline-flex; align-items: center; min-height: var(--tap); }
+      .x-foot ul a { display: inline-flex; align-items: center; min-height: var(--tap); min-width: var(--tap); }
       .x-foot__logo { width: 140px; margin-bottom: 12px; }
-      .x-foot__copy { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--x-line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
-      .x-foot__staff { color: var(--x-muted) !important; opacity: .75; }
+      .x-foot__copy { margin-top: 28px; padding-top: 18px; border-top: 1px solid rgb(246 236 214 / .15); }
+      .x-foot__staff { color: #cfc6b0 !important; }
       @media (max-width: 760px) { .x-foot__grid { grid-template-columns: 1fr; } }
       /* cart */
-      .x-cartbar { position: fixed; z-index: 40; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 140%); width: min(560px, calc(100% - 28px)); display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 20px; border-radius: var(--r-pill); background: linear-gradient(135deg, var(--x-emerald), #0a3d2e); border: 1px solid var(--x-gold); box-shadow: 0 16px 40px rgb(0 0 0 / .5); transition: transform .45s var(--ease-out); }
+      .x-cartbar { position: fixed; z-index: 40; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 140%); width: min(560px, calc(100% - 28px)); display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 8px 8px 18px; border-radius: 10px; background: var(--x-deep); color: var(--x-light); box-shadow: 0 4px 14px rgb(0 0 0 / .18); transition: transform .35s var(--ease-out); }
       .x-cartbar.is-on { transform: translate(-50%, 0); }
-      .x-callfab { position: fixed; z-index: 39; right: 16px; bottom: calc(86px + env(safe-area-inset-bottom, 0px)); width: 56px; height: 56px; border-radius: 50%; display: none; place-items: center; background: var(--x-crimson); color: #fff; box-shadow: 0 10px 30px rgb(0 0 0 / .5); }
+      .x-callfab { position: fixed; z-index: 39; right: 16px; bottom: calc(86px + env(safe-area-inset-bottom, 0px)); width: 56px; height: 56px; border-radius: 50%; display: none; place-items: center; background: var(--x-emerald); color: #fff; box-shadow: 0 2px 8px rgb(0 0 0 / .2); }
       .x-callfab svg { width: 24px; height: 24px; }
       @media (max-width: 760px) { .x-callfab { display: grid; } }
-      .x-scrim { position: fixed; inset: 0; z-index: 60; background: rgb(0 0 0 / .6); opacity: 0; pointer-events: none; transition: opacity .3s; }
+      .x-scrim { position: fixed; inset: 0; z-index: 60; background: rgb(0 0 0 / .45); opacity: 0; pointer-events: none; transition: opacity .3s; }
       .x-scrim.is-on { opacity: 1; pointer-events: auto; }
-      .x-drawer { position: fixed; z-index: 61; left: 50%; bottom: 0; width: min(560px, 100%); max-height: 92svh; overflow: auto; transform: translate(-50%, 105%); transition: transform .45s var(--ease-out); background: var(--x-night2); border: 1px solid var(--x-line); border-bottom: 0; border-radius: var(--r-l) var(--r-l) 0 0; padding: 18px 20px calc(24px + env(safe-area-inset-bottom, 0px)); box-sizing: border-box; }
+      .x-drawer { position: fixed; z-index: 61; left: 50%; bottom: 0; width: min(560px, 100%); max-height: 92svh; overflow: auto; transform: translate(-50%, 105%); transition: transform .45s var(--ease-out); background: var(--x-night2); border: 1px solid var(--x-line); border-bottom: 0; border-radius: 12px 12px 0 0; padding: 18px 20px calc(24px + env(safe-area-inset-bottom, 0px)); box-sizing: border-box; }
       .x-drawer.is-on { transform: translate(-50%, 0); }
       .x-drawer__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-      .x-drawer__head h3 { font: 700 24px var(--x-serif); }
+      .x-drawer__head h3 { font: 700 22px var(--x-serif); color: var(--x-emerald); }
       .x-x { width: var(--tap); height: var(--tap); border-radius: 50%; border: 1px solid var(--x-line); background: none; color: var(--x-cream); font-size: 22px; cursor: pointer; }
       .x-line { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--x-line); }
       .x-line small { color: var(--x-muted); display: block; }
       .x-sum { display: grid; gap: 6px; margin: 14px 0; }
       .x-sum div { display: flex; justify-content: space-between; }
-      .x-sum .is-total { font-size: 19px; font-weight: 600; color: var(--x-gold2); padding-top: 8px; border-top: 1px solid var(--x-line); }
+      .x-sum .is-total { font-size: 18px; font-weight: 600; color: var(--x-cream); padding-top: 8px; border-top: 1px solid var(--x-line); }
       .x-success { text-align: center; padding: 10px 0; }
-      .x-success__plate { width: 150px; height: 150px; margin: 6px auto 14px; perspective: 600px; }
-      .x-success__plate img { width: 100%; height: 100%; object-fit: contain; animation: x-flip 1.4s var(--ease-out) both; }
-      @keyframes x-flip { from { transform: rotateY(-540deg) scale(.3); opacity: 0; } to { transform: none; opacity: 1; } }
-      .x-success h3 { font: 700 26px var(--x-serif); }
-      .x-success .x-ordno { font: 700 34px var(--x-serif); color: var(--x-gold2); margin: 6px 0; }
-      .x-confetti { position: fixed; inset: 0; z-index: 80; pointer-events: none; overflow: hidden; }
-      .x-confetti i { position: absolute; top: -20px; width: 9px; height: 14px; border-radius: 2px; animation: x-fall 2.6s ease-in forwards; }
-      @keyframes x-fall { to { transform: translateY(110vh) rotate(720deg); } }
+      .x-success__plate { width: 120px; height: 120px; margin: 6px auto 12px; }
+      .x-success__plate img { width: 100%; height: 100%; object-fit: contain; }
+      .x-success h3 { font: 700 24px var(--x-serif); }
+      .x-success .x-ordno { font: 700 32px var(--x-serif); color: var(--x-emerald); margin: 6px 0; }
       /* admin */
-      .x-admin { position: fixed; inset: 0; z-index: 100; overflow: auto; background: radial-gradient(ellipse at 20% 0, rgb(15 90 67 / .55), transparent 60%), #0a100e; display: none; }
+      .x-admin { position: fixed; inset: 0; z-index: 100; overflow: auto; background: var(--x-night); display: none; }
       .x-admin.is-on { display: block; }
-      .x-admin__bar { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: rgb(10 16 14 / .8); -webkit-backdrop-filter: var(--hark-blur); backdrop-filter: var(--hark-blur); border-bottom: 1px solid var(--x-line); flex-wrap: wrap; }
+      .x-admin__bar { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: var(--x-card); border-bottom: 1px solid var(--x-line); flex-wrap: wrap; }
       .x-admin__bar img { width: 64px; }
+      .x-demo { font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: 4px; background: #f8e6e2; color: #7a1f19; }
       .x-atabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
-      .x-atabs button { flex: none; min-height: 40px; padding: 0 14px; border-radius: var(--r-pill); border: 0; background: none; color: var(--x-muted); font: 500 14px var(--x-ui); cursor: pointer; }
-      .x-atabs button.is-on { background: rgb(246 236 214 / .1); color: var(--x-cream); }
+      .x-atabs button { flex: none; min-height: 40px; padding: 0 14px; border-radius: 6px; border: 0; background: none; color: var(--x-muted); font: 500 14px var(--x-ui); cursor: pointer; }
+      .x-atabs button.is-on { background: rgb(31 77 58 / .1); color: var(--x-emerald); }
       .x-atabs b { display: inline-grid; place-items: center; min-width: 20px; height: 20px; border-radius: 10px; background: var(--x-crimson); color: #fff; font-size: 12px; margin-left: 6px; padding: 0 5px; }
       .x-abody { padding: 18px 16px 60px; max-width: 1400px; margin: 0 auto; }
-      .x-glass { background: rgb(24 36 31 / .65); border: 1px solid var(--x-line); border-radius: var(--r-m); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+      .x-glass { background: var(--x-card); border: 1px solid var(--x-line); border-radius: 8px; }
       .x-kanban { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(270px, 1fr); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; }
       .x-col { scroll-snap-align: start; padding: 10px; min-height: 200px; }
-      .x-col h4 { margin: 2px 4px 10px; font: 600 14px var(--x-ui); color: var(--x-gold2); display: flex; justify-content: space-between; }
-      .x-ocard { padding: 12px; border-radius: 12px; background: var(--x-night); border: 1px solid var(--x-line); margin-bottom: 10px; font-size: 14px; display: grid; gap: 6px; }
-      .x-ocard.is-new { border-color: var(--x-gold2); animation: x-pulse 1.6s ease-in-out infinite; }
-      @keyframes x-pulse { 50% { box-shadow: 0 0 0 6px rgb(243 210 122 / .18); } }
+      .x-col h4 { margin: 2px 4px 10px; font: 600 14px var(--x-ui); color: var(--x-emerald); display: flex; justify-content: space-between; }
+      .x-ocard { padding: 12px; border-radius: 8px; background: var(--x-night2); border: 1px solid var(--x-line); margin-bottom: 10px; font-size: 14px; display: grid; gap: 6px; }
+      .x-ocard.is-new { border-color: var(--x-gold); box-shadow: inset 3px 0 0 var(--x-gold); }
       .x-ocard header { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
       .x-ocard ul { margin: 0; padding-left: 18px; color: var(--x-muted); }
       .x-ocard .x-acts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-      .x-tag { font-size: 12px; padding: 3px 8px; border-radius: var(--r-pill); background: var(--x-emerald); color: var(--x-cream); }
+      .x-tag { font-size: 12px; padding: 3px 8px; border-radius: 4px; background: var(--x-emerald); color: #fff; }
       .x-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 14px 0; }
       .x-stats div { padding: 16px; }
-      .x-stats b { display: block; font: 700 28px var(--x-serif); color: var(--x-gold2); }
+      .x-stats b { display: block; font: 700 28px var(--x-serif); color: var(--x-emerald); }
       .x-stats span { color: var(--x-muted); font-size: 13px; }
       .x-bars { display: flex; align-items: flex-end; gap: 4px; height: 160px; padding: 16px 12px 28px; }
-      .x-bars div { flex: 1; position: relative; background: linear-gradient(180deg, var(--x-gold2), var(--x-emerald2)); border-radius: 4px 4px 0 0; min-height: 2px; }
+      .x-bars div { flex: 1; position: relative; background: var(--x-emerald2); border-radius: 3px 3px 0 0; min-height: 2px; }
       .x-bars span { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 12px; color: var(--x-muted); }
       .x-mtable { width: 100%; border-collapse: collapse; font-size: 14px; }
       .x-mtable th, .x-mtable td { padding: 6px; border-bottom: 1px solid var(--x-line); text-align: left; }
-      .x-mtable th[colspan] { color: var(--x-gold2); font: 700 18px var(--x-serif); padding-top: 18px; }
-      .x-mtable input[type=text], .x-mtable input[type=number] { min-height: 40px; border-radius: 10px; border: 1px solid var(--x-line); background: var(--x-night); color: var(--x-cream); padding: 0 10px; font: 14px var(--x-ui); width: 100%; box-sizing: border-box; }
-      .x-mtable textarea { min-height: 40px; min-width: 200px; border-radius: 10px; border: 1px solid var(--x-line); background: var(--x-night); color: var(--x-cream); padding: 8px 10px; font: 13px/1.4 var(--x-ui); width: 100%; box-sizing: border-box; resize: vertical; }
+      .x-mtable th[colspan] { color: var(--x-emerald); font: 700 18px var(--x-serif); padding-top: 18px; }
+      .x-mtable input[type=text], .x-mtable input[type=number] { min-height: 40px; border-radius: 6px; border: 1px solid var(--x-line); background: #fff; color: var(--x-cream); padding: 0 10px; font: 14px var(--x-ui); width: 100%; box-sizing: border-box; }
+      .x-mtable textarea { min-height: 40px; min-width: 200px; border-radius: 6px; border: 1px solid var(--x-line); background: #fff; color: var(--x-cream); padding: 8px 10px; font: 13px/1.4 var(--x-ui); width: 100%; box-sizing: border-box; resize: vertical; }
       .x-mtable td { vertical-align: top; }
       .x-mtable input[type=checkbox] { width: 20px; height: 20px; accent-color: var(--x-emerald2); }
       .x-scroll { overflow-x: auto; }
       .x-ol { padding-left: 20px; line-height: 1.7; }
       .x-ol code { background: var(--x-night); padding: 2px 6px; border-radius: 6px; font-size: 13px; }
-      .x-toast { position: fixed; z-index: 120; left: 50%; top: 18px; transform: translate(-50%, -150%); padding: 12px 18px; border-radius: var(--r-pill); background: var(--x-cream); color: #1d1405; font-weight: 500; transition: transform .35s var(--ease-out); }
+      .x-toast { position: fixed; z-index: 120; left: 50%; top: 18px; transform: translate(-50%, -150%); padding: 12px 18px; border-radius: 8px; background: var(--x-deep); color: var(--x-light); font-weight: 500; transition: transform .35s var(--ease-out); }
       .x-toast.is-on { transform: translate(-50%, 0); }
       @media (prefers-reduced-motion: reduce) {
         .x-app *, .x-app *::before, .x-app *::after { animation: none !important; transition: none !important; }
-        .x-rv { opacity: 1; transform: none; }
       }
     </style>
   </head>
   <body>
     <div class="page x-app" id="top">
-      <div class="x-prog" id="x-prog"></div>
       <div class="x-ann" id="x-ann" hidden></div>
-      <div class="x-ribbon" id="x-ribbon" hidden>Demo mode</div>
       <header class="x-nav">
         <a class="x-nav__brand" href="#top" aria-label="Hotel Al-Bahar, home"><span class="x-badge3d"><div id="x-badge"></div></span><span>Al-Bahar</span></a>
         <nav class="x-nav__links" aria-label="Sections">
-          <a href="#signature">Signature</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#track">Track order</a><a href="#visit">Visit</a>
+          <a href="#signature">Popular</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#track">Track order</a><a href="#visit">Find us</a>
         </nav>
         <button class="x-btn x-btn--sm x-cartbtn" id="x-navcart" type="button" aria-label="Open cart">Cart<b id="x-navcount" hidden>0</b></button>
       </header>
 
       <section class="x-hero" id="x-hero">
         <div class="x-hero__bg" id="x-hbg"><img src="ab-hero.jpg" alt="" /></div>
-        <div class="x-steam" id="x-steam" aria-hidden="true"></div>
-        <div class="x-wrap x-hero__grid" id="x-hgrid">
+        <div class="x-wrap x-hero__grid">
           <div>
-            <p class="x-eyebrow">Veg &amp; Non-Veg · Camp, Belagavi</p>
+            <p class="x-eyebrow">Veg and non-veg</p>
             <h1>Hotel Al-Bahar</h1>
-            <p class="x-hero__tag">Royal flavours of Biryani, Tandoor &amp; Chinese</p>
-            <p class="x-hero__svc">Dine-in · Takeaway · Home Delivery</p>
+            <p class="x-hero__tag">Biryani, tandoori and Chinese in Camp, Belagavi</p>
+            <p class="x-hero__svc">Dine-in · Takeaway · Home delivery · Open 11 am to 11 pm</p>
             <div class="x-hero__cta">
-              <a class="x-btn x-btn--gold" href="#menu" data-order>Order Online</a>
-              <a class="x-btn" href="#menu">View Menu</a>
+              <a class="x-btn x-btn--gold" href="#menu" data-order>Order online</a>
+              <a class="x-btn" href="#menu">See the menu</a>
             </div>
-            <p class="x-live" id="x-live"><i></i><span>Checking hours…</span></p>
+            <p class="x-live" id="x-live"><i></i><span>Open daily, 11 am to 11 pm</span></p>
+            <script>
+              (function () { var d = new Date(), m = (d.getUTCHours() * 60 + d.getUTCMinutes() + 330) % 1440, o = m >= 660 && m < 1380, e = document.getElementById("x-live"); e.classList.toggle("is-open", o); e.lastElementChild.textContent = o ? "Open now, until 11 pm" : "Closed now. Opens at 11 am"; })();
+            </script>
           </div>
           <div class="x-plaque" id="x-plaque">
             <div class="x-plaque__body" id="x-pbody">
-              <div class="x-plaque__shadow"></div>
               <img id="x-logo" src="ab-logo.png" alt="Hotel Al-Bahar logo" />
-              <div class="x-sheen" id="x-sheen"></div>
             </div>
           </div>
         </div>
@@ -338,29 +323,30 @@
 
       <section class="x-sec x-sig" id="signature">
         <div class="x-wrap">
-          <div class="x-sec__head x-rv">
-            <p class="x-eyebrow">From our kitchen</p>
-            <h2>Signature dishes</h2>
-            <p>Drag or swipe to turn the table.</p>
+          <div class="x-sec__head">
+            <h2>Popular dishes</h2>
           </div>
-          <div class="x-stage x-rv" id="x-stage" role="region" aria-label="Signature dishes carousel. Use left and right arrow keys to turn." tabindex="0">
+          <div class="x-stage" id="x-stage" role="region" aria-label="Popular dishes. Use the left and right arrow keys to turn." tabindex="0">
             <div class="x-ring" id="x-ring">
-              <div class="x-dish" data-id="chicken-dum-biryani"><img id="img-biryani" src="ab-biryani.png" alt="Chicken dum biryani" /></div>
-              <div class="x-dish" data-id="chicken-tandoori"><img id="img-tandoori" src="ab-tandoori.png" alt="Chicken tandoori" /></div>
-              <div class="x-dish" data-id="kaju-paneer-masala"><img id="img-paneer" src="ab-paneer.png" alt="Kaju paneer masala" /></div>
-              <div class="x-dish" data-id="butter-naan"><img id="img-naan" src="ab-naan.png" alt="Butter naan and paratha" /></div>
-              <div class="x-dish" data-id="chicken-lollipop"><img id="img-lollipop" src="ab-lollipop.png" alt="Chicken lollipop" /></div>
-              <div class="x-dish" data-id="chicken-schezwan-fried-rice"><img id="img-friedrice" src="ab-friedrice.png" alt="Chicken schezwan fried rice" /></div>
+              <div class="x-dish" data-id="chicken-dum-biryani"><img id="img-biryani" src="ab-biryani.png" alt="Chicken dum biryani" /><p class="x-dish__cap"><b>Chicken Dum Biryani</b><span>₹255</span></p></div>
+              <div class="x-dish" data-id="chicken-tandoori"><img id="img-tandoori" src="ab-tandoori.png" alt="Chicken tandoori" /><p class="x-dish__cap"><b>Chicken Tandoori</b><span>₹345</span></p></div>
+              <div class="x-dish" data-id="kaju-paneer-masala"><img id="img-paneer" src="ab-paneer.png" alt="Kaju paneer masala" /><p class="x-dish__cap"><b>Kaju Paneer Masala</b><span>₹355</span></p></div>
+              <div class="x-dish" data-id="butter-naan"><img id="img-naan" src="ab-naan.png" alt="Butter naan and paratha" /><p class="x-dish__cap"><b>Butter Naan</b><span>₹68</span></p></div>
+              <div class="x-dish" data-id="chicken-lollipop"><img id="img-lollipop" src="ab-lollipop.png" alt="Chicken lollipop" /><p class="x-dish__cap"><b>Chicken Lollipop</b><span>₹166</span></p></div>
+              <div class="x-dish" data-id="chicken-schezwan-fried-rice"><img id="img-friedrice" src="ab-friedrice.png" alt="Chicken schezwan fried rice" /><p class="x-dish__cap"><b>Chicken Schezwan Fried Rice</b><span>₹271</span></p></div>
             </div>
           </div>
-          <div class="x-front" id="x-front" aria-live="polite"></div>
+          <div class="x-front">
+            <button class="x-arrow" type="button" id="x-prev" aria-label="Previous dish">‹</button>
+            <div id="x-front" aria-live="polite"></div>
+            <button class="x-arrow" type="button" id="x-next" aria-label="Next dish">›</button>
+          </div>
         </div>
       </section>
 
-      <section class="x-sec" id="menu" style="padding-top: 40px">
-        <div class="x-wrap x-sec__head x-rv">
-          <p class="x-eyebrow">Order online</p>
-          <h2>The menu</h2>
+      <section class="x-sec" id="menu" style="padding-top: 48px">
+        <div class="x-wrap x-sec__head">
+          <h2>Menu</h2>
           <p>Prices in ₹. <span class="x-nowrap"><span class="x-vd is-veg" style="display: inline-grid; vertical-align: -3px"></span> Veg</span> &nbsp; <span class="x-nowrap"><span class="x-vd" style="display: inline-grid; vertical-align: -3px"></span> Non-veg</span></p>
         </div>
         <div class="x-tools">
@@ -421,28 +407,27 @@
 
       <section class="x-sec" id="about">
         <div class="x-wrap">
-          <div class="x-sec__head x-rv">
-            <p class="x-eyebrow">About us</p>
-            <h2>Eat in, take away, or have it delivered</h2>
-            <p>Biryani from the handi, kebabs off the tandoor and Chinese from the wok, in Camp, Belagavi.</p>
+          <div class="x-sec__head">
+            <h2>About us</h2>
+            <p>Hotel Al-Bahar has been serving Camp and Belagavi with dum biryani, tandoor and Indo-Chinese food. Sit in with family, pick up at the counter or order home.</p>
           </div>
           <div class="x-cards">
-            <div class="x-card x-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18M17 21V3c-2 1-3 4-3 8h3"/></svg><h3>Dine-in</h3><p>Family seating, served hot from the kitchen.</p></div>
-            <div class="x-card x-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 13H6L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg><h3>Takeaway</h3><p>Order ahead and pick up at the counter.</p></div>
-            <div class="x-card x-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Home Delivery</h3><p>Across Belagavi. Delivery charges confirmed on call.</p></div>
-            <div class="x-card x-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg><h3>Online Ordering</h3><p>Order here, pay cash or UPI, and track it live.</p></div>
+            <div class="x-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18M17 21V3c-2 1-3 4-3 8h3"/></svg><h3>Dine-in</h3><p>Family seating. Food comes to the table hot.</p></div>
+            <div class="x-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 13H6L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg><h3>Takeaway</h3><p>Order ahead and pick up at the counter.</p></div>
+            <div class="x-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Home delivery</h3><p>Across Belagavi. Delivery charge confirmed on call.</p></div>
+            <div class="x-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg><h3>Order online</h3><p>Order here, pay cash or UPI, and track your order.</p></div>
           </div>
-          <div class="x-chips x-rv"><span>Biryani</span><span>Mughlai</span><span>Chinese</span><span>Kebabs</span><span>Tandoori</span><span>Non-Veg</span><span>Veg</span></div>
+          <p class="x-kinds">Biryani · Mughlai · Chinese · Kebabs · Tandoori · Veg and non-veg</p>
         </div>
       </section>
 
       <section class="x-sec" id="track">
         <div class="x-wrap">
-          <div class="x-sec__head x-rv">
-            <p class="x-eyebrow">Already ordered?</p>
-            <h2>Track my order</h2>
+          <div class="x-sec__head">
+            <h2>Track your order</h2>
+            <p>Enter your order number and the phone number you ordered with.</p>
           </div>
-          <form class="x-panel x-rv" id="x-trackf" novalidate>
+          <form class="x-panel" id="x-trackf" novalidate>
             <div class="x-row2">
               <label class="x-field">Order number<input name="no" placeholder="AB-12" required /></label>
               <label class="x-field">Phone<input name="phone" inputmode="numeric" maxlength="10" placeholder="10-digit mobile" required /></label>
@@ -457,15 +442,14 @@
       <section class="x-sec" id="visit">
         <div class="x-wrap">
           <div class="x-sec__head">
-            <p class="x-eyebrow">Visit us</p>
-            <h2>Find us in Camp, Belagavi</h2>
+            <h2>Find us</h2>
           </div>
           <div class="x-visit">
             <div class="x-panel" style="max-width: none; margin: 0">
               <dl>
                 <div><dt>Address</dt><dd>Hotel Al-Bahar, VG44+MQM, Khanapur Road, Behind Petrol Pump, Camp, Belagavi Cantonment, Belagavi, Karnataka 590001</dd></div>
                 <div><dt>Phone</dt><dd><a class="x-nowrap x-gold x-tap" href="tel:+918314203229">+91 831 420 3229</a></dd></div>
-                <div><dt>Hours</dt><dd>Monday – Sunday, 11:00 AM – 11:00 PM</dd></div>
+                <div><dt>Hours</dt><dd>Monday to Sunday, 11 am to 11 pm</dd></div>
               </dl>
             </div>
             <div class="x-panel" style="max-width: none; margin: 0; display: grid; gap: 12px; align-content: center">
@@ -484,18 +468,18 @@
               <img class="x-foot__logo" id="x-flogo" alt="Hotel Al-Bahar" hidden />
               <p>VG44+MQM, Khanapur Road, Behind Petrol Pump, Camp, Belagavi Cantonment, Belagavi, Karnataka 590001</p>
               <p style="margin-top: 8px"><a class="x-nowrap x-tap" href="tel:+918314203229">+91 831 420 3229</a></p>
-              <p style="margin-top: 4px">Mon – Sun, 11:00 AM – 11:00 PM</p>
+              <p style="margin-top: 4px">Monday to Sunday, 11 am to 11 pm</p>
             </div>
             <div>
-              <h4>Quick links</h4>
-              <ul><li><a href="#signature">Signature dishes</a></li><li><a href="#menu">Menu &amp; order</a></li><li><a href="#track">Track my order</a></li><li><a href="#visit">Visit us</a></li></ul>
+              <h4>Links</h4>
+              <ul><li><a href="#signature">Popular dishes</a></li><li><a href="#menu">Menu</a></li><li><a href="#track">Track your order</a></li><li><a href="#visit">Find us</a></li></ul>
             </div>
             <div>
               <h4>We serve</h4>
-              <ul><li>Dine-in</li><li>Takeaway</li><li>Home Delivery</li><li><a class="x-foot__staff" href="#admin">Staff login</a></li></ul>
+              <ul><li>Dine-in</li><li>Takeaway</li><li>Home delivery</li><li><a class="x-foot__staff" href="#admin">Staff login</a></li></ul>
             </div>
           </div>
-          <div class="x-foot__copy"><span>© 2026 Hotel Al-Bahar, Belagavi</span><span>Veg &amp; Non-Veg</span></div>
+          <p class="x-foot__copy">© 2026 Hotel Al-Bahar, Camp, Belagavi</p>
         </div>
       </footer>
 
@@ -509,6 +493,7 @@
         <div class="x-admin__bar">
           <img id="x-alogo" alt="Al-Bahar" />
           <strong class="x-serif" style="font-size: 18px">Staff</strong>
+          <span class="x-demo" id="x-demo" hidden>Demo mode</span>
           <div class="x-atabs" id="x-atabs" role="tablist"></div>
           <a class="x-btn x-btn--sm" href="#top" id="x-aexit">View site</a>
           <button class="x-btn x-btn--sm" type="button" id="x-logout" hidden>Log out</button>
@@ -542,75 +527,81 @@
   var LIVE = !!(CFG.SUPABASE_URL && CFG.SUPABASE_ANON_KEY && window.supabase && window.supabase.createClient);
   var sb = null;
   if (LIVE) { try { sb = window.supabase.createClient(CFG.SUPABASE_URL, CFG.SUPABASE_ANON_KEY); } catch (e) { LIVE = false; } }
-  if (!LIVE) $("#x-ribbon").hidden = false;
+  if (!LIVE) $("#x-demo").hidden = false;
 
   /* ---------- default menu ---------- */
   /* [name, price, veg, img, desc, tag] */
-  var BS = "Bestseller", CS = "Chef's special";
+  var BS = "Popular", CS = "Chef's special"; /* CS stays as data only; it never shows as a ribbon */
   var RAW = [
     ["Rice & Biryani", [
-      ["Chicken Dum Biryani", 255, 0, "d-chicken-biryani.jpg", "Slow-cooked dum biryani with tender chicken, long-grain basmati, saffron and fried onions, served with raita.", BS],
-      ["Chicken Dum Biryani Quarter", 210, 0, "d-chicken-biryani.jpg", "A lighter portion of our signature chicken dum biryani — perfect for one."],
-      ["Veg Biryani", 240, 1, "d-veg-biryani.jpg", "Fragrant basmati layered with garden vegetables, paneer, mint and saffron."],
-      ["Egg Biryani (2 Eggs)", 215, 0, "d-egg-biryani.jpg", "Spiced biryani rice crowned with two masala-roasted boiled eggs."],
-      ["Buffalo Biryani", 245, 0, "d-buffalo-biryani.jpg", "Rich, spicy biryani with tender buffalo meat cooked dum-style.", CS],
-      ["Curd Rice", 210, 1, "d-curd-rice.jpg", "Cool, creamy curd rice tempered with mustard, curry leaves and green chilli."],
-      ["Ghee Rice", 225, 1, "d-ghee-rice.jpg", "Basmati cooked in pure ghee with whole spices, cashews and golden onions."],
-      ["Steamed Rice", 70, 1, "d-steamed-rice.jpg", "Plain, fluffy steamed basmati — the perfect partner for any gravy."],
-      ["Jeera Rice", 205, 1, "d-jeera-rice.jpg", "Basmati tossed with ghee-roasted cumin and fresh coriander."]]],
+      ["Chicken Dum Biryani", 255, 0, "d-chicken-biryani.jpg", "Dum-cooked chicken biryani with basmati and fried onion. Comes with raita and salan.", BS],
+      ["Chicken Dum Biryani Quarter", 210, 0, "d-chicken-biryani.jpg", "Smaller plate of our chicken dum biryani, enough for one."],
+      ["Veg Biryani", 240, 1, "d-veg-biryani.jpg", "Basmati cooked with mixed vegetables, paneer and mint."],
+      ["Egg Biryani (2 Eggs)", 215, 0, "d-egg-biryani.jpg", "Biryani rice with two masala boiled eggs."],
+      ["Buffalo Biryani", 245, 0, "d-buffalo-biryani.jpg", "Spicy biryani with tender buffalo meat, cooked dum style.", CS],
+      ["Curd Rice", 210, 1, "d-curd-rice.jpg", "Curd rice with mustard, curry leaves and green chilli tadka."],
+      ["Ghee Rice", 225, 1, "d-ghee-rice.jpg", "Basmati cooked in ghee with cashews and fried onion."],
+      ["Steamed Rice", 70, 1, "d-steamed-rice.jpg", "Plain steamed basmati."],
+      ["Jeera Rice", 205, 1, "d-jeera-rice.jpg", "Basmati tossed with cumin and coriander."]]],
     ["Chicken Starters", [
-      ["Chicken Tandoori", 345, 0, "d-chicken-tandoori.jpg", "Chicken marinated in yogurt and tandoori masala, char-grilled in the clay oven. Served with mint chutney.", BS],
-      ["Chicken Lollipop", 166, 0, "d-chicken-lollipop.jpg", "Frenched chicken wings fried crisp and tossed in fiery schezwan glaze."],
-      ["Chicken China Town (8 pcs)", 399, 0, "d-china-town.jpg", "Indo-Chinese chicken tossed with chilli, garlic, capsicum and spring onion.", CS],
-      ["Chicken Crispy", 339, 0, "d-chicken-crispy.jpg", "Golden, crunchy chicken strips with a sticky sweet-chilli coating and sesame."],
-      ["Chicken Garlic", 329, 0, "d-chicken-garlic.jpg", "Juicy chicken in a glossy, garlicky sauce with crisp fried garlic."],
-      ["Chicken Satay (5 pcs)", 399, 0, "d-chicken-satay.jpg", "Grilled chicken skewers with a rich peanut dipping sauce."],
-      ["Chicken Wings Crispy (4 pcs)", 219, 0, "d-wings-crispy.jpg", "Crunchy fried chicken wings with a creamy dip."],
-      ["Chicken Wings Kabab (4 pcs)", 219, 0, "d-wings-kabab.jpg", "Tandoori-marinated wings, smoky and charred, with onion rings and chutney."]]],
+      ["Chicken Tandoori", 345, 0, "d-chicken-tandoori.jpg", "Marinated chicken roasted in the tandoor, served with onion, lemon and green chutney.", BS],
+      ["Chicken Lollipop", 166, 0, "d-chicken-lollipop.jpg", "Fried chicken lollipops tossed in schezwan sauce."],
+      ["Chicken China Town (8 pcs)", 399, 0, "d-china-town.jpg", "Chicken tossed with chilli, garlic, capsicum and spring onion.", CS],
+      ["Chicken Crispy", 339, 0, "d-chicken-crispy.jpg", "Crunchy fried chicken strips with sesame."],
+      ["Chicken Garlic", 329, 0, "d-chicken-garlic.jpg", "Chicken in a garlic sauce with fried garlic on top."],
+      ["Chicken Satay (5 pcs)", 399, 0, "d-chicken-satay.jpg", "Grilled chicken skewers with peanut sauce."],
+      ["Chicken Wings Crispy (4 pcs)", 219, 0, "d-wings-crispy.jpg", "Fried chicken wings with dip."],
+      ["Chicken Wings Kabab (4 pcs)", 219, 0, "d-wings-kabab.jpg", "Tandoori wings with onion and green chutney."]]],
     ["Veg Main Course", [
-      ["Dal Tadka", 244, 1, "d-dal-tadka.jpg", "Yellow lentils finished with a sizzling tadka of ghee, cumin, garlic and red chilli."],
-      ["Dal Fry", 210, 1, "d-dal-fry.jpg", "Home-style toor dal cooked with onion, tomato and mild spices."],
-      ["Kaju Masala", 345, 1, "d-kaju-masala.jpg", "Roasted cashews simmered in a rich, creamy tomato-cashew gravy."],
-      ["Kaju Paneer Masala", 355, 1, "d-kaju-paneer.jpg", "Soft paneer and roasted cashews in a velvety Mughlai gravy.", BS],
-      ["Paneer Masala", 345, 1, "d-paneer-masala.jpg", "Cottage cheese cubes in a buttery, mildly spiced tomato gravy."],
-      ["Mix Veg Gravy", 245, 1, "d-mix-veg.jpg", "Seasonal vegetables and paneer cooked in a spiced onion-tomato gravy."]]],
+      ["Dal Tadka", 244, 1, "d-dal-tadka.jpg", "Yellow dal with ghee, jeera, garlic and red chilli tadka."],
+      ["Dal Fry", 210, 1, "d-dal-fry.jpg", "Toor dal cooked with onion and tomato."],
+      ["Kaju Masala", 345, 1, "d-kaju-masala.jpg", "Roasted cashews in a creamy tomato and cashew gravy."],
+      ["Kaju Paneer Masala", 355, 1, "d-kaju-paneer.jpg", "Paneer and cashews in a rich Mughlai gravy.", BS],
+      ["Paneer Masala", 345, 1, "d-paneer-masala.jpg", "Paneer cubes in a buttery tomato gravy."],
+      ["Mix Veg Gravy", 245, 1, "d-mix-veg.jpg", "Mixed vegetables and paneer in onion tomato gravy."]]],
     ["Egg Main Course", [
-      ["Egg Gravy (2 Whole Eggs)", 258, 0, "d-egg-gravy.jpg", "Two whole boiled eggs in a spicy, home-style onion-tomato masala."]]],
+      ["Egg Gravy (2 Whole Eggs)", 258, 0, "d-egg-gravy.jpg", "Two boiled eggs in a spicy onion tomato masala."]]],
     ["Chicken & Mutton Main Course", [
-      ["Chicken Gravy", 319, 0, "d-chicken-gravy.jpg", "Classic chicken curry in a robust red masala."],
-      ["Mutton Gravy", 381, 0, "d-mutton-gravy.jpg", "Tender bone-in mutton slow-cooked in a dark, aromatic gravy.", CS],
-      ["Chicken Peshawari", 250, 0, "d-chicken-peshawari.jpg", "Mildly spiced chicken in a rich cream and nut gravy, Peshawar style."],
-      ["Chicken Kadhai", 250, 0, "d-chicken-kadhai.jpg", "Chicken tossed in the kadhai with capsicum, onion and freshly ground spices."]]],
+      ["Chicken Gravy", 319, 0, "d-chicken-gravy.jpg", "Home-style chicken curry."],
+      ["Mutton Gravy", 381, 0, "d-mutton-gravy.jpg", "Bone-in mutton cooked slow in a dark masala.", CS],
+      ["Chicken Peshawari", 250, 0, "d-chicken-peshawari.jpg", "Mild chicken curry with cream and nuts."],
+      ["Chicken Kadhai", 250, 0, "d-chicken-kadhai.jpg", "Chicken cooked in the kadhai with capsicum and onion."]]],
     ["Breads", [
-      ["Roti", 35, 1, "d-roti.jpg", "Whole-wheat flatbread baked fresh in the tandoor."],
-      ["Butter Roti", 47, 1, "d-butter-roti.jpg", "Tandoori roti brushed with melted butter."],
-      ["Plain Kulcha", 60, 1, "d-plain-kulcha.jpg", "Soft, leavened tandoor-baked kulcha."],
-      ["Butter Kulcha", 75, 1, "d-butter-kulcha.jpg", "Fluffy kulcha glazed with butter and coriander."],
-      ["Plain Naan", 60, 1, "d-naan.jpg", "Classic soft naan, fresh from the clay oven."],
-      ["Butter Naan", 68, 1, "d-naan.jpg", "Soft naan finished with a generous brush of butter."],
-      ["Cheese Naan", 102, 1, "d-cheese-naan.jpg", "Naan stuffed with melting cheese."],
-      ["Garlic Cheese Naan", 112, 1, "d-garlic-cheese-naan.jpg", "Cheese-stuffed naan topped with garlic and coriander.", BS],
-      ["Kerala Paratha", 45, 1, "d-kerala-paratha.jpg", "Flaky, layered Malabar parotta."]]],
+      ["Roti", 35, 1, "d-roti.jpg", "Tandoori roti."],
+      ["Butter Roti", 47, 1, "d-butter-roti.jpg", "Tandoori roti with butter."],
+      ["Plain Kulcha", 60, 1, "d-plain-kulcha.jpg", "Soft tandoor kulcha."],
+      ["Butter Kulcha", 75, 1, "d-butter-kulcha.jpg", "Kulcha with butter and coriander."],
+      ["Plain Naan", 60, 1, "d-naan.jpg", "Soft naan from the tandoor."],
+      ["Butter Naan", 68, 1, "d-naan.jpg", "Naan with butter."],
+      ["Cheese Naan", 102, 1, "d-cheese-naan.jpg", "Naan stuffed with cheese."],
+      ["Garlic Cheese Naan", 112, 1, "d-garlic-cheese-naan.jpg", "Cheese naan topped with garlic and coriander.", BS],
+      ["Kerala Paratha", 45, 1, "d-kerala-paratha.jpg", "Layered Kerala parotta."]]],
     ["Fried Rice", [
-      ["Veg Fried Rice", 244, 1, "d-veg-fried-rice.jpg", "Wok-tossed rice with crunchy vegetables and spring onion."],
-      ["Egg Fried Rice", 248, 0, "d-egg-fried-rice.jpg", "Wok-fried rice with scrambled egg and spring onion."],
-      ["Chicken Fried Rice", 261, 0, "d-chicken-fried-rice.jpg", "Wok-tossed rice with chicken, egg and vegetables."],
-      ["Chicken Schezwan Fried Rice", 271, 0, "d-schezwan-fried-rice.jpg", "Spicy schezwan fried rice loaded with chicken.", BS],
-      ["Buffalo Fried Rice", 230, 0, "d-buffalo-fried-rice.jpg", "Wok-fried rice with tender buffalo meat and vegetables."],
-      ["Buffalo Schezwan Fried Rice", 235, 0, "d-buffalo-schezwan.jpg", "Fiery schezwan fried rice with buffalo meat."]]],
+      ["Veg Fried Rice", 244, 1, "d-veg-fried-rice.jpg", "Wok-fried rice with vegetables."],
+      ["Egg Fried Rice", 248, 0, "d-egg-fried-rice.jpg", "Wok-fried rice with egg and spring onion."],
+      ["Chicken Fried Rice", 261, 0, "d-chicken-fried-rice.jpg", "Wok-fried rice with chicken, egg and vegetables."],
+      ["Chicken Schezwan Fried Rice", 271, 0, "d-schezwan-fried-rice.jpg", "Spicy schezwan fried rice with chicken.", BS],
+      ["Buffalo Fried Rice", 230, 0, "d-buffalo-fried-rice.jpg", "Wok-fried rice with buffalo meat."],
+      ["Buffalo Schezwan Fried Rice", 235, 0, "d-buffalo-schezwan.jpg", "Spicy schezwan fried rice with buffalo meat."]]],
     ["Beverages", [
-      ["Jeera Soda", 25, 1, "d-jeera-soda.jpg", "Chilled fizzy soda with roasted cumin, lemon and mint."]]]
+      ["Jeera Soda", 25, 1, "d-jeera-soda.jpg", "Cold soda with roasted jeera, lemon and mint."]]]
   ];
+  /* Only "Popular" shows as a ribbon (older data may still say "Bestseller"). */
+  function ribbon(tag) { return /^(popular|bestseller)$/i.test(String(tag || "").trim()) ? '<span class="x-rib">Popular</span>' : ""; }
   var CATS = RAW.map(function (c) { return c[0]; });
   var CAT_IMG = { "Rice & Biryani": "biryani", "Chicken Starters": "tandoori", "Veg Main Course": "paneer", "Egg Main Course": "biryani", "Chicken & Mutton Main Course": "paneer", "Breads": "naan", "Fried Rice": "friedrice" };
   function slug(s) { return s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
   var DEFAULT_MENU = [];
   RAW.forEach(function (c) { c[1].forEach(function (it) { DEFAULT_MENU.push({ id: slug(it[0]), category: c[0], name: it[0], price: it[1], veg: !!it[2], available: true, sort: DEFAULT_MENU.length, img: it[3] || "", desc: it[4] || "", tag: it[5] || "" }); }); });
   var DEF_BY_ID = {}; DEFAULT_MENU.forEach(function (m) { DEF_BY_ID[m.id] = m; });
+  /* Openings of the first build's default descriptions; saved menus still holding them get the current text. */
+  var OLD_DESC = ["Slow-cooked dum biryani", "A lighter portion of our", "Fragrant basmati layered", "Spiced biryani rice ", "Rich, spicy biryani with", "Cool, creamy curd rice", "Basmati cooked in pure ghee", "Plain, fluffy steamed", "Basmati tossed with ghee-roasted", "Chicken marinated in yogurt", "Frenched chicken wings", "Indo-Chinese chicken tossed", "Golden, crunchy chicken", "Juicy chicken in a glossy", "Grilled chicken skewers with a rich", "Crunchy fried chicken wings with a creamy", "Tandoori-marinated wings", "Yellow lentils finished", "Home-style toor dal", "Roasted cashews simmered", "Soft paneer and roasted cashews", "Cottage cheese cubes", "Seasonal vegetables and paneer", "Two whole boiled eggs", "Classic chicken curry", "Tender bone-in mutton", "Mildly spiced chicken", "Chicken tossed in the kadhai", "Whole-wheat flatbread", "Tandoori roti brushed", "Soft, leavened", "Fluffy kulcha", "Classic soft naan", "Soft naan finished", "Naan stuffed with melting", "Cheese-stuffed naan", "Flaky, layered", "Wok-tossed rice with crunchy", "Wok-fried rice with scrambled", "Wok-tossed rice with chicken", "Spicy schezwan fried rice loaded", "Wok-fried rice with tender buffalo", "Fiery schezwan", "Chilled fizzy soda"];
   /* DB rows use `description`; the app uses `desc`. Missing img/desc fall back to the default item by id. */
   function fromDb(r) {
     var d = DEF_BY_ID[r.id] || {}, m = Object.assign({}, r);
-    m.desc = r.desc || r.description || d.desc || ""; m.img = r.img || d.img || ""; m.tag = r.tag || d.tag || "";
+    m.desc = r.desc || r.description || d.desc || "";
+    if (d.desc && OLD_DESC.some(function (p) { return m.desc.indexOf(p) === 0; })) m.desc = d.desc;
+    if (/^bestseller$/i.test(r.tag || "")) m.tag = "Popular"; m.img = r.img || d.img || ""; m.tag = r.tag || d.tag || "";
     delete m.description; return m;
   }
   function toDb(m) { return { id: m.id, category: m.category, name: m.name, price: m.price, veg: !!m.veg, available: m.available !== false, sort: m.sort || 0, description: m.desc || null, img: m.img || null }; }
@@ -632,16 +623,15 @@
   function byId(id) { for (var i = 0; i < state.menu.length; i++) if (state.menu[i].id === id) return state.menu[i]; return null; }
   function toast(msg) { var t = $("#x-toast"); t.textContent = msg; t.classList.add("is-on"); clearTimeout(toast.t); toast.t = setTimeout(function () { t.classList.remove("is-on"); }, 2600); }
   function ago(ts) { var s = (Date.now() - new Date(ts).getTime()) / 1000; if (s < 60) return "just now"; if (s < 3600) return Math.floor(s / 60) + " min ago"; if (s < 86400) return Math.floor(s / 3600) + " h ago"; return new Date(ts).toLocaleDateString("en-IN"); }
-  var TYPE_LABEL = { delivery: "Home Delivery", takeaway: "Takeaway", dinein: "Dine-in" };
+  var TYPE_LABEL = { delivery: "Home delivery", takeaway: "Takeaway", dinein: "Dine-in" };
   var STEPS = [["new", "Order placed"], ["accepted", "Accepted"], ["preparing", "Preparing"], ["ready", "Ready / Out for delivery"], ["completed", "Completed"]];
 
   /* ---------- logo copies (reuse the folded image) ---------- */
   var LOGO = $("#x-logo").src;
   (function () {
     var body = $("#x-pbody"), front = $("#x-logo");
-    for (var i = 10; i >= 1; i--) { var l = document.createElement("img"); l.src = LOGO; l.alt = ""; l.className = "x-plaque__layer"; l.style.transform = "translateZ(" + (-i * 1.6) + "px)"; body.insertBefore(l, front); }
+    for (var i = 8; i >= 1; i--) { var l = document.createElement("img"); l.src = LOGO; l.alt = ""; l.className = "x-plaque__layer"; l.style.transform = "translateZ(" + (-i * 1.4) + "px)"; body.insertBefore(l, front); }
     front.style.transform = "translateZ(1px)";
-    var sh = $("#x-sheen"); sh.style.webkitMaskImage = sh.style.maskImage = "url(" + LOGO + ")";
     var b = $("#x-badge");
     for (var j = 3; j >= 0; j--) { var bl = document.createElement("img"); bl.src = LOGO; bl.alt = ""; bl.style.transform = "translateZ(" + (-j * 1.2) + "px)"; if (j) bl.className = "x-plaque__layer"; b.appendChild(bl); }
     $("#x-flogo").src = LOGO; $("#x-flogo").hidden = false; $("#x-alogo").src = LOGO;
@@ -649,28 +639,19 @@
 
   /* ---------- open status ---------- */
   function paintLive() {
-    var o = isOpen(), txt = o ? "Open now · until 11:00 PM" : "Closed now · opens 11:00 AM";
-    if (o && state.settings.accepting === false) txt = "Open now · online orders paused";
+    var o = isOpen(), txt = o ? "Open now, until 11 pm" : "Closed now. Opens at 11 am";
+    if (o && state.settings.accepting === false) txt = "Open now. Online orders paused";
     ["#x-live", "#x-live2"].forEach(function (s) { var e = $(s); e.classList.toggle("is-open", o); e.lastElementChild.textContent = txt; });
   }
   function paintAnn() { var a = $("#x-ann"), t = (state.settings.announcement || "").trim(); a.hidden = !t; a.textContent = t; }
 
-  /* ---------- hero 3D: tilt, parallax, steam ---------- */
+  /* ---------- hero logo: a small tilt toward the pointer over the hero only ---------- */
   (function () {
-    var steam = $("#x-steam");
-    if (!RM) for (var i = 0; i < 14; i++) { var s = document.createElement("i"); s.style.left = (8 + Math.random() * 84) + "%"; s.style.animationDelay = (-Math.random() * 9) + "s"; s.style.animationDuration = (7 + Math.random() * 5) + "s"; steam.appendChild(s); }
     if (RM) return;
-    var pb = $("#x-pbody"), bg = $("#x-hbg"), grid = $("#x-hgrid"), tx = 0, ty = 0;
-    function tilt(x, y) { tx = x; ty = y; pb.style.setProperty("--ry", (x * 22) + "deg"); pb.style.setProperty("--rx", (-y * 16) + "deg"); bg.style.transform = "translate3d(" + (-x * 18) + "px," + (-y * 12 + scrollY * 0.3) + "px,0) scale(1.04)"; steam.style.transform = "translate3d(" + (x * 10) + "px,0,0)"; }
-    window.addEventListener("pointermove", function (e) { if (e.pointerType === "touch") return; tilt(e.clientX / innerWidth * 2 - 1, e.clientY / innerHeight * 2 - 1); }, { passive: true });
-    window.addEventListener("deviceorientation", function (e) { if (e.gamma == null) return; tilt(Math.max(-1, Math.min(1, e.gamma / 30)), Math.max(-1, Math.min(1, (e.beta - 45) / 30))); }, { passive: true });
-    window.addEventListener("scroll", function () { if (scrollY < innerHeight * 1.2) { tilt(tx, ty); grid.style.transform = "translate3d(0," + (scrollY * 0.12) + "px,0)"; } }, { passive: true });
+    var hero = $("#x-hero"), pb = $("#x-pbody");
+    hero.addEventListener("pointermove", function (e) { if (e.pointerType === "touch") return; var r = hero.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * 2 - 1, y = (e.clientY - r.top) / r.height * 2 - 1; pb.style.setProperty("--ry", (x * 8) + "deg"); pb.style.setProperty("--rx", (-y * 5) + "deg"); });
+    hero.addEventListener("pointerleave", function () { pb.style.removeProperty("--ry"); pb.style.removeProperty("--rx"); });
   })();
-
-  /* ---------- scroll progress + reveals ---------- */
-  window.addEventListener("scroll", function () { var h = document.documentElement.scrollHeight - innerHeight; $("#x-prog").style.transform = "scaleX(" + (h > 0 ? scrollY / h : 0) + ")"; }, { passive: true });
-  var revealIO = "IntersectionObserver" in window && !RM ? new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); revealIO.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" }) : null;
-  function reveal(root) { $$(".x-rv:not(.is-in)", root).forEach(function (el) { if (revealIO) revealIO.observe(el); else el.classList.add("is-in"); }); }
 
   /* ---------- cart ---------- */
   function qty(id) { return state.cart[id] || 0; }
@@ -691,7 +672,7 @@
     if (!it || !it.available) return '<span class="x-sold">Sold out</span>';
     var q = qty(id);
     return q ? '<span class="x-step"><button type="button" data-dec="' + id + '" aria-label="One less ' + esc(it.name) + '">−</button><span aria-live="polite">' + q + '</span><button type="button" data-inc="' + id + '" aria-label="One more ' + esc(it.name) + '">+</button></span>'
-      : '<button class="x-add" type="button" data-inc="' + id + '" aria-label="Add ' + esc(it.name) + '">ADD</button>';
+      : '<button class="x-add" type="button" data-inc="' + id + '" aria-label="Add ' + esc(it.name) + '">Add</button>';
   }
   function paintCtls() { $$("[data-ctl]").forEach(function (el) { el.innerHTML = ctlHTML(el.getAttribute("data-ctl")); }); }
   function paintCartBar() {
@@ -709,24 +690,28 @@
   /* ---------- signature carousel ---------- */
   var carousel = (function () {
     var stage = $("#x-stage"), ring = $("#x-ring"), dishes = $$(".x-dish", ring), N = dishes.length, STEP = 360 / N;
-    var ang = 0, vel = 0, drag = false, lastX = 0, R = 300, idle = !RM, front = -1, raf = 0, touched = 0;
-    function size() { var w = stage.clientWidth, d = Math.min(210, Math.max(120, w * 0.3)); R = Math.min(330, w * 0.36); stage.style.setProperty("--d", d + "px"); }
+    var ang = 0, vel = 0, drag = false, lastX = 0, R = 260, idle = !RM, front = -1, raf = 0, touched = 0;
+    function size() { var w = stage.clientWidth, d = Math.min(170, Math.max(110, w * 0.26)); R = Math.min(280, w * 0.34); stage.style.setProperty("--d", d + "px"); }
     function draw() {
       ring.style.transform = "translateZ(" + (-R) + "px) rotateY(" + ang + "deg)";
-      dishes.forEach(function (d, i) { var rel = ((i * STEP + ang) % 360 + 540) % 360 - 180, c = Math.cos(rel * Math.PI / 180); d.style.transform = "rotateY(" + (i * STEP) + "deg) translateZ(" + R + "px) rotateY(" + (-(i * STEP + ang)) + "deg)"; d.style.opacity = (0.35 + 0.65 * (c + 1) / 2).toFixed(2); d.style.zIndex = Math.round((c + 1) * 50); });
+      dishes.forEach(function (d, i) { var rel = ((i * STEP + ang) % 360 + 540) % 360 - 180, c = Math.cos(rel * Math.PI / 180); d.style.transform = "rotateY(" + (i * STEP) + "deg) translateZ(" + R + "px) rotateY(" + (-(i * STEP + ang)) + "deg)"; d.style.opacity = (0.3 + 0.7 * (c + 1) / 2).toFixed(2); d.style.zIndex = Math.round((c + 1) * 50); });
       var f = ((Math.round(-ang / STEP) % N) + N) % N;
       if (f !== front) { front = f; paintFront(); }
+    }
+    function caps() {
+      dishes.forEach(function (d) { var it = byId(d.getAttribute("data-id")), cap = d.querySelector(".x-dish__cap"); if (it && cap) cap.innerHTML = "<b>" + esc(it.name) + "</b><span>" + inr(it.price) + "</span>"; });
     }
     function paintFront() {
       var it = byId(dishes[front].getAttribute("data-id")), el = $("#x-front");
       if (!it) { el.innerHTML = ""; return; }
-      el.innerHTML = "<h3>" + esc(it.name) + "</h3><p>" + inr(it.price) + '</p><div data-ctl="' + it.id + '">' + ctlHTML(it.id) + "</div>";
+      el.innerHTML = '<div data-ctl="' + it.id + '">' + ctlHTML(it.id) + "</div>";
     }
+    function turn(dir) { ang = Math.round(ang / STEP) * STEP + dir * STEP; vel = 0; kick(); if (RM) draw(); }
     function loop() {
       raf = 0;
       if (!drag) {
-        if (Math.abs(vel) > 0.05) { ang += vel; vel *= 0.94; }
-        else { var target = Math.round(ang / STEP) * STEP, diff = target - ang; if (idle && Date.now() - touched > 3500) { ang -= 0.08; } else if (Math.abs(diff) > 0.05) ang += diff * 0.12; else ang = target; vel = 0; }
+        if (Math.abs(vel) > 0.05) { ang += vel; vel *= 0.92; }
+        else { var target = Math.round(ang / STEP) * STEP, diff = target - ang; if (idle && Date.now() - touched > 5000) { ang -= 0.035; } else if (Math.abs(diff) > 0.05) ang += diff * 0.08; else ang = target; vel = 0; }
       }
       draw(); if (!RM || drag || Math.abs(vel) > 0.05) raf = requestAnimationFrame(loop);
     }
@@ -735,14 +720,15 @@
     stage.addEventListener("pointermove", function (e) { if (!drag) return; var dx = e.clientX - lastX; lastX = e.clientX; ang += dx * 0.35; vel = dx * 0.35; touched = Date.now(); });
     function up() { if (!drag) return; drag = false; kick(); }
     stage.addEventListener("pointerup", up); stage.addEventListener("pointercancel", up);
-    stage.addEventListener("keydown", function (e) { if (e.key === "ArrowLeft" || e.key === "ArrowRight") { e.preventDefault(); ang = Math.round(ang / STEP) * STEP + (e.key === "ArrowLeft" ? STEP : -STEP); vel = 0; kick(); if (RM) draw(); } });
+    stage.addEventListener("keydown", function (e) { if (e.key === "ArrowLeft" || e.key === "ArrowRight") { e.preventDefault(); turn(e.key === "ArrowLeft" ? 1 : -1); } });
+    $("#x-prev").addEventListener("click", function () { turn(1); });
+    $("#x-next").addEventListener("click", function () { turn(-1); });
     window.addEventListener("resize", function () { size(); draw(); });
     size(); draw(); kick();
-    return { refresh: function () { front = -1; draw(); } };
+    return { refresh: function () { caps(); front = -1; draw(); } };
   })();
 
   /* ---------- menu ---------- */
-  var BEV_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12l-1.5 17a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1L6 3zM6.5 8h11M10 12h.01M13 15h.01M11 17h.01"/></svg>';
   function catId(c) { return "cat-" + slug(c); }
   function renderMenu() {
     var cats = CATS.slice(); state.menu.forEach(function (m) { if (cats.indexOf(m.category) < 0) cats.push(m.category); });
@@ -750,16 +736,15 @@
     cats.forEach(function (c) {
       var items = state.menu.filter(function (m) { return m.category === c; }).sort(function (a, b) { return a.sort - b.sort; });
       if (!items.length) return;
-      var k = CAT_IMG[c], icon = k ? '<img src="' + imgSrc(k) + '" alt="" />' : BEV_ICON;
       tabs += '<a href="#' + catId(c) + '" data-tab="' + catId(c) + '">' + esc(c) + "</a>";
-      html += '<section class="x-cat" id="' + catId(c) + '"><div class="x-cat__head"><span class="x-plate">' + icon + "</span><div><h3>" + esc(c) + "</h3><small>" + items.length + (items.length === 1 ? " dish" : " dishes") + '</small></div></div><div class="x-grid">';
+      html += '<section class="x-cat" id="' + catId(c) + '"><div class="x-cat__head"><h3>' + esc(c) + "</h3><small>" + items.length + (items.length === 1 ? " dish" : " dishes") + '</small></div><div class="x-grid">';
       items.forEach(function (m) {
         var own = !!photo(m.img);
         html += '<article class="x-item' + (m.available ? "" : " is-out") + '" data-q="' + esc((m.name + " " + (m.desc || "")).toLowerCase()) + '" data-veg="' + (m.veg ? 1 : 0) + '">' +
           '<button class="x-item__ph" type="button" data-open="' + esc(m.id) + '" aria-label="View ' + esc(m.name) + '">' +
           '<img src="' + esc(dishSrc(m)) + '" alt="' + esc(m.name) + '" loading="lazy" decoding="async"' + (own ? "" : ' class="is-plate"') + " />" +
           '<span class="x-vd' + (m.veg ? " is-veg" : "") + '" role="img" aria-label="' + (m.veg ? "Veg" : "Non-veg") + '"></span>' +
-          (m.tag ? '<span class="x-rib' + (/chef/i.test(m.tag) ? " x-rib--chef" : "") + '">' + esc(m.tag) + "</span>" : "") +
+          ribbon(m.tag) +
           (m.available ? "" : '<span class="x-out"><span>Sold out</span></span>') + "</button>" +
           '<div class="x-item__body"><h4>' + esc(m.name) + "</h4>" + (m.desc ? '<p class="x-desc">' + esc(m.desc) + "</p>" : "") +
           '<div class="x-item__foot"><p class="x-price">' + inr(m.price) + '</p><div class="x-ctl" data-ctl="' + m.id + '">' + ctlHTML(m.id) + "</div></div></div></article>";
@@ -794,18 +779,6 @@
     }, { rootMargin: "-35% 0px -60% 0px" });
     $$(".x-cat").forEach(function (s) { spyIO.observe(s); });
   }
-  /* 3D tilt + sheen on cards */
-  var menuEl = $("#x-menu");
-  if (!RM) {
-    menuEl.addEventListener("pointermove", function (e) {
-      if (e.pointerType === "touch") return;
-      var c = e.target.closest(".x-item"); if (!c) return;
-      var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-      c.style.setProperty("--ry", ((x - 0.5) * 12) + "deg"); c.style.setProperty("--rx", ((0.5 - y) * 12) + "deg");
-      c.style.setProperty("--mx", x * 100 + "%"); c.style.setProperty("--my", y * 100 + "%");
-    });
-    menuEl.addEventListener("pointerout", function (e) { var c = e.target.closest(".x-item"); if (c && !c.contains(e.relatedTarget)) { c.style.setProperty("--rx", "0deg"); c.style.setProperty("--ry", "0deg"); } });
-  }
 
   /* ---------- drawer: cart, checkout, success ---------- */
   var drawerView = "cart", form = { type: "delivery", payment: "cod" };
@@ -819,7 +792,7 @@
     var m = byId(sheet.id), d = $("#x-drawer"); if (!m) { closeDrawer(); return; }
     var h = head(esc(m.name)) + '<img class="x-sheet__ph' + (m.available ? "" : " is-out") + '" src="' + esc(dishSrc(m)) + '" alt="' + esc(m.name) + '" decoding="async">' +
       '<div class="x-sheet__tags"><span class="x-vd' + (m.veg ? " is-veg" : "") + '"></span><span>' + (m.veg ? "Veg" : "Non-veg") + " · " + esc(m.category) + "</span>" +
-      (m.tag ? '<span class="x-rib' + (/chef/i.test(m.tag) ? " x-rib--chef" : "") + '">' + esc(m.tag) + "</span>" : "") + "</div>" +
+      ribbon(m.tag) + "</div>" +
       (m.desc ? '<p class="x-sheet__desc">' + esc(m.desc) + "</p>" : "");
     if (!m.available) h += '<div class="x-sheet__buy"><p class="x-sheet__price">' + inr(m.price) + '</p><span class="x-sold">Sold out</span></div>';
     else {
@@ -832,7 +805,7 @@
   }
   $("#x-menu").addEventListener("click", function (e) { var o = e.target.closest("[data-open]"); if (o) openDish(o.getAttribute("data-open")); });
   function blockMsg() {
-    if (!isOpen()) return "We're closed right now. Online orders open daily 11:00 AM – 11:00 PM.";
+    if (!isOpen()) return "We're closed now. Online orders are taken from 11 am to 11 pm.";
     if (state.settings.accepting === false) return "Online orders are paused right now. Please call " + PHONE + ".";
     return "";
   }
@@ -845,7 +818,7 @@
     if (!t.count) { d.innerHTML = head("Your cart") + '<p class="x-empty">Your cart is empty.</p><a class="x-btn x-btn--gold" style="width:100%" href="#menu" data-close>Browse the menu</a>'; return; }
     var h = head("Your cart");
     t.lines.forEach(function (l) { h += '<div class="x-line"><span class="x-thumb"><img src="' + esc(l.src) + '" alt="" decoding="async"><span class="x-vd' + (l.veg ? " is-veg" : "") + '" role="img" aria-label="' + (l.veg ? "Veg" : "Non-veg") + '"></span></span><div>' + esc(l.name) + "<small>" + inr(l.price) + " × " + l.qty + " = " + inr(l.price * l.qty) + '</small></div><div data-ctl="' + l.id + '">' + ctlHTML(l.id) + "</div></div>"; });
-    h += sumHTML(t, form.type === "delivery") + '<p class="x-note">Delivery charges confirmed on call.</p>';
+    h += sumHTML(t, form.type === "delivery") + '<p class="x-note">Delivery charge confirmed on call.</p>';
     if (msg) h += '<p class="x-warn" style="margin-top:12px">' + esc(msg) + "</p>";
     else if (t.sub < min) h += '<p class="x-warn" style="margin-top:12px">Minimum order is ' + inr(min) + ". Add " + inr(min - t.sub) + " more.</p>";
     h += '<button class="x-btn x-btn--gold" type="button" style="width:100%;margin-top:14px" data-go="checkout"' + (msg || t.sub < min ? " disabled" : "") + ">Checkout · " + inr(t.total) + "</button>";
@@ -855,14 +828,14 @@
   function renderCheckout() {
     var t = totals(form.type), d = $("#x-drawer");
     d.innerHTML = head("Checkout") + '<form id="x-cof" novalidate>' +
-      '<div class="x-field">Order type<div class="x-seg">' + radio("type", "delivery", "Home Delivery") + radio("type", "takeaway", "Takeaway") + radio("type", "dinein", "Dine-in") + "</div></div>" +
+      '<div class="x-field">Order type<div class="x-seg">' + radio("type", "delivery", "Home delivery") + radio("type", "takeaway", "Takeaway") + radio("type", "dinein", "Dine-in") + "</div></div>" +
       '<label class="x-field">Your name<input name="name" autocomplete="name" required value="' + esc(form.name || "") + '"></label>' +
       '<label class="x-field">Mobile number<input name="phone" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="10 digits" required value="' + esc(form.phone || "") + '"></label>' +
       (form.type === "delivery" ? '<label class="x-field">Delivery address<textarea name="address" autocomplete="street-address" required>' + esc(form.address || "") + "</textarea></label>" : "") +
       (form.type === "dinein" ? '<label class="x-field">Table number<input name="table" required value="' + esc(form.table || "") + '"></label>' : "") +
       '<label class="x-field">Notes (optional)<textarea name="notes" placeholder="Less spicy, extra onion…">' + esc(form.notes || "") + "</textarea></label>" +
       '<div class="x-field">Payment<div class="x-seg">' + radio("payment", "cod", "Cash") + radio("payment", "upi", "UPI on delivery") + "</div></div>" +
-      sumHTML(t, form.type === "delivery") + '<p class="x-note">Delivery charges confirmed on call.</p>' +
+      sumHTML(t, form.type === "delivery") + '<p class="x-note">Delivery charge confirmed on call.</p>' +
       '<p class="x-err" id="x-coerr" role="alert"></p><div style="display:flex;gap:10px"><button class="x-btn" type="button" data-go="cart">Back</button><button class="x-btn x-btn--gold" type="submit" style="flex:1">Place order · ' + inr(t.total) + "</button></div></form>";
   }
   function grab() { var f = $("#x-cof"); if (!f) return; ["name", "phone", "address", "table", "notes"].forEach(function (k) { if (f[k]) form[k] = f[k].value; }); }
@@ -915,17 +888,11 @@
     state.cart = {}; store.set("ab_cart", {}); paintCtls(); paintCartBar(); drawerView = "success";
     store.set("ab_last", { no: "AB-" + id, phone: o.phone });
     var items = o.items.map(function (i) { return "<div><span>" + i.qty + " × " + esc(i.name) + "</span><span>" + inr(i.price * i.qty) + "</span></div>"; }).join("");
-    $("#x-drawer").innerHTML = head("Order placed") + '<div class="x-success"><div class="x-success__plate"><img src="' + imgSrc("biryani") + '" alt=""></div><h3>Thank you, ' + esc(o.customer_name.split(" ")[0]) + '!</h3><p class="x-note">Your order number</p><p class="x-ordno">AB-' + esc(id) + '</p><p class="x-note">' + TYPE_LABEL[o.order_type] + " · " + (o.payment === "upi" ? "UPI on delivery" : "Cash") + (o.table_no ? " · Table " + esc(o.table_no) : "") + "</p></div>" +
+    $("#x-drawer").innerHTML = head("Order placed") + '<div class="x-success"><div class="x-success__plate"><img src="' + imgSrc("biryani") + '" alt=""></div><h3>Thanks, ' + esc(o.customer_name.split(" ")[0]) + '. We have your order.</h3><p class="x-note">Your order number</p><p class="x-ordno">AB-' + esc(id) + '</p><p class="x-note">' + TYPE_LABEL[o.order_type] + " · " + (o.payment === "upi" ? "UPI on delivery" : "Cash") + (o.table_no ? " · Table " + esc(o.table_no) : "") + "</p></div>" +
       '<div class="x-sum">' + items + '<div class="is-total"><span>Total</span><span>' + inr(o.total) + "</span></div></div>" +
       '<p style="text-align:center;margin:12px 0">Questions? Call <a class="x-gold x-nowrap" href="tel:+918314203229">' + PHONE + "</a></p>" +
       '<a class="x-btn x-btn--gold" style="width:100%" href="#track" data-close data-track="AB-' + esc(id) + '">Track this order</a>';
     var tf = $("#x-trackf"); tf.no.value = "AB-" + id; tf.phone.value = o.phone;
-    if (!RM) confetti();
-  }
-  function confetti() {
-    var c = document.createElement("div"), cols = ["#d9a641", "#f3d27a", "#b3202c", "#1f8a64", "#f6ecd6"]; c.className = "x-confetti";
-    for (var i = 0; i < 80; i++) { var p = document.createElement("i"); p.style.left = Math.random() * 100 + "%"; p.style.background = cols[i % 5]; p.style.animationDelay = Math.random() * 0.6 + "s"; p.style.animationDuration = 1.8 + Math.random() * 1.6 + "s"; c.appendChild(p); }
-    document.body.appendChild(c); setTimeout(function () { c.remove(); }, 4200);
   }
   $$("[data-order]").forEach(function (a) { a.addEventListener("click", function () { if (!canOrder()) toast(blockMsg()); }); });
 
@@ -998,7 +965,7 @@
     $("#x-atabs").innerHTML = ""; $("#x-logout").hidden = true;
     abody.innerHTML = '<form class="x-panel x-glass" id="x-login" style="margin-top:8vh" novalidate><h2 class="x-serif" style="font-size:28px;margin-bottom:6px">Staff login</h2><p class="x-note" style="margin-bottom:16px">Orders, sales, menu and settings.</p>' +
       (LIVE ? '<label class="x-field">Email<input name="email" type="email" autocomplete="username" required></label><label class="x-field">Password<input name="pw" type="password" autocomplete="current-password" required></label>'
-        : '<label class="x-field">PIN<input name="pin" type="password" inputmode="numeric" maxlength="8" autocomplete="off" required></label><p class="x-note">Demo PIN 1234 — set up Supabase for real logins.</p>') +
+        : '<label class="x-field">PIN<input name="pin" type="password" inputmode="numeric" maxlength="8" autocomplete="off" required></label><p class="x-warn">Demo mode: orders are saved only in this browser. Demo PIN is 1234. Set up Supabase for real logins.</p>') +
       '<p class="x-err" id="x-lerr" role="alert"></p><button class="x-btn x-btn--gold" style="width:100%" type="submit">Log in</button></form>';
     $("#x-login").addEventListener("submit", async function (e) {
       e.preventDefault(); unlockAudio();
@@ -1218,7 +1185,7 @@
   }
   route();
 
-  renderMenu(); paintCartBar(); paintLive(); reveal(document);
+  renderMenu(); paintCartBar(); paintLive();
   loadSettings(); loadMenu();
   setInterval(paintLive, 60000);
 })();
