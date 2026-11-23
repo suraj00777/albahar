@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Hotel Al-Bahar · Royal Biryani, Tandoor & Chinese · Belagavi</title>
+    <meta name="description" content="Hotel Al-Bahar, Camp, Belagavi. Veg & Non-Veg. Order biryani, tandoor and Chinese online for delivery, takeaway or dine-in." />
+    <meta name="theme-color" content="#0c1210" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --x-night: #0c1210; --x-night2: #131d19; --x-card: #18241f; --x-line: rgb(217 166 65 / 0.22);
+        --x-emerald: #0f5a43; --x-emerald2: #1f8a64; --x-gold: #d9a641; --x-gold2: #f3d27a;
+        --x-crimson: #b3202c; --x-cream: #f6ecd6; --x-muted: #c8bda5; --x-veg: #1fa35c; --x-nonveg: #d23a3a;
+        --x-serif: "Playfair Display", Georgia, serif; --x-ui: "Poppins", var(--sans);
+        --x-navh: 64px;
+      }
+      body { background: var(--x-night); color: var(--x-cream); font-family: var(--x-ui); }
+      .x-app { max-width: none; padding: 0; display: block; }
+      .x-app a { text-decoration: none; }
+      .x-app :focus-visible { outline: 2px solid var(--x-gold2); outline-offset: 3px; }
+      .x-wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; }
+      .x-serif { font-family: var(--x-serif); }
+      .x-gold { color: var(--x-gold2); }
+      .x-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: var(--tap); padding: 0 22px; border-radius: var(--r-pill); border: 1px solid var(--x-gold); background: transparent; color: var(--x-cream); font: 500 15px/1 var(--x-ui); cursor: pointer; transition: transform var(--dur-quick) var(--ease-out), background var(--dur-quick); }
+      .x-btn:hover { transform: translateY(-2px); background: rgb(217 166 65 / 0.12); }
+      .x-btn--gold { background: var(--x-gold2) linear-gradient(135deg, var(--x-gold2), var(--x-gold) 55%, #b9822a); color: #1d1405; border-color: transparent; box-shadow: 0 8px 30px rgb(217 166 65 / 0.3); }
+      .x-btn--gold:hover { background: var(--x-gold2) linear-gradient(135deg, #fbe39b, var(--x-gold2)); }
+      .x-btn--sm { min-height: var(--tap); padding: 0 14px; font-size: 13px; }
+      .x-tap { display: inline-flex; align-items: center; min-height: var(--tap); }
+      .x-btn[disabled] { opacity: .45; pointer-events: none; }
+      .x-prog { position: fixed; inset: 0 0 auto; height: 3px; z-index: 90; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--x-gold), var(--x-gold2)); }
+      .x-ann { position: relative; z-index: 31; background: var(--x-crimson); color: #fff; text-align: center; padding: 8px 16px; font-size: 14px; }
+      .x-ribbon { position: fixed; z-index: 95; right: 10px; top: calc(var(--x-navh) + 10px); background: var(--x-crimson); color: #fff; font: 600 12px/1 var(--x-ui); letter-spacing: .08em; text-transform: uppercase; padding: 7px 10px; border-radius: 8px; pointer-events: none; opacity: .92; }
+      /* nav */
+      .x-nav { position: sticky; top: 0; z-index: 30; height: var(--x-navh); display: flex; align-items: center; gap: 14px; padding: 0 16px; background: rgb(12 18 16 / 0.72); -webkit-backdrop-filter: var(--hark-blur); backdrop-filter: var(--hark-blur); border-bottom: 1px solid var(--x-line); }
+      .x-nav__brand { display: flex; align-items: center; gap: 10px; color: var(--x-cream); font: 700 18px/1 var(--x-serif); }
+      .x-badge3d { width: 74px; height: 38px; perspective: 300px; }
+      .x-badge3d div { width: 100%; height: 100%; transform-style: preserve-3d; animation: x-badge 6s ease-in-out infinite; }
+      .x-badge3d img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+      @keyframes x-badge { 0%,100% { transform: rotateY(-18deg) rotateX(6deg); } 50% { transform: rotateY(18deg) rotateX(-6deg); } }
+      .x-nav__links { display: flex; gap: 4px; margin-left: auto; }
+      .x-nav__links a { color: var(--x-muted); padding: 10px 12px; border-radius: var(--r-pill); font-size: 14px; }
+      .x-nav__links a:hover { color: var(--x-cream); background: rgb(246 236 214 / 0.06); }
+      .x-cartbtn { position: relative; }
+      .x-cartbtn b { position: absolute; top: -4px; right: -4px; min-width: 20px; height: 20px; border-radius: 10px; background: var(--x-crimson); color: #fff; font-size: 12px; display: grid; place-items: center; padding: 0 5px; }
+      @media (max-width: 760px) { .x-nav__links { display: none; } .x-nav .x-cartbtn { margin-left: auto; } .x-nav__brand span { display: none; } }
+      /* hero */
+      .x-hero { position: relative; min-height: calc(100svh - var(--x-navh)); overflow: hidden; display: grid; align-items: center; isolation: isolate; }
+      .x-hero__bg { position: absolute; inset: -6%; z-index: -3; will-change: transform; }
+      .x-hero__bg img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.1) brightness(.62); }
+      .x-hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: radial-gradient(ellipse at 70% 40%, transparent 0, rgb(12 18 16 / .55) 60%), linear-gradient(180deg, rgb(12 18 16 / .25), rgb(12 18 16 / .2) 50%, var(--x-night)); }
+      .x-steam { position: absolute; inset: 0; z-index: -1; pointer-events: none; will-change: transform; }
+      .x-steam i { position: absolute; bottom: -60px; width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(circle, rgb(255 255 255 / .16), transparent 65%); filter: blur(8px); animation: x-rise 9s linear infinite; opacity: 0; }
+      @keyframes x-rise { 0% { transform: translateY(0) scale(.6); opacity: 0; } 15% { opacity: .9; } 100% { transform: translateY(-80vh) translateX(40px) scale(2.2); opacity: 0; } }
+      .x-hero__grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; padding-block: 48px 72px; will-change: transform; }
+      .x-eyebrow { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--x-gold2); }
+      .x-hero h1 { font: 700 clamp(44px, 7vw, 84px)/1.02 var(--x-serif); margin: 14px 0 12px; color: var(--x-gold2); text-shadow: 0 2px 0 #9a6a1f, 0 10px 30px rgb(0 0 0 / .55); text-wrap: balance; }
+      .x-hero__tag { font: italic 600 clamp(19px, 2.4vw, 26px)/1.3 var(--x-serif); color: var(--x-cream); }
+      .x-hero__svc { margin-top: 10px; color: var(--x-muted); font-size: 15px; }
+      .x-hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 18px; }
+      .x-live { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: var(--r-pill); background: rgb(12 18 16 / .6); border: 1px solid var(--x-line); font-size: 14px; }
+      .x-live i { width: 9px; height: 9px; border-radius: 50%; background: var(--x-nonveg); box-shadow: 0 0 0 4px rgb(210 58 58 / .2); }
+      .x-live.is-open i { background: var(--x-veg); box-shadow: 0 0 0 4px rgb(31 163 92 / .25); animation: x-ping 2s infinite; }
+      @keyframes x-ping { 50% { box-shadow: 0 0 0 8px rgb(31 163 92 / 0); } }
+      .x-plaque { perspective: 1100px; justify-self: center; width: min(520px, 88vw); aspect-ratio: 900 / 464; animation: x-float 7s ease-in-out infinite; }
+      @keyframes x-float { 50% { transform: translateY(-14px); } }
+      .x-plaque__body { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .25s var(--ease-out); }
+      .x-plaque__body img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+      .x-plaque__layer { filter: brightness(.55) sepia(1) saturate(2.6) hue-rotate(-8deg); }
+      .x-plaque__shadow { position: absolute; left: 10%; right: 10%; bottom: -14%; height: 18%; border-radius: 50%; background: radial-gradient(rgb(0 0 0 / .6), transparent 70%); transform: translateZ(-60px); filter: blur(6px); }
+      .x-sheen { position: absolute; inset: 0; transform: translateZ(1px); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; background: linear-gradient(105deg, transparent 35%, rgb(255 244 200 / .55) 48%, transparent 60%) no-repeat; background-size: 250% 100%; animation: x-sheen 5.5s ease-in-out infinite; mix-blend-mode: screen; pointer-events: none; }
+      @keyframes x-sheen { 0% { background-position: 130% 0; } 55%,100% { background-position: -30% 0; } }
+      @media (max-width: 860px) { .x-hero__grid { grid-template-columns: 1fr; gap: 28px; padding-block: 28px 56px; text-align: center; } .x-hero__cta { justify-content: center; } .x-plaque { order: -1; width: min(360px, 82vw); } }
+      /* sections */
+      .x-sec { padding-block: 80px; position: relative; }
+      .x-sec__head { text-align: center; margin-bottom: 36px; }
+      .x-sec__head h2 { font: 700 clamp(30px, 4.4vw, 48px)/1.1 var(--x-serif); margin: 8px 0 10px; }
+      .x-sec__head p { color: var(--x-muted); }
+      .x-rv { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+      .x-rv.is-in { opacity: 1; transform: none; }
+      /* carousel */
+      .x-sig { background: radial-gradient(ellipse at 50% 70%, rgb(15 90 67 / .45), transparent 65%); }
+      .x-stage { position: relative; height: 400px; perspective: 1200px; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+      .x-stage:active { cursor: grabbing; }
+      .x-ring { position: absolute; left: 50%; top: 42%; width: 0; height: 0; transform-style: preserve-3d; }
+      .x-dish { position: absolute; width: var(--d, 200px); height: var(--d, 200px); margin: calc(var(--d, 200px) / -2) 0 0 calc(var(--d, 200px) / -2); transform-style: preserve-3d; }
+      .x-dish img { width: 100%; height: 100%; object-fit: contain; animation: x-spin 28s linear infinite; filter: drop-shadow(0 18px 24px rgb(0 0 0 / .55)); -webkit-box-reflect: below 4px linear-gradient(transparent 62%, rgb(255 255 255 / .18)); pointer-events: none; }
+      .x-dish::after { content: ""; position: absolute; left: 12%; right: 12%; bottom: -10%; height: 14%; border-radius: 50%; background: radial-gradient(rgb(217 166 65 / .35), transparent 70%); transform: rotateX(80deg); }
+      @keyframes x-spin { to { transform: rotate(360deg); } }
+      .x-front { text-align: center; min-height: 120px; }
+      .x-front h3 { font: 700 26px/1.2 var(--x-serif); }
+      .x-front p { color: var(--x-gold2); font-size: 20px; font-weight: 600; margin: 4px 0 12px; }
+      .x-hint { text-align: center; color: var(--x-muted); font-size: 13px; margin-top: 10px; }
+      @media (max-width: 640px) { .x-stage { height: 300px; } }
+      /* menu */
+      .x-tools { position: sticky; top: var(--x-navh); z-index: 20; background: rgb(12 18 16 / .9); -webkit-backdrop-filter: var(--hark-blur); backdrop-filter: var(--hark-blur); border-bottom: 1px solid var(--x-line); padding: 10px 0; }
+      .x-tools__row { display: flex; gap: 10px; align-items: center; }
+      .x-search { flex: 1; min-width: 0; min-height: var(--tap); border-radius: var(--r-pill); border: 1px solid var(--x-line); background: var(--x-night2); color: var(--x-cream); padding: 0 18px; font: 15px var(--x-ui); }
+      .x-switch { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); padding: 0 14px; border-radius: var(--r-pill); border: 1px solid var(--x-line); cursor: pointer; font-size: 14px; white-space: nowrap; }
+      .x-switch input { accent-color: var(--x-veg); width: 18px; height: 18px; }
+      .x-tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin-top: 10px; }
+      .x-tabs::-webkit-scrollbar { display: none; }
+      .x-tabs a { flex: none; display: inline-flex; align-items: center; min-height: var(--tap); box-sizing: border-box; padding: 0 14px; border-radius: var(--r-pill); color: var(--x-muted); font-size: 14px; border: 1px solid transparent; }
+      .x-tabs a.is-on { color: #1d1405; background: var(--x-gold2); }
+      .x-cat { padding-top: 34px; scroll-margin-top: calc(var(--x-navh) + 120px); }
+      .x-cat__head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+      .x-cat__head h3 { font: 700 26px/1.2 var(--x-serif); }
+      .x-cat__head small { color: var(--x-muted); display: block; font-size: 13px; }
+      .x-plate { width: 64px; height: 64px; flex: none; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, rgb(217 166 65 / .2), transparent 70%); }
+      .x-plate img { width: 64px; height: 64px; object-fit: contain; animation: x-spin 18s linear infinite; }
+      .x-plate svg { width: 34px; height: 34px; color: var(--x-gold2); }
+      .x-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; perspective: 900px; }
+      .x-item { position: relative; display: grid; grid-template-columns: auto 1fr auto; gap: 6px 12px; align-items: center; padding: 16px; border-radius: var(--r-m); background: linear-gradient(160deg, var(--x-card), var(--x-night2)); border: 1px solid var(--x-line); transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .3s var(--ease-out), box-shadow .3s; overflow: hidden; }
+      .x-item:hover { box-shadow: 0 16px 40px rgb(0 0 0 / .45); }
+      .x-item::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgb(243 210 122 / .14), transparent 60%); opacity: 0; transition: opacity .3s; }
+      .x-item:hover::after { opacity: 1; }
+      .x-item h4 { margin: 0; font: 500 15px/1.3 var(--x-ui); }
+      .x-item .x-price { color: var(--x-gold2); font-weight: 600; font-size: 15px; grid-column: 2; }
+      .x-item .x-ctl { grid-row: 1 / span 2; grid-column: 3; }
+      .x-item.is-out { opacity: .45; filter: grayscale(1); }
+      .x-vd { width: 16px; height: 16px; border: 2px solid var(--x-nonveg); border-radius: 3px; display: grid; place-items: center; flex: none; }
+      .x-vd::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--x-nonveg); }
+      .x-vd.is-veg { border-color: var(--x-veg); }
+      .x-vd.is-veg::after { background: var(--x-veg); }
+      .x-add { min-width: 88px; min-height: var(--tap); border-radius: 10px; border: 1px solid var(--x-gold); background: #221d10; color: var(--x-gold2); font: 600 14px var(--x-ui); letter-spacing: .06em; cursor: pointer; }
+      .x-add:hover { background: #2e2715; }
+      .x-step { display: inline-grid; grid-template-columns: 44px 28px 44px; align-items: center; min-height: var(--tap); border-radius: 10px; background: var(--x-gold2); color: #1d1405; font-weight: 600; text-align: center; }
+      .x-step button { height: var(--tap); border: 0; background: none; color: inherit; font: 600 20px var(--x-ui); cursor: pointer; }
+      .x-sold { font-size: 13px; color: var(--x-muted); }
+      .x-empty { text-align: center; color: var(--x-muted); padding: 30px; }
+      /* about */
+      .x-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+      .x-card { padding: 22px; border-radius: var(--r-l); background: linear-gradient(160deg, rgb(15 90 67 / .35), var(--x-night2)); border: 1px solid var(--x-line); }
+      .x-card h3 { font: 700 20px/1.2 var(--x-serif); margin: 10px 0 6px; }
+      .x-card p { color: var(--x-muted); font-size: 14px; }
+      .x-card svg { width: 30px; height: 30px; color: var(--x-gold2); }
+      .x-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 24px; }
+      .x-chips span { padding: 8px 16px; border-radius: var(--r-pill); border: 1px solid var(--x-gold); color: var(--x-gold2); font-size: 14px; }
+      /* forms */
+      .x-panel { max-width: 560px; margin: 0 auto; padding: 24px; border-radius: var(--r-l); background: var(--x-night2); border: 1px solid var(--x-line); }
+      .x-field { display: grid; gap: 6px; margin-bottom: 14px; font-size: 14px; color: var(--x-muted); }
+      .x-field input, .x-field textarea, .x-field select, .x-in { min-height: var(--tap); border-radius: 12px; border: 1px solid var(--x-line); background: var(--x-night); color: var(--x-cream); padding: 10px 14px; font: 15px var(--x-ui); width: 100%; box-sizing: border-box; }
+      .x-field textarea { min-height: 72px; resize: vertical; }
+      .x-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .x-seg { display: flex; flex-wrap: wrap; gap: 8px; }
+      .x-seg label { flex: 1; min-width: 96px; position: relative; }
+      .x-seg input { position: absolute; opacity: 0; }
+      .x-seg span { display: flex; align-items: center; justify-content: center; min-height: var(--tap); padding: 0 10px; border-radius: 12px; border: 1px solid var(--x-line); color: var(--x-cream); font-size: 14px; cursor: pointer; text-align: center; }
+      .x-seg input:checked + span { background: var(--x-emerald); border-color: var(--x-gold); }
+      .x-seg input:focus-visible + span { outline: 2px solid var(--x-gold2); }
+      .x-err { color: #ff8a8a; font-size: 14px; min-height: 1em; margin: 6px 0; }
+      .x-note { color: var(--x-muted); font-size: 13px; }
+      .x-warn { padding: 12px 14px; border-radius: 12px; background: rgb(179 32 44 / .2); border: 1px solid rgb(179 32 44 / .5); font-size: 14px; margin-bottom: 12px; }
+      /* tracking timeline */
+      .x-tl { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 0; }
+      .x-tl li { position: relative; padding: 0 0 18px 34px; color: var(--x-muted); }
+      .x-tl li::before { content: ""; position: absolute; left: 6px; top: 4px; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--x-line); background: var(--x-night); }
+      .x-tl li::after { content: ""; position: absolute; left: 13px; top: 22px; bottom: 0; width: 2px; background: var(--x-line); }
+      .x-tl li:last-child::after { display: none; }
+      .x-tl li.is-done { color: var(--x-cream); }
+      .x-tl li.is-done::before { background: var(--x-veg); border-color: var(--x-veg); }
+      .x-tl li.is-now::before { background: var(--x-gold2); border-color: var(--x-gold2); box-shadow: 0 0 0 5px rgb(243 210 122 / .25); }
+      /* visit */
+      .x-visit { display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; }
+      .x-visit dl { display: grid; gap: 14px; margin: 0; }
+      .x-visit dt { color: var(--x-gold2); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
+      .x-visit dd { margin: 4px 0 0; font-size: 16px; }
+      .x-nowrap { white-space: nowrap; }
+      @media (max-width: 760px) { .x-visit { grid-template-columns: 1fr; } }
+      /* footer */
+      .x-foot { border-top: 1px solid var(--x-line); background: #090e0c; padding: 48px 0 110px; font-size: 14px; color: var(--x-muted); }
+      .x-foot__grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 28px; }
+      .x-foot h4 { color: var(--x-gold2); font: 600 15px var(--x-ui); margin: 0 0 10px; }
+      .x-foot a { color: var(--x-cream); }
+      .x-foot ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+      .x-foot ul a { display: inline-flex; align-items: center; min-height: var(--tap); }
+      .x-foot__logo { width: 140px; margin-bottom: 12px; }
+      .x-foot__copy { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--x-line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+      .x-foot__staff { color: var(--x-muted) !important; opacity: .75; }
+      @media (max-width: 760px) { .x-foot__grid { grid-template-columns: 1fr; } }
+      /* cart */
+      .x-cartbar { position: fixed; z-index: 40; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 140%); width: min(560px, calc(100% - 28px)); display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 20px; border-radius: var(--r-pill); background: linear-gradient(135deg, var(--x-emerald), #0a3d2e); border: 1px solid var(--x-gold); box-shadow: 0 16px 40px rgb(0 0 0 / .5); transition: transform .45s var(--ease-out); }
+      .x-cartbar.is-on { transform: translate(-50%, 0); }
+      .x-callfab { position: fixed; z-index: 39; right: 16px; bottom: calc(86px + env(safe-area-inset-bottom, 0px)); width: 56px; height: 56px; border-radius: 50%; display: none; place-items: center; background: var(--x-crimson); color: #fff; box-shadow: 0 10px 30px rgb(0 0 0 / .5); }
+      .x-callfab svg { width: 24px; height: 24px; }
+      @media (max-width: 760px) { .x-callfab { display: grid; } }
+      .x-scrim { position: fixed; inset: 0; z-index: 60; background: rgb(0 0 0 / .6); opacity: 0; pointer-events: none; transition: opacity .3s; }
+      .x-scrim.is-on { opacity: 1; pointer-events: auto; }
+      .x-drawer { position: fixed; z-index: 61; left: 50%; bottom: 0; width: min(560px, 100%); max-height: 92svh; overflow: auto; transform: translate(-50%, 105%); transition: transform .45s var(--ease-out); background: var(--x-night2); border: 1px solid var(--x-line); border-bottom: 0; border-radius: var(--r-l) var(--r-l) 0 0; padding: 18px 20px calc(24px + env(safe-area-inset-bottom, 0px)); box-sizing: border-box; }
+      .x-drawer.is-on { transform: translate(-50%, 0); }
+      .x-drawer__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+      .x-drawer__head h3 { font: 700 24px var(--x-serif); }
+      .x-x { width: var(--tap); height: var(--tap); border-radius: 50%; border: 1px solid var(--x-line); background: none; color: var(--x-cream); font-size: 22px; cursor: pointer; }
+      .x-line { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--x-line); }
+      .x-line small { color: var(--x-muted); display: block; }
+      .x-sum { display: grid; gap: 6px; margin: 14px 0; }
+      .x-sum div { display: flex; justify-content: space-between; }
+      .x-sum .is-total { font-size: 19px; font-weight: 600; color: var(--x-gold2); padding-top: 8px; border-top: 1px solid var(--x-line); }
+      .x-success { text-align: center; padding: 10px 0; }
+      .x-success__plate { width: 150px; height: 150px; margin: 6px auto 14px; perspective: 600px; }
+      .x-success__plate img { width: 100%; height: 100%; object-fit: contain; animation: x-flip 1.4s var(--ease-out) both; }
+      @keyframes x-flip { from { transform: rotateY(-540deg) scale(.3); opacity: 0; } to { transform: none; opacity: 1; } }
+      .x-success h3 { font: 700 26px var(--x-serif); }
+      .x-success .x-ordno { font: 700 34px var(--x-serif); color: var(--x-gold2); margin: 6px 0; }
+      .x-confetti { position: fixed; inset: 0; z-index: 80; pointer-events: none; overflow: hidden; }
+      .x-confetti i { position: absolute; top: -20px; width: 9px; height: 14px; border-radius: 2px; animation: x-fall 2.6s ease-in forwards; }
+      @keyframes x-fall { to { transform: translateY(110vh) rotate(720deg); } }
+      /* admin */
+      .x-admin { position: fixed; inset: 0; z-index: 100; overflow: auto; background: radial-gradient(ellipse at 20% 0, rgb(15 90 67 / .55), transparent 60%), #0a100e; display: none; }
+      .x-admin.is-on { display: block; }
+      .x-admin__bar { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: rgb(10 16 14 / .8); -webkit-backdrop-filter: var(--hark-blur); backdrop-filter: var(--hark-blur); border-bottom: 1px solid var(--x-line); flex-wrap: wrap; }
+      .x-admin__bar img { width: 64px; }
+      .x-atabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+      .x-atabs button { flex: none; min-height: 40px; padding: 0 14px; border-radius: var(--r-pill); border: 0; background: none; color: var(--x-muted); font: 500 14px var(--x-ui); cursor: pointer; }
+      .x-atabs button.is-on { background: rgb(246 236 214 / .1); color: var(--x-cream); }
+      .x-atabs b { display: inline-grid; place-items: center; min-width: 20px; height: 20px; border-radius: 10px; background: var(--x-crimson); color: #fff; font-size: 12px; margin-left: 6px; padding: 0 5px; }
+      .x-abody { padding: 18px 16px 60px; max-width: 1400px; margin: 0 auto; }
+      .x-glass { background: rgb(24 36 31 / .65); border: 1px solid var(--x-line); border-radius: var(--r-m); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+      .x-kanban { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(270px, 1fr); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; }
+      .x-col { scroll-snap-align: start; padding: 10px; min-height: 200px; }
+      .x-col h4 { margin: 2px 4px 10px; font: 600 14px var(--x-ui); color: var(--x-gold2); display: flex; justify-content: space-between; }
+      .x-ocard { padding: 12px; border-radius: 12px; background: var(--x-night); border: 1px solid var(--x-line); margin-bottom: 10px; font-size: 14px; display: grid; gap: 6px; }
+      .x-ocard.is-new { border-color: var(--x-gold2); animation: x-pulse 1.6s ease-in-out infinite; }
+      @keyframes x-pulse { 50% { box-shadow: 0 0 0 6px rgb(243 210 122 / .18); } }
+      .x-ocard header { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+      .x-ocard ul { margin: 0; padding-left: 18px; color: var(--x-muted); }
+      .x-ocard .x-acts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+      .x-tag { font-size: 12px; padding: 3px 8px; border-radius: var(--r-pill); background: var(--x-emerald); color: var(--x-cream); }
+      .x-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 14px 0; }
+      .x-stats div { padding: 16px; }
+      .x-stats b { display: block; font: 700 28px var(--x-serif); color: var(--x-gold2); }
+      .x-stats span { color: var(--x-muted); font-size: 13px; }
+      .x-bars { display: flex; align-items: flex-end; gap: 4px; height: 160px; padding: 16px 12px 28px; }
+      .x-bars div { flex: 1; position: relative; background: linear-gradient(180deg, var(--x-gold2), var(--x-emerald2)); border-radius: 4px 4px 0 0; min-height: 2px; }
+      .x-bars span { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 12px; color: var(--x-muted); }
+      .x-mtable { width: 100%; border-collapse: collapse; font-size: 14px; }
+      .x-mtable th, .x-mtable td { padding: 6px; border-bottom: 1px solid var(--x-line); text-align: left; }
+      .x-mtable th[colspan] { color: var(--x-gold2); font: 700 18px var(--x-serif); padding-top: 18px; }
+      .x-mtable input[type=text], .x-mtable input[type=number] { min-height: 40px; border-radius: 10px; border: 1px solid var(--x-line); background: var(--x-night); color: var(--x-cream); padding: 0 10px; font: 14px var(--x-ui); width: 100%; box-sizing: border-box; }
+      .x-mtable input[type=checkbox] { width: 20px; height: 20px; accent-color: var(--x-emerald2); }
+      .x-scroll { overflow-x: auto; }
+      .x-ol { padding-left: 20px; line-height: 1.7; }
+      .x-ol code { background: var(--x-night); padding: 2px 6px; border-radius: 6px; font-size: 13px; }
+      .x-toast { position: fixed; z-index: 120; left: 50%; top: 18px; transform: translate(-50%, -150%); padding: 12px 18px; border-radius: var(--r-pill); background: var(--x-cream); color: #1d1405; font-weight: 500; transition: transform .35s var(--ease-out); }
+      .x-toast.is-on { transform: translate(-50%, 0); }
+      @media (prefers-reduced-motion: reduce) {
+        .x-app *, .x-app *::before, .x-app *::after { animation: none !important; transition: none !important; }
+        .x-rv { opacity: 1; transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page x-app" id="top">
+      <div class="x-prog" id="x-prog"></div>
+      <div class="x-ann" id="x-ann" hidden></div>
+      <div class="x-ribbon" id="x-ribbon" hidden>Demo mode</div>
+      <header class="x-nav">
+        <a class="x-nav__brand" href="#top" aria-label="Hotel Al-Bahar, home"><span class="x-badge3d"><div id="x-badge"></div></span><span>Al-Bahar</span></a>
+        <nav class="x-nav__links" aria-label="Sections">
+          <a href="#signature">Signature</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#track">Track order</a><a href="#visit">Visit</a>
+        </nav>
+        <button class="x-btn x-btn--sm x-cartbtn" id="x-navcart" type="button" aria-label="Open cart">Cart<b id="x-navcount" hidden>0</b></button>
+      </header>
+
+      <section class="x-hero" id="x-hero">
+        <div class="x-hero__bg" id="x-hbg"><img src="ab-hero.jpg" alt="" /></div>
+        <div class="x-steam" id="x-steam" aria-hidden="true"></div>
+        <div class="x-wrap x-hero__grid" id="x-hgrid">
+          <div>
+            <p class="x-eyebrow">Veg &amp; Non-Veg · Camp, Belagavi</p>
+            <h1>Hotel Al-Bahar</h1>
+            <p class="x-hero__tag">Royal flavours of Biryani, Tandoor &amp; Chinese</p>
+            <p class="x-hero__svc">Dine-in · Takeaway · Home Delivery</p>
+            <div class="x-hero__cta">
+              <a class="x-btn x-btn--gold" href="#menu" data-order>Order Online</a>
+              <a class="x-btn" href="#menu">View Menu</a>
+            </div>
+            <p class="x-live" id="x-live"><i></i><span>Checking hours…</span></p>
+          </div>
+          <div class="x-plaque" id="x-plaque">
+            <div class="x-plaque__body" id="x-pbody">
+              <div class="x-plaque__shadow"></div>
+              <img id="x-logo" src="ab-logo.png" alt="Hotel Al-Bahar logo" />
+              <div class="x-sheen" id="x-sheen"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="x-sec x-sig" id="signature">
+        <div class="x-wrap">
+          <div class="x-sec__head x-rv">
+            <p class="x-eyebrow">From our kitchen</p>
+            <h2>Signature dishes</h2>
+            <p>Drag or swipe to turn the table.</p>
+          </div>
+          <div class="x-stage x-rv" id="x-stage" role="region" aria-label="Signature dishes carousel. Use left and right arrow keys to turn." tabindex="0">
+            <div class="x-ring" id="x-ring">
+              <div class="x-dish" data-id="chicken-dum-biryani"><img id="img-biryani" src="ab-biryani.png" alt="Chicken dum biryani" /></div>
+              <div class="x-dish" data-id="chicken-tandoori"><img id="img-tandoori" src="ab-tandoori.png" alt="Chicken tandoori" /></div>
+              <div class="x-dish" data-id="kaju-paneer-masala"><img id="img-paneer" src="ab-paneer.png" alt="Kaju paneer masala" /></div>
+              <div class="x-dish" data-id="butter-naan"><img id="img-naan" src="ab-naan.png" alt="Butter naan and paratha" /></div>
+              <div class="x-dish" data-id="chicken-lollipop"><img id="img-lollipop" src="ab-lollipop.png" alt="Chicken lollipop" /></div>
+              <div class="x-dish" data-id="chicken-schezwan-fried-rice"><img id="img-friedrice" src="ab-friedrice.png" alt="Chicken schezwan fried rice" /></div>
+            </div>
+          </div>
+          <div class="x-front" id="x-front" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="x-sec" id="menu" style="padding-top: 40px">
+        <div class="x-wrap x-sec__head x-rv">
+          <p class="x-eyebrow">Order online</p>
+          <h2>The menu</h2>
+          <p>Prices in ₹. <span class="x-nowrap"><span class="x-vd is-veg" style="display: inline-grid; vertical-align: -3px"></span> Veg</span> &nbsp; <span class="x-nowrap"><span class="x-vd" style="display: inline-grid; vertical-align: -3px"></span> Non-veg</span></p>
+        </div>
+        <div class="x-tools">
+          <div class="x-wrap">
+            <div class="x-tools__row">
+              <input class="x-search" id="x-q" type="search" placeholder="Search biryani, naan, kabab…" aria-label="Search the menu" />
+              <label class="x-switch"><input type="checkbox" id="x-vegonly" /> Veg only</label>
+            </div>
+            <nav class="x-tabs" id="x-tabs" aria-label="Menu categories"></nav>
+          </div>
+        </div>
+        <div class="x-wrap" id="x-menu"></div>
+      </section>
+
+      <section class="x-sec" id="about">
+        <div class="x-wrap">
+          <div class="x-sec__head x-rv">
+            <p class="x-eyebrow">About us</p>
+            <h2>Eat in, take away, or have it delivered</h2>
+            <p>Biryani from the handi, kebabs off the tandoor and Chinese from the wok, in Camp, Belagavi.</p>
+          </div>
+          <div class="x-cards">
+            <div class="x-card x-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18M17 21V3c-2 1-3 4-3 8h3"/></svg><h3>Dine-in</h3><p>Family seating, served hot from the kitchen.</p></div>
+            <div class="x-card x-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 13H6L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg><h3>Takeaway</h3><p>Order ahead and pick up at the counter.</p></div>
+            <div class="x-card x-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Home Delivery</h3><p>Across Belagavi. Delivery charges confirmed on call.</p></div>
+            <div class="x-card x-rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg><h3>Online Ordering</h3><p>Order here, pay cash or UPI, and track it live.</p></div>
+          </div>
+          <div class="x-chips x-rv"><span>Biryani</span><span>Mughlai</span><span>Chinese</span><span>Kebabs</span><span>Tandoori</span><span>Non-Veg</span><span>Veg</span></div>
+        </div>
+      </section>
+
+      <section class="x-sec" id="track">
+        <div class="x-wrap">
+          <div class="x-sec__head x-rv">
+            <p class="x-eyebrow">Already ordered?</p>
+            <h2>Track my order</h2>
+          </div>
+          <form class="x-panel x-rv" id="x-trackf" novalidate>
+            <div class="x-row2">
+              <label class="x-field">Order number<input name="no" placeholder="AB-12" required /></label>
+              <label class="x-field">Phone<input name="phone" inputmode="numeric" maxlength="10" placeholder="10-digit mobile" required /></label>
+            </div>
+            <button class="x-btn x-btn--gold" type="submit" style="width: 100%">Track order</button>
+            <p class="x-err" id="x-trackerr" role="alert"></p>
+            <div id="x-trackout" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="x-sec" id="visit">
+        <div class="x-wrap">
+          <div class="x-sec__head">
+            <p class="x-eyebrow">Visit us</p>
+            <h2>Find us in Camp, Belagavi</h2>
+          </div>
+          <div class="x-visit">
+            <div class="x-panel" style="max-width: none; margin: 0">
+              <dl>
+                <div><dt>Address</dt><dd>Hotel Al-Bahar, VG44+MQM, Khanapur Road, Behind Petrol Pump, Camp, Belagavi Cantonment, Belagavi, Karnataka 590001</dd></div>
+                <div><dt>Phone</dt><dd><a class="x-nowrap x-gold x-tap" href="tel:+918314203229">+91 831 420 3229</a></dd></div>
+                <div><dt>Hours</dt><dd>Monday – Sunday, 11:00 AM – 11:00 PM</dd></div>
+              </dl>
+            </div>
+            <div class="x-panel" style="max-width: none; margin: 0; display: grid; gap: 12px; align-content: center">
+              <p class="x-live" id="x-live2" style="justify-self: start"><i></i><span></span></p>
+              <a class="x-btn x-btn--gold" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20Al-Bahar%20Khanapur%20Road%20Camp%20Belagavi" target="_blank" rel="noopener">Get directions</a>
+              <a class="x-btn" href="tel:+918314203229">Call now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div>
+              <img class="x-foot__logo" id="x-flogo" alt="Hotel Al-Bahar" hidden />
+              <p>VG44+MQM, Khanapur Road, Behind Petrol Pump, Camp, Belagavi Cantonment, Belagavi, Karnataka 590001</p>
+              <p style="margin-top: 8px"><a class="x-nowrap x-tap" href="tel:+918314203229">+91 831 420 3229</a></p>
+              <p style="margin-top: 4px">Mon – Sun, 11:00 AM – 11:00 PM</p>
+            </div>
+            <div>
+              <h4>Quick links</h4>
+              <ul><li><a href="#signature">Signature dishes</a></li><li><a href="#menu">Menu &amp; order</a></li><li><a href="#track">Track my order</a></li><li><a href="#visit">Visit us</a></li></ul>
+            </div>
+            <div>
+              <h4>We serve</h4>
+              <ul><li>Dine-in</li><li>Takeaway</li><li>Home Delivery</li><li><a class="x-foot__staff" href="#admin">Staff login</a></li></ul>
+            </div>
+          </div>
+          <div class="x-foot__copy"><span>© 2026 Hotel Al-Bahar, Belagavi</span><span>Veg &amp; Non-Veg</span></div>
+        </div>
+      </footer>
+
+      <a class="x-callfab" href="tel:+918314203229" aria-label="Call Hotel Al-Bahar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></a>
+      <div class="x-cartbar" id="x-cartbar"><span id="x-cbtext">0 items · ₹0</span><button class="x-btn x-btn--gold x-btn--sm" type="button" id="x-cbopen">View cart</button></div>
+      <div class="x-scrim" id="x-scrim"></div>
+      <aside class="x-drawer" id="x-drawer" role="dialog" aria-modal="true" aria-label="Your order"></aside>
+      <div class="x-toast" id="x-toast" role="status"></div>
+
+      <div class="x-admin" id="x-admin" role="dialog" aria-label="Staff admin panel">
+        <div class="x-admin__bar">
+          <img id="x-alogo" alt="Al-Bahar" />
+          <strong class="x-serif" style="font-size: 18px">Staff</strong>
+          <div class="x-atabs" id="x-atabs" role="tablist"></div>
+          <a class="x-btn x-btn--sm" href="#top" id="x-aexit">View site</a>
+          <button class="x-btn x-btn--sm" type="button" id="x-logout" hidden>Log out</button>
+        </div>
+        <div class="x-abody" id="x-abody"></div>
+      </div>
+    </div>
+    <script src="hark.js"></script>
+    <script src="config.js"></script>
+    <script src="supabase.umd.js"></script>
+    <script>
+(function () {
+  "use strict";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return [].slice.call((r || document).querySelectorAll(s)); };
+  var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var PHONE = "+91 831 420 3229";
+
+  /* ---------- storage with in-memory fallback ---------- */
+  var mem = {};
+  var store = {
+    get: function (k, d) {
+      try { var v = localStorage.getItem(k); if (v != null) return JSON.parse(v); } catch (e) {}
+      return k in mem ? mem[k] : d;
+    },
+    set: function (k, v) { mem[k] = v; try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+
+  /* ---------- supabase ---------- */
+  var CFG = window.ALBAHAR_CONFIG || {};
+  var LIVE = !!(CFG.SUPABASE_URL && CFG.SUPABASE_ANON_KEY && window.supabase && window.supabase.createClient);
+  var sb = null;
+  if (LIVE) { try { sb = window.supabase.createClient(CFG.SUPABASE_URL, CFG.SUPABASE_ANON_KEY); } catch (e) { LIVE = false; } }
+  if (!LIVE) $("#x-ribbon").hidden = false;
+
+  /* ---------- default menu ---------- */
+  var RAW = [
+    ["Rice & Biryani", [["Chicken Dum Biryani", 255], ["Chicken Dum Biryani Quarter", 210], ["Veg Biryani", 240, 1], ["Egg Biryani (2 Eggs)", 215], ["Buffalo Biryani", 245], ["Curd Rice", 210, 1], ["Ghee Rice", 225, 1], ["Steamed Rice", 70, 1], ["Jeera Rice", 205, 1]]],
+    ["Chicken Starters", [["Chicken Tandoori", 345], ["Chicken Lollipop", 166], ["Chicken China Town (8 pcs)", 399], ["Chicken Crispy", 339], ["Chicken Garlic", 329], ["Chicken Satay (5 pcs)", 399], ["Chicken Wings Crispy (4 pcs)", 219], ["Chicken Wings Kabab (4 pcs)", 219]]],
+    ["Veg Main Course", [["Dal Tadka", 244, 1], ["Dal Fry", 210, 1], ["Kaju Masala", 345, 1], ["Kaju Paneer Masala", 355, 1], ["Paneer Masala", 345, 1], ["Mix Veg Gravy", 245, 1]]],
+    ["Egg Main Course", [["Egg Gravy (2 Whole Eggs)", 258]]],
+    ["Chicken & Mutton Main Course", [["Chicken Gravy", 319], ["Mutton Gravy", 381], ["Chicken Peshawari", 250], ["Chicken Kadhai", 250]]],
+    ["Breads", [["Roti", 35, 1], ["Butter Roti", 47, 1], ["Plain Kulcha", 60, 1], ["Butter Kulcha", 75, 1], ["Plain Naan", 60, 1], ["Butter Naan", 68, 1], ["Cheese Naan", 102, 1], ["Garlic Cheese Naan", 112, 1], ["Kerala Paratha", 45, 1]]],
+    ["Fried Rice", [["Veg Fried Rice", 244, 1], ["Egg Fried Rice", 248], ["Chicken Fried Rice", 261], ["Chicken Schezwan Fried Rice", 271], ["Buffalo Fried Rice", 230], ["Buffalo Schezwan Fried Rice", 235]]],
+    ["Beverages", [["Jeera Soda", 25, 1]]]
+  ];
+  var CATS = RAW.map(function (c) { return c[0]; });
+  var CAT_IMG = { "Rice & Biryani": "biryani", "Chicken Starters": "tandoori", "Veg Main Course": "paneer", "Egg Main Course": "biryani", "Chicken & Mutton Main Course": "paneer", "Breads": "naan", "Fried Rice": "friedrice" };
+  function slug(s) { return s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
+  var DEFAULT_MENU = [];
+  RAW.forEach(function (c) { c[1].forEach(function (it) { DEFAULT_MENU.push({ id: slug(it[0]), category: c[0], name: it[0], price: it[1], veg: !!it[2], available: true, sort: DEFAULT_MENU.length }); }); });
+  var DEF_SETTINGS = { accepting: true, delivery_fee: 0, min_order: 0, announcement: "" };
+
+  var state = { menu: DEFAULT_MENU.slice(), settings: Object.assign({}, DEF_SETTINGS), cart: store.get("ab_cart", {}) };
+
+  /* ---------- helpers ---------- */
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function inr(n) { return "₹" + Math.round(Number(n) || 0).toLocaleString("en-IN"); }
+  function imgSrc(k) { var i = document.getElementById("img-" + k); return i ? i.src : ""; }
+  function istMinutes() { var d = new Date(); return (d.getUTCHours() * 60 + d.getUTCMinutes() + 330) % 1440; }
+  function isOpen() { var m = istMinutes(); return m >= 660 && m < 1380; }
+  function canOrder() { return isOpen() && state.settings.accepting !== false; }
+  function byId(id) { for (var i = 0; i < state.menu.length; i++) if (state.menu[i].id === id) return state.menu[i]; return null; }
+  function toast(msg) { var t = $("#x-toast"); t.textContent = msg; t.classList.add("is-on"); clearTimeout(toast.t); toast.t = setTimeout(function () { t.classList.remove("is-on"); }, 2600); }
+  function ago(ts) { var s = (Date.now() - new Date(ts).getTime()) / 1000; if (s < 60) return "just now"; if (s < 3600) return Math.floor(s / 60) + " min ago"; if (s < 86400) return Math.floor(s / 3600) + " h ago"; return new Date(ts).toLocaleDateString("en-IN"); }
+  var TYPE_LABEL = { delivery: "Home Delivery", takeaway: "Takeaway", dinein: "Dine-in" };
+  var STEPS = [["new", "Order placed"], ["accepted", "Accepted"], ["preparing", "Preparing"], ["ready", "Ready / Out for delivery"], ["completed", "Completed"]];
+
+  /* ---------- logo copies (reuse the folded image) ---------- */
+  var LOGO = $("#x-logo").src;
+  (function () {
+    var body = $("#x-pbody"), front = $("#x-logo");
+    for (var i = 10; i >= 1; i--) { var l = document.createElement("img"); l.src = LOGO; l.alt = ""; l.className = "x-plaque__layer"; l.style.transform = "translateZ(" + (-i * 1.6) + "px)"; body.insertBefore(l, front); }
+    front.style.transform = "translateZ(1px)";
+    var sh = $("#x-sheen"); sh.style.webkitMaskImage = sh.style.maskImage = "url(" + LOGO + ")";
+    var b = $("#x-badge");
+    for (var j = 3; j >= 0; j--) { var bl = document.createElement("img"); bl.src = LOGO; bl.alt = ""; bl.style.transform = "translateZ(" + (-j * 1.2) + "px)"; if (j) bl.className = "x-plaque__layer"; b.appendChild(bl); }
+    $("#x-flogo").src = LOGO; $("#x-flogo").hidden = false; $("#x-alogo").src = LOGO;
+  })();
+
+  /* ---------- open status ---------- */
+  function paintLive() {
+    var o = isOpen(), txt = o ? "Open now · until 11:00 PM" : "Closed now · opens 11:00 AM";
+    if (o && state.settings.accepting === false) txt = "Open now · online orders paused";
+    ["#x-live", "#x-live2"].forEach(function (s) { var e = $(s); e.classList.toggle("is-open", o); e.lastElementChild.textContent = txt; });
+  }
+  function paintAnn() { var a = $("#x-ann"), t = (state.settings.announcement || "").trim(); a.hidden = !t; a.textContent = t; }
+
+  /* ---------- hero 3D: tilt, parallax, steam ---------- */
+  (function () {
+    var steam = $("#x-steam");
+    if (!RM) for (var i = 0; i < 14; i++) { var s = document.createElement("i"); s.style.left = (8 + Math.random() * 84) + "%"; s.style.animationDelay = (-Math.random() * 9) + "s"; s.style.animationDuration = (7 + Math.random() * 5) + "s"; steam.appendChild(s); }
+    if (RM) return;
+    var pb = $("#x-pbody"), bg = $("#x-hbg"), grid = $("#x-hgrid"), tx = 0, ty = 0;
+    function tilt(x, y) { tx = x; ty = y; pb.style.setProperty("--ry", (x * 22) + "deg"); pb.style.setProperty("--rx", (-y * 16) + "deg"); bg.style.transform = "translate3d(" + (-x * 18) + "px," + (-y * 12 + scrollY * 0.3) + "px,0) scale(1.04)"; steam.style.transform = "translate3d(" + (x * 10) + "px,0,0)"; }
+    window.addEventListener("pointermove", function (e) { if (e.pointerType === "touch") return; tilt(e.clientX / innerWidth * 2 - 1, e.clientY / innerHeight * 2 - 1); }, { passive: true });
+    window.addEventListener("deviceorientation", function (e) { if (e.gamma == null) return; tilt(Math.max(-1, Math.min(1, e.gamma / 30)), Math.max(-1, Math.min(1, (e.beta - 45) / 30))); }, { passive: true });
+    window.addEventListener("scroll", function () { if (scrollY < innerHeight * 1.2) { tilt(tx, ty); grid.style.transform = "translate3d(0," + (scrollY * 0.12) + "px,0)"; } }, { passive: true });
+  })();
+
+  /* ---------- scroll progress + reveals ---------- */
+  window.addEventListener("scroll", function () { var h = document.documentElement.scrollHeight - innerHeight; $("#x-prog").style.transform = "scaleX(" + (h > 0 ? scrollY / h : 0) + ")"; }, { passive: true });
+  var revealIO = "IntersectionObserver" in window && !RM ? new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); revealIO.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" }) : null;
+  function reveal(root) { $$(".x-rv:not(.is-in)", root).forEach(function (el) { if (revealIO) revealIO.observe(el); else el.classList.add("is-in"); }); }
+
+  /* ---------- cart ---------- */
+  function qty(id) { return state.cart[id] || 0; }
+  function setQty(id, q) {
+    var it = byId(id); if (!it || (!it.available && q > qty(id))) return;
+    if (q <= 0) delete state.cart[id]; else state.cart[id] = Math.min(q, 50);
+    store.set("ab_cart", state.cart); paintCtls(); paintCartBar();
+    if ($("#x-drawer").classList.contains("is-on") && drawerView === "cart") renderCart();
+  }
+  function cartLines() { return Object.keys(state.cart).map(function (id) { var it = byId(id); return it && it.available ? { id: id, name: it.name, price: Number(it.price), qty: state.cart[id], veg: it.veg } : null; }).filter(Boolean); }
+  function totals(type) {
+    var lines = cartLines(), sub = lines.reduce(function (a, l) { return a + l.price * l.qty; }, 0);
+    var fee = type === "delivery" && sub ? Number(state.settings.delivery_fee) || 0 : 0;
+    return { lines: lines, count: lines.reduce(function (a, l) { return a + l.qty; }, 0), sub: sub, fee: fee, total: sub + fee };
+  }
+  function ctlHTML(id) {
+    var it = byId(id);
+    if (!it || !it.available) return '<span class="x-sold">Sold out</span>';
+    var q = qty(id);
+    return q ? '<span class="x-step"><button type="button" data-dec="' + id + '" aria-label="One less ' + esc(it.name) + '">−</button><span aria-live="polite">' + q + '</span><button type="button" data-inc="' + id + '" aria-label="One more ' + esc(it.name) + '">+</button></span>'
+      : '<button class="x-add" type="button" data-inc="' + id + '" aria-label="Add ' + esc(it.name) + '">ADD</button>';
+  }
+  function paintCtls() { $$("[data-ctl]").forEach(function (el) { el.innerHTML = ctlHTML(el.getAttribute("data-ctl")); }); }
+  function paintCartBar() {
+    var t = totals("x");
+    $("#x-cartbar").classList.toggle("is-on", t.count > 0);
+    $("#x-cbtext").textContent = t.count + (t.count === 1 ? " item · " : " items · ") + inr(t.sub);
+    $("#x-navcount").hidden = !t.count; $("#x-navcount").textContent = t.count;
+  }
+  document.addEventListener("click", function (e) {
+    var inc = e.target.closest("[data-inc]"), dec = e.target.closest("[data-dec]");
+    if (inc) setQty(inc.getAttribute("data-inc"), qty(inc.getAttribute("data-inc")) + 1);
+    if (dec) setQty(dec.getAttribute("data-dec"), qty(dec.getAttribute("data-dec")) - 1);
+  });
+
+  /* ---------- signature carousel ---------- */
+  var carousel = (function () {
+    var stage = $("#x-stage"), ring = $("#x-ring"), dishes = $$(".x-dish", ring), N = dishes.length, STEP = 360 / N;
+    var ang = 0, vel = 0, drag = false, lastX = 0, R = 300, idle = !RM, front = -1, raf = 0, touched = 0;
+    function size() { var w = stage.clientWidth, d = Math.min(210, Math.max(120, w * 0.3)); R = Math.min(330, w * 0.36); stage.style.setProperty("--d", d + "px"); }
+    function draw() {
+      ring.style.transform = "translateZ(" + (-R) + "px) rotateY(" + ang + "deg)";
+      dishes.forEach(function (d, i) { var rel = ((i * STEP + ang) % 360 + 540) % 360 - 180, c = Math.cos(rel * Math.PI / 180); d.style.transform = "rotateY(" + (i * STEP) + "deg) translateZ(" + R + "px) rotateY(" + (-(i * STEP + ang)) + "deg)"; d.style.opacity = (0.35 + 0.65 * (c + 1) / 2).toFixed(2); d.style.zIndex = Math.round((c + 1) * 50); });
+      var f = ((Math.round(-ang / STEP) % N) + N) % N;
+      if (f !== front) { front = f; paintFront(); }
+    }
+    function paintFront() {
+      var it = byId(dishes[front].getAttribute("data-id")), el = $("#x-front");
+      if (!it) { el.innerHTML = ""; return; }
+      el.innerHTML = "<h3>" + esc(it.name) + "</h3><p>" + inr(it.price) + '</p><div data-ctl="' + it.id + '">' + ctlHTML(it.id) + "</div>";
+    }
+    function loop() {
+      raf = 0;
+      if (!drag) {
+        if (Math.abs(vel) > 0.05) { ang += vel; vel *= 0.94; }
+        else { var target = Math.round(ang / STEP) * STEP, diff = target - ang; if (idle && Date.now() - touched > 3500) { ang -= 0.08; } else if (Math.abs(diff) > 0.05) ang += diff * 0.12; else ang = target; vel = 0; }
+      }
+      draw(); if (!RM || drag || Math.abs(vel) > 0.05) raf = requestAnimationFrame(loop);
+    }
+    function kick() { touched = Date.now(); if (!raf) raf = requestAnimationFrame(loop); }
+    stage.addEventListener("pointerdown", function (e) { drag = true; lastX = e.clientX; vel = 0; kick(); stage.setPointerCapture(e.pointerId); });
+    stage.addEventListener("pointermove", function (e) { if (!drag) return; var dx = e.clientX - lastX; lastX = e.clientX; ang += dx * 0.35; vel = dx * 0.35; touched = Date.now(); });
+    function up() { if (!drag) return; drag = false; kick(); }
+    stage.addEventListener("pointerup", up); stage.addEventListener("pointercancel", up);
+    stage.addEventListener("keydown", function (e) { if (e.key === "ArrowLeft" || e.key === "ArrowRight") { e.preventDefault(); ang = Math.round(ang / STEP) * STEP + (e.key === "ArrowLeft" ? STEP : -STEP); vel = 0; kick(); if (RM) draw(); } });
+    window.addEventListener("resize", function () { size(); draw(); });
+    size(); draw(); kick();
+    return { refresh: function () { front = -1; draw(); } };
+  })();
+
+  /* ---------- menu ---------- */
+  var BEV_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12l-1.5 17a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1L6 3zM6.5 8h11M10 12h.01M13 15h.01M11 17h.01"/></svg>';
+  function catId(c) { return "cat-" + slug(c); }
+  function renderMenu() {
+    var cats = CATS.slice(); state.menu.forEach(function (m) { if (cats.indexOf(m.category) < 0) cats.push(m.category); });
+    var html = "", tabs = "";
+    cats.forEach(function (c) {
+      var items = state.menu.filter(function (m) { return m.category === c; }).sort(function (a, b) { return a.sort - b.sort; });
+      if (!items.length) return;
+      var k = CAT_IMG[c], icon = k ? '<img src="' + imgSrc(k) + '" alt="" />' : BEV_ICON;
+      tabs += '<a href="#' + catId(c) + '" data-tab="' + catId(c) + '">' + esc(c) + "</a>";
+      html += '<section class="x-cat" id="' + catId(c) + '"><div class="x-cat__head"><span class="x-plate">' + icon + "</span><div><h3>" + esc(c) + "</h3><small>" + items.length + (items.length === 1 ? " dish" : " dishes") + '</small></div></div><div class="x-grid">';
+      items.forEach(function (m) {
+        html += '<article class="x-item' + (m.available ? "" : " is-out") + '" data-name="' + esc(m.name.toLowerCase()) + '" data-veg="' + (m.veg ? 1 : 0) + '"><span class="x-vd' + (m.veg ? " is-veg" : "") + '" role="img" aria-label="' + (m.veg ? "Veg" : "Non-veg") + '"></span><h4>' + esc(m.name) + '</h4><div class="x-ctl" data-ctl="' + m.id + '">' + ctlHTML(m.id) + '</div><p class="x-price">' + inr(m.price) + "</p></article>";
+      });
+      html += "</div></section>";
+    });
+    $("#x-menu").innerHTML = html + '<p class="x-empty" id="x-noresults" hidden>No dishes match. Try another search.</p>';
+    $("#x-tabs").innerHTML = tabs;
+    filterMenu(); spy(); carousel.refresh();
+  }
+  function filterMenu() {
+    var q = $("#x-q").value.trim().toLowerCase(), veg = $("#x-vegonly").checked, any = false;
+    $$(".x-cat").forEach(function (sec) {
+      var vis = 0;
+      $$(".x-item", sec).forEach(function (it) { var ok = (!q || it.getAttribute("data-name").indexOf(q) > -1) && (!veg || it.getAttribute("data-veg") === "1"); it.hidden = !ok; if (ok) vis++; });
+      sec.hidden = !vis; var tab = $('[data-tab="' + sec.id + '"]'); if (tab) tab.hidden = !vis; if (vis) any = true;
+    });
+    $("#x-noresults").hidden = any;
+  }
+  $("#x-q").addEventListener("input", filterMenu);
+  $("#x-vegonly").addEventListener("change", filterMenu);
+  var spyIO;
+  function spy() {
+    if (spyIO) spyIO.disconnect();
+    if (!("IntersectionObserver" in window)) return;
+    spyIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        $$("#x-tabs a").forEach(function (a) { a.classList.toggle("is-on", a.getAttribute("data-tab") === e.target.id); });
+        var on = $("#x-tabs a.is-on"); if (on) { var t = $("#x-tabs"); t.scrollTo({ left: on.offsetLeft - t.clientWidth / 2 + on.clientWidth / 2, behavior: RM ? "auto" : "smooth" }); }
+      });
+    }, { rootMargin: "-35% 0px -60% 0px" });
+    $$(".x-cat").forEach(function (s) { spyIO.observe(s); });
+  }
+  /* 3D tilt + sheen on cards */
+  var menuEl = $("#x-menu");
+  if (!RM) {
+    menuEl.addEventListener("pointermove", function (e) {
+      if (e.pointerType === "touch") return;
+      var c = e.target.closest(".x-item"); if (!c) return;
+      var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      c.style.setProperty("--ry", ((x - 0.5) * 12) + "deg"); c.style.setProperty("--rx", ((0.5 - y) * 12) + "deg");
+      c.style.setProperty("--mx", x * 100 + "%"); c.style.setProperty("--my", y * 100 + "%");
+    });
+    menuEl.addEventListener("pointerout", function (e) { var c = e.target.closest(".x-item"); if (c && !c.contains(e.relatedTarget)) { c.style.setProperty("--rx", "0deg"); c.style.setProperty("--ry", "0deg"); } });
+  }
+
+  /* ---------- drawer: cart, checkout, success ---------- */
+  var drawerView = "cart", form = { type: "delivery", payment: "cod" };
+  function openDrawer(view) { drawerView = view || "cart"; render(); $("#x-drawer").classList.add("is-on"); $("#x-scrim").classList.add("is-on"); document.body.style.overflow = "hidden"; setTimeout(function () { var f = $("#x-drawer .x-x"); if (f) f.focus(); }, 50); }
+  function closeDrawer() { $("#x-drawer").classList.remove("is-on"); $("#x-scrim").classList.remove("is-on"); document.body.style.overflow = ""; }
+  function render() { if (drawerView === "cart") renderCart(); else if (drawerView === "checkout") renderCheckout(); }
+  function blockMsg() {
+    if (!isOpen()) return "We're closed right now. Online orders open daily 11:00 AM – 11:00 PM.";
+    if (state.settings.accepting === false) return "Online orders are paused right now. Please call " + PHONE + ".";
+    return "";
+  }
+  function head(t) { return '<div class="x-drawer__head"><h3>' + t + '</h3><button class="x-x" type="button" data-close aria-label="Close">×</button></div>'; }
+  function sumHTML(t, withFee) {
+    return '<div class="x-sum"><div><span>Subtotal</span><span>' + inr(t.sub) + "</span></div>" + (withFee ? "<div><span>Delivery fee</span><span>" + (t.fee ? inr(t.fee) : "₹0") + "</span></div>" : "") + '<div class="is-total"><span>Total</span><span>' + inr(t.total) + '</span></div></div>';
+  }
+  function renderCart() {
+    var t = totals(form.type), d = $("#x-drawer"), msg = blockMsg(), min = Number(state.settings.min_order) || 0;
+    if (!t.count) { d.innerHTML = head("Your cart") + '<p class="x-empty">Your cart is empty.</p><a class="x-btn x-btn--gold" style="width:100%" href="#menu" data-close>Browse the menu</a>'; return; }
+    var h = head("Your cart");
+    t.lines.forEach(function (l) { h += '<div class="x-line"><span class="x-vd' + (l.veg ? " is-veg" : "") + '"></span><div>' + esc(l.name) + "<small>" + inr(l.price) + " × " + l.qty + " = " + inr(l.price * l.qty) + '</small></div><div data-ctl="' + l.id + '">' + ctlHTML(l.id) + "</div></div>"; });
+    h += sumHTML(t, form.type === "delivery") + '<p class="x-note">Delivery charges confirmed on call.</p>';
+    if (msg) h += '<p class="x-warn" style="margin-top:12px">' + esc(msg) + "</p>";
+    else if (t.sub < min) h += '<p class="x-warn" style="margin-top:12px">Minimum order is ' + inr(min) + ". Add " + inr(min - t.sub) + " more.</p>";
+    h += '<button class="x-btn x-btn--gold" type="button" style="width:100%;margin-top:14px" data-go="checkout"' + (msg || t.sub < min ? " disabled" : "") + ">Checkout · " + inr(t.total) + "</button>";
+    d.innerHTML = h;
+  }
+  function radio(name, val, label) { return '<label><input type="radio" name="' + name + '" value="' + val + '"' + (form[name] === val ? " checked" : "") + "><span>" + label + "</span></label>"; }
+  function renderCheckout() {
+    var t = totals(form.type), d = $("#x-drawer");
+    d.innerHTML = head("Checkout") + '<form id="x-cof" novalidate>' +
+      '<div class="x-field">Order type<div class="x-seg">' + radio("type", "delivery", "Home Delivery") + radio("type", "takeaway", "Takeaway") + radio("type", "dinein", "Dine-in") + "</div></div>" +
+      '<label class="x-field">Your name<input name="name" autocomplete="name" required value="' + esc(form.name || "") + '"></label>' +
+      '<label class="x-field">Mobile number<input name="phone" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="10 digits" required value="' + esc(form.phone || "") + '"></label>' +
+      (form.type === "delivery" ? '<label class="x-field">Delivery address<textarea name="address" autocomplete="street-address" required>' + esc(form.address || "") + "</textarea></label>" : "") +
+      (form.type === "dinein" ? '<label class="x-field">Table number<input name="table" required value="' + esc(form.table || "") + '"></label>' : "") +
+      '<label class="x-field">Notes (optional)<textarea name="notes" placeholder="Less spicy, extra onion…">' + esc(form.notes || "") + "</textarea></label>" +
+      '<div class="x-field">Payment<div class="x-seg">' + radio("payment", "cod", "Cash") + radio("payment", "upi", "UPI on delivery") + "</div></div>" +
+      sumHTML(t, form.type === "delivery") + '<p class="x-note">Delivery charges confirmed on call.</p>' +
+      '<p class="x-err" id="x-coerr" role="alert"></p><div style="display:flex;gap:10px"><button class="x-btn" type="button" data-go="cart">Back</button><button class="x-btn x-btn--gold" type="submit" style="flex:1">Place order · ' + inr(t.total) + "</button></div></form>";
+  }
+  function grab() { var f = $("#x-cof"); if (!f) return; ["name", "phone", "address", "table", "notes"].forEach(function (k) { if (f[k]) form[k] = f[k].value; }); }
+  var drawer = $("#x-drawer");
+  drawer.addEventListener("change", function (e) { if (e.target.name === "type" || e.target.name === "payment") { grab(); form[e.target.name] = e.target.value; if (e.target.name === "type") renderCheckout(); } });
+  drawer.addEventListener("click", function (e) {
+    var go = e.target.closest("[data-go]"); if (go) { grab(); drawerView = go.getAttribute("data-go"); render(); }
+    if (e.target.closest("[data-close]")) closeDrawer();
+  });
+  drawer.addEventListener("submit", function (e) { e.preventDefault(); grab(); placeOrder(); });
+  $("#x-scrim").addEventListener("click", closeDrawer);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeDrawer(); });
+  $("#x-cbopen").addEventListener("click", function () { openDrawer("cart"); });
+  $("#x-navcart").addEventListener("click", function () { openDrawer("cart"); });
+
+  async function placeOrder() {
+    var err = $("#x-coerr"), t = totals(form.type), btn = $('#x-cof [type=submit]');
+    var phone = (form.phone || "").replace(/\D/g, "");
+    var problem = blockMsg() ||
+      (!t.count ? "Your cart is empty." : "") ||
+      (t.sub < (Number(state.settings.min_order) || 0) ? "Minimum order is " + inr(state.settings.min_order) + "." : "") ||
+      (!(form.name || "").trim() ? "Please enter your name." : "") ||
+      (!/^[6-9]\d{9}$/.test(phone) ? "Enter a valid 10-digit mobile number." : "") ||
+      (form.type === "delivery" && !(form.address || "").trim() ? "Please enter the delivery address." : "") ||
+      (form.type === "dinein" && !(form.table || "").trim() ? "Please enter your table number." : "");
+    if (problem) { err.textContent = problem; return; }
+    err.textContent = ""; btn.disabled = true; btn.textContent = "Placing order…";
+    var order = { customer_name: form.name.trim(), phone: phone, order_type: form.type, address: form.type === "delivery" ? form.address.trim() : null, table_no: form.type === "dinein" ? form.table.trim() : null, notes: (form.notes || "").trim() || null, items: t.lines.map(function (l) { return { id: l.id, name: l.name, price: l.price, qty: l.qty }; }), subtotal: t.sub, delivery_fee: t.fee, total: t.total, payment: form.payment === "upi" ? "upi" : "cod", status: "new" };
+    try {
+      var id;
+      if (LIVE) {
+        var r = await sb.from("orders").insert(order).select("id");
+        if (!r.error && r.data && r.data[0]) id = r.data[0].id;
+        else { var r2 = await sb.rpc("place_order", { o: order }); if (r2.error) throw r2.error; id = r2.data; }
+      } else {
+        var list = store.get("ab_orders", []), next = store.get("ab_seq", 1000) + 1;
+        store.set("ab_seq", next); order.id = next; order.created_at = new Date().toISOString();
+        list.push(order); store.set("ab_orders", list); id = next;
+      }
+      success(id, order);
+    } catch (ex) {
+      err.textContent = "Couldn't place the order (" + (ex.message || "network error") + "). Please try again or call " + PHONE + ".";
+      btn.disabled = false; btn.textContent = "Place order · " + inr(t.total);
+    }
+  }
+  function success(id, o) {
+    state.cart = {}; store.set("ab_cart", {}); paintCtls(); paintCartBar(); drawerView = "success";
+    store.set("ab_last", { no: "AB-" + id, phone: o.phone });
+    var items = o.items.map(function (i) { return "<div><span>" + i.qty + " × " + esc(i.name) + "</span><span>" + inr(i.price * i.qty) + "</span></div>"; }).join("");
+    $("#x-drawer").innerHTML = head("Order placed") + '<div class="x-success"><div class="x-success__plate"><img src="' + imgSrc("biryani") + '" alt=""></div><h3>Thank you, ' + esc(o.customer_name.split(" ")[0]) + '!</h3><p class="x-note">Your order number</p><p class="x-ordno">AB-' + esc(id) + '</p><p class="x-note">' + TYPE_LABEL[o.order_type] + " · " + (o.payment === "upi" ? "UPI on delivery" : "Cash") + (o.table_no ? " · Table " + esc(o.table_no) : "") + "</p></div>" +
+      '<div class="x-sum">' + items + '<div class="is-total"><span>Total</span><span>' + inr(o.total) + "</span></div></div>" +
+      '<p style="text-align:center;margin:12px 0">Questions? Call <a class="x-gold x-nowrap" href="tel:+918314203229">' + PHONE + "</a></p>" +
+      '<a class="x-btn x-btn--gold" style="width:100%" href="#track" data-close data-track="AB-' + esc(id) + '">Track this order</a>';
+    var tf = $("#x-trackf"); tf.no.value = "AB-" + id; tf.phone.value = o.phone;
+    if (!RM) confetti();
+  }
+  function confetti() {
+    var c = document.createElement("div"), cols = ["#d9a641", "#f3d27a", "#b3202c", "#1f8a64", "#f6ecd6"]; c.className = "x-confetti";
+    for (var i = 0; i < 80; i++) { var p = document.createElement("i"); p.style.left = Math.random() * 100 + "%"; p.style.background = cols[i % 5]; p.style.animationDelay = Math.random() * 0.6 + "s"; p.style.animationDuration = 1.8 + Math.random() * 1.6 + "s"; c.appendChild(p); }
+    document.body.appendChild(c); setTimeout(function () { c.remove(); }, 4200);
+  }
+  $$("[data-order]").forEach(function (a) { a.addEventListener("click", function () { if (!canOrder()) toast(blockMsg()); }); });
+
+  /* ---------- tracking ---------- */
+  async function fetchTrack(id, phone) {
+    if (!LIVE) { return store.get("ab_orders", []).filter(function (o) { return String(o.id) === String(id) && o.phone === phone; })[0] || null; }
+    var r = await sb.rpc("track_order", { p_id: Number(id), p_phone: phone });
+    if (!r.error) return (r.data || [])[0] || null;
+    var r2 = await sb.from("orders").select("id,status,created_at,order_type,total,items").eq("id", id).eq("phone", phone).limit(1);
+    if (r2.error) throw r2.error; return (r2.data || [])[0] || null;
+  }
+  function paintTrack(o) {
+    var out = $("#x-trackout");
+    if (!o) { out.innerHTML = ""; $("#x-trackerr").textContent = "No order found with that number and phone."; return; }
+    $("#x-trackerr").textContent = "";
+    var idx = STEPS.map(function (s) { return s[0]; }).indexOf(o.status), h = '<p style="margin-top:16px"><b class="x-gold">AB-' + esc(o.id) + "</b> · " + (TYPE_LABEL[o.order_type] || "") + " · " + inr(o.total) + ' <span class="x-note">· ' + ago(o.created_at) + "</span></p>";
+    if (o.status === "cancelled") h += '<p class="x-warn" style="margin-top:12px">This order was cancelled. Please call ' + PHONE + ".</p>";
+    else h += '<ol class="x-tl">' + STEPS.map(function (s, i) { var lbl = s[0] === "ready" ? (o.order_type === "delivery" ? "Out for delivery" : "Ready for pickup / serving") : s[1]; return '<li class="' + (i < idx || (i === idx && i === 4) ? "is-done" : i === idx ? "is-now" : "") + '">' + lbl + "</li>"; }).join("") + "</ol>";
+    out.innerHTML = h;
+  }
+  var trackTimer;
+  $("#x-trackf").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var no = this.no.value.replace(/[^0-9]/g, ""), ph = this.phone.value.replace(/\D/g, ""), err = $("#x-trackerr");
+    if (!no) { err.textContent = "Enter your order number, like AB-12."; return; }
+    if (ph.length !== 10) { err.textContent = "Enter the 10-digit phone used for the order."; return; }
+    err.textContent = "Looking up…";
+    async function go() { try { paintTrack(await fetchTrack(no, ph)); } catch (ex) { err.textContent = "Couldn't reach the server. Try again."; } }
+    await go(); clearInterval(trackTimer); trackTimer = setInterval(go, 20000);
+  });
+  (function () { var l = store.get("ab_last", null); if (l) { var f = $("#x-trackf"); f.no.value = l.no; f.phone.value = l.phone; } })();
+
+  /* ---------- load data ---------- */
+  async function loadSettings() {
+    if (LIVE) {
+      try { var r = await sb.from("settings").select("key,value"); if (!r.error && r.data) { var s = Object.assign({}, DEF_SETTINGS); r.data.forEach(function (row) { s[row.key] = row.value; }); state.settings = s; } } catch (e) {}
+    } else state.settings = Object.assign({}, DEF_SETTINGS, store.get("ab_settings", {}));
+    paintLive(); paintAnn();
+  }
+  async function loadMenu() {
+    if (LIVE) {
+      try { var r = await sb.from("menu_items").select("*").order("sort"); if (!r.error && r.data && r.data.length) state.menu = r.data; else state.menu = DEFAULT_MENU.slice(); } catch (e) {}
+    } else state.menu = store.get("ab_menu", null) || DEFAULT_MENU.slice();
+    renderMenu(); paintCartBar();
+  }
+
+  document.addEventListener("click", function (e) { if (e.target.closest("[data-track]")) setTimeout(function () { $("#x-trackf").requestSubmit(); }, 300); });
+
+  /* =================== ADMIN =================== */
+  var A = { authed: false, tab: "orders", orders: [], known: null, showCancelled: false, timer: 0, chan: null, audio: null, dbMenu: null, salesDate: new Date().toLocaleDateString("en-CA") };
+  var abody = $("#x-abody"), NEXT = { new: "accepted", accepted: "preparing", preparing: "ready", ready: "completed" };
+  var NEXT_LABEL = { new: "Accept", accepted: "Start preparing", preparing: "Mark ready / out", ready: "Complete" };
+  var COLS = [["new", "New"], ["accepted", "Accepted"], ["preparing", "Preparing"], ["ready", "Ready & Out"], ["completed", "Completed"]];
+
+  function route() {
+    var on = location.hash === "#admin";
+    $("#x-admin").classList.toggle("is-on", on);
+    document.body.style.overflow = on ? "hidden" : "";
+    if (on) { closeDrawer(); document.body.style.overflow = "hidden"; checkAuth(); }
+  }
+  window.addEventListener("hashchange", route);
+  $("#x-aexit").addEventListener("click", function (e) { e.preventDefault(); history.pushState("", document.title, location.pathname + location.search); route(); });
+
+  async function checkAuth() {
+    if (LIVE) { try { var s = await sb.auth.getSession(); A.authed = !!(s.data && s.data.session); } catch (e) { A.authed = false; } }
+    else A.authed = A.authed || store.get("ab_admin", false) === true;
+    A.authed ? startAdmin() : renderLogin();
+  }
+  function renderLogin() {
+    $("#x-atabs").innerHTML = ""; $("#x-logout").hidden = true;
+    abody.innerHTML = '<form class="x-panel x-glass" id="x-login" style="margin-top:8vh" novalidate><h2 class="x-serif" style="font-size:28px;margin-bottom:6px">Staff login</h2><p class="x-note" style="margin-bottom:16px">Orders, sales, menu and settings.</p>' +
+      (LIVE ? '<label class="x-field">Email<input name="email" type="email" autocomplete="username" required></label><label class="x-field">Password<input name="pw" type="password" autocomplete="current-password" required></label>'
+        : '<label class="x-field">PIN<input name="pin" type="password" inputmode="numeric" maxlength="8" autocomplete="off" required></label><p class="x-note">Demo PIN 1234 — set up Supabase for real logins.</p>') +
+      '<p class="x-err" id="x-lerr" role="alert"></p><button class="x-btn x-btn--gold" style="width:100%" type="submit">Log in</button></form>';
+    $("#x-login").addEventListener("submit", async function (e) {
+      e.preventDefault(); unlockAudio();
+      var f = this, er = $("#x-lerr");
+      if (LIVE) {
+        er.textContent = "Signing in…";
+        var r = await sb.auth.signInWithPassword({ email: f.email.value.trim(), password: f.pw.value });
+        if (r.error) { er.textContent = r.error.message; return; }
+      } else {
+        if (f.pin.value !== "1234") { er.textContent = "Wrong PIN."; return; }
+        store.set("ab_admin", true);
+      }
+      A.authed = true; startAdmin();
+    });
+    var first = $("#x-login input"); if (first) first.focus();
+  }
+  $("#x-logout").addEventListener("click", async function () {
+    if (LIVE) { try { await sb.auth.signOut(); } catch (e) {} } else store.set("ab_admin", false);
+    A.authed = false; clearInterval(A.timer); if (A.chan) { sb.removeChannel(A.chan); A.chan = null; } renderLogin();
+  });
+
+  function renderTabs() {
+    var n = A.orders.filter(function (o) { return o.status === "new"; }).length;
+    var tabs = [["orders", "Live Orders" + (n ? "<b>" + n + "</b>" : "")], ["sales", "Today's Sales"], ["menu", "Menu Manager"], ["settings", "Settings"]];
+    if (!LIVE) tabs.push(["setup", "Setup help"]);
+    $("#x-atabs").innerHTML = tabs.map(function (t) { return '<button type="button" role="tab" aria-selected="' + (A.tab === t[0]) + '" class="' + (A.tab === t[0] ? "is-on" : "") + '" data-atab="' + t[0] + '">' + t[1] + "</button>"; }).join("");
+  }
+  $("#x-atabs").addEventListener("click", function (e) { var b = e.target.closest("[data-atab]"); if (b) { A.tab = b.getAttribute("data-atab"); renderTabs(); renderAdmin(); } });
+  function renderAdmin() {
+    if (A.tab === "orders") renderOrders(); else if (A.tab === "sales") renderSales(); else if (A.tab === "menu") renderMenuMgr(); else if (A.tab === "settings") renderSettings(); else renderSetup();
+  }
+  function startAdmin() {
+    $("#x-logout").hidden = false; renderTabs(); renderAdmin(); loadOrders();
+    clearInterval(A.timer); A.timer = setInterval(loadOrders, 20000);
+    if (LIVE && !A.chan) {
+      A.chan = sb.channel("orders-live").on("postgres_changes", { event: "INSERT", schema: "public", table: "orders" }, loadOrders)
+        .on("postgres_changes", { event: "UPDATE", schema: "public", table: "orders" }, loadOrders).subscribe();
+    }
+  }
+  window.addEventListener("storage", function (e) { if (e.key === "ab_orders" && A.authed) loadOrders(); });
+
+  /* chime */
+  function unlockAudio() { try { if (!A.audio) A.audio = new (window.AudioContext || window.webkitAudioContext)(); if (A.audio.state === "suspended") A.audio.resume(); } catch (e) {} }
+  function chime() {
+    var ac = A.audio; if (!ac) return;
+    [0, 0.18, 0.36].forEach(function (t, i) { var o = ac.createOscillator(), g = ac.createGain(); o.type = "sine"; o.frequency.value = [880, 1175, 1568][i]; g.gain.setValueAtTime(0.0001, ac.currentTime + t); g.gain.exponentialRampToValueAtTime(0.3, ac.currentTime + t + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, ac.currentTime + t + 0.35); o.connect(g).connect(ac.destination); o.start(ac.currentTime + t); o.stop(ac.currentTime + t + 0.4); });
+  }
+
+  async function loadOrders() {
+    if (!A.authed) return;
+    var list = [];
+    if (LIVE) {
+      var since = new Date(Date.now() - 3 * 86400000).toISOString();
+      var r = await sb.from("orders").select("*").gte("created_at", since).order("id", { ascending: false }).limit(500);
+      if (r.error) { if (A.tab === "orders") abody.innerHTML = '<p class="x-warn">Could not load orders: ' + esc(r.error.message) + "</p>"; return; }
+      list = r.data || [];
+    } else list = store.get("ab_orders", []).slice().reverse();
+    var fresh = list.filter(function (o) { return o.status === "new" && A.known && !A.known[o.id]; });
+    A.known = {}; list.forEach(function (o) { A.known[o.id] = 1; });
+    A.orders = list;
+    if (fresh.length) { chime(); toast(fresh.length === 1 ? "New order AB-" + fresh[0].id : fresh.length + " new orders"); }
+    renderTabs(); if (A.tab === "orders") renderOrders();
+  }
+  async function setStatus(id, status) {
+    if (LIVE) { var r = await sb.from("orders").update({ status: status }).eq("id", id); if (r.error) { toast(r.error.message); return; } }
+    else { var l = store.get("ab_orders", []); l.forEach(function (o) { if (String(o.id) === String(id)) o.status = status; }); store.set("ab_orders", l); }
+    A.orders.forEach(function (o) { if (String(o.id) === String(id)) o.status = status; });
+    renderTabs(); renderOrders();
+  }
+  function orderCard(o) {
+    var acts = NEXT[o.status] ? '<button class="x-btn x-btn--gold x-btn--sm" data-adv="' + o.id + '" data-to="' + NEXT[o.status] + '">' + NEXT_LABEL[o.status] + "</button>" : "";
+    if (o.status !== "completed" && o.status !== "cancelled") acts += '<button class="x-btn x-btn--sm" data-adv="' + o.id + '" data-to="cancelled">Cancel</button>';
+    acts += '<button class="x-btn x-btn--sm" data-print="' + o.id + '">Print KOT/Bill</button>';
+    return '<article class="x-ocard' + (o.status === "new" ? " is-new" : "") + '"><header><b class="x-gold">#AB-' + esc(o.id) + '</b><span class="x-tag">' + (TYPE_LABEL[o.order_type] || esc(o.order_type)) + '</span></header><span class="x-note">' + ago(o.created_at) + "</span>" +
+      "<div><b>" + esc(o.customer_name) + '</b> · <a class="x-gold x-nowrap" href="tel:+91' + esc(o.phone) + '">' + esc(o.phone) + "</a></div>" +
+      (o.address ? '<div class="x-note">' + esc(o.address) + "</div>" : "") + (o.table_no ? "<div>Table " + esc(o.table_no) + "</div>" : "") +
+      "<ul>" + (o.items || []).map(function (i) { return "<li>" + i.qty + " × " + esc(i.name) + "</li>"; }).join("") + "</ul>" +
+      (o.notes ? '<div class="x-note">Note: ' + esc(o.notes) + "</div>" : "") +
+      "<div><b>" + inr(o.total) + "</b> · " + (o.payment === "upi" ? "UPI" : "Cash") + '</div><div class="x-acts">' + acts + "</div></article>";
+  }
+  function renderOrders() {
+    var cols = COLS.slice(); if (A.showCancelled) cols.push(["cancelled", "Cancelled"]);
+    var h = '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap"><p class="x-note">Last 3 days · refreshes live' + (LIVE ? "" : " (demo: this browser only)") + '</p><label class="x-switch"><input type="checkbox" id="x-showc"' + (A.showCancelled ? " checked" : "") + "> Show cancelled</label></div><div class=\"x-kanban\">";
+    cols.forEach(function (c) {
+      var list = A.orders.filter(function (o) { return o.status === c[0]; });
+      h += '<div class="x-col x-glass"><h4><span>' + c[1] + "</span><span>" + list.length + "</span></h4>" + (list.length ? list.map(orderCard).join("") : '<p class="x-note" style="padding:4px">No orders.</p>') + "</div>";
+    });
+    abody.innerHTML = h + "</div>";
+    $("#x-showc").addEventListener("change", function () { A.showCancelled = this.checked; renderOrders(); });
+  }
+  abody.addEventListener("click", function (e) {
+    var a = e.target.closest("[data-adv]"); if (a) { if (a.getAttribute("data-to") !== "cancelled" || confirm("Cancel order AB-" + a.getAttribute("data-adv") + "?")) setStatus(a.getAttribute("data-adv"), a.getAttribute("data-to")); }
+    var p = e.target.closest("[data-print]"); if (p) printBill(A.orders.filter(function (o) { return String(o.id) === p.getAttribute("data-print"); })[0]);
+  });
+  function printBill(o) {
+    if (!o) return;
+    var rows = (o.items || []).map(function (i) { return "<tr><td>" + i.qty + " × " + esc(i.name) + '</td><td style="text-align:right">' + inr(i.price * i.qty) + "</td></tr>"; }).join("");
+    var html = '<!doctype html><html><head><meta charset="utf-8"><title>AB-' + esc(o.id) + '</title><style>body{font:14px/1.4 monospace;width:300px;margin:10px auto;color:#000}img{width:150px;display:block;margin:0 auto 6px}h1{font-size:16px;text-align:center;margin:0}p{margin:4px 0}table{width:100%;border-collapse:collapse}td{padding:3px 0;vertical-align:top}hr{border:0;border-top:1px dashed #000}.c{text-align:center}</style></head><body>' +
+      '<img src="' + LOGO + '" alt=""><h1>Hotel Al-Bahar</h1><p class="c">Khanapur Road, Camp, Belagavi<br>' + PHONE + "</p><hr>" +
+      "<p><b>Order AB-" + esc(o.id) + "</b> · " + (TYPE_LABEL[o.order_type] || "") + "<br>" + new Date(o.created_at).toLocaleString("en-IN") + "</p>" +
+      "<p>" + esc(o.customer_name) + " · " + esc(o.phone) + (o.address ? "<br>" + esc(o.address) : "") + (o.table_no ? "<br>Table " + esc(o.table_no) : "") + "</p>" + (o.notes ? "<p>Note: " + esc(o.notes) + "</p>" : "") +
+      "<hr><table>" + rows + "</table><hr><table><tr><td>Subtotal</td><td style=\"text-align:right\">" + inr(o.subtotal) + "</td></tr><tr><td>Delivery</td><td style=\"text-align:right\">" + inr(o.delivery_fee) + "</td></tr><tr><td><b>Total</b></td><td style=\"text-align:right\"><b>" + inr(o.total) + "</b></td></tr></table>" +
+      "<p>Payment: " + (o.payment === "upi" ? "UPI" : "Cash") + '</p><hr><p class="c">GST not applicable. Thank you!</p><script>window.onload=function(){window.print()}<\/script></body></html>';
+    var w = window.open("", "_blank");
+    if (!w) { toast("Allow pop-ups to print."); return; }
+    w.document.open(); w.document.write(html); w.document.close();
+  }
+
+  /* sales */
+  async function renderSales() {
+    abody.innerHTML = '<label class="x-field" style="max-width:240px">Date<input type="date" id="x-sdate" value="' + A.salesDate + '"></label><div id="x-sout"><p class="x-note">Loading…</p></div>';
+    $("#x-sdate").addEventListener("change", function () { A.salesDate = this.value || A.salesDate; renderSales(); });
+    var start = new Date(A.salesDate + "T00:00:00"), end = new Date(start.getTime() + 86400000), list;
+    if (LIVE) {
+      var r = await sb.from("orders").select("*").gte("created_at", start.toISOString()).lt("created_at", end.toISOString()).limit(2000);
+      if (r.error) { $("#x-sout").innerHTML = '<p class="x-warn">' + esc(r.error.message) + "</p>"; return; }
+      list = r.data || [];
+    } else list = store.get("ab_orders", []).filter(function (o) { var t = new Date(o.created_at); return t >= start && t < end; });
+    list = list.filter(function (o) { return o.status !== "cancelled"; });
+    var rev = list.reduce(function (a, o) { return a + Number(o.total); }, 0), byType = {}, items = {}, hours = [];
+    for (var h = 11; h <= 22; h++) hours.push([h, 0]);
+    list.forEach(function (o) {
+      byType[o.order_type] = (byType[o.order_type] || 0) + 1;
+      (o.items || []).forEach(function (i) { items[i.name] = (items[i.name] || 0) + i.qty; });
+      var hr = new Date(o.created_at).getHours(), slot = hours.filter(function (x) { return x[0] === hr; })[0];
+      if (slot) slot[1]++; else hours.push([hr, 1]);
+    });
+    hours.sort(function (a, b) { return a[0] - b[0]; });
+    var max = Math.max.apply(null, hours.map(function (x) { return x[1]; }).concat(1));
+    var top = Object.keys(items).sort(function (a, b) { return items[b] - items[a]; }).slice(0, 5);
+    $("#x-sout").innerHTML = '<div class="x-stats"><div class="x-glass"><b>' + list.length + '</b><span>Orders</span></div><div class="x-glass"><b>' + inr(rev) + '</b><span>Revenue</span></div><div class="x-glass"><b>' + inr(list.length ? rev / list.length : 0) + '</b><span>Average order</span></div>' +
+      ["delivery", "takeaway", "dinein"].map(function (t) { return '<div class="x-glass"><b>' + (byType[t] || 0) + "</b><span>" + TYPE_LABEL[t] + "</span></div>"; }).join("") + "</div>" +
+      '<div class="x-cards"><div class="x-glass" style="padding:16px"><h4 class="x-gold" style="margin:0 0 8px">Orders by hour</h4><div class="x-bars">' + hours.map(function (x) { return '<div style="height:' + (x[1] / max * 100) + '%" title="' + x[1] + ' orders"><span>' + (x[0] % 12 || 12) + "</span></div>"; }).join("") + "</div></div>" +
+      '<div class="x-glass" style="padding:16px"><h4 class="x-gold" style="margin:0 0 8px">Top 5 items</h4>' + (top.length ? '<ol class="x-ol">' + top.map(function (n) { return "<li>" + esc(n) + " <span class=\"x-note\">× " + items[n] + "</span></li>"; }).join("") + "</ol>" : '<p class="x-note">No orders on this day.</p>') + "</div></div>";
+  }
+
+  /* menu manager */
+  async function getAdminMenu() {
+    if (!LIVE) return store.get("ab_menu", null) || DEFAULT_MENU.map(function (m) { return Object.assign({}, m); });
+    var r = await sb.from("menu_items").select("*").order("sort");
+    if (r.error) throw r.error; return r.data || [];
+  }
+  async function saveMenuItem(it, del) {
+    if (LIVE) {
+      var r = del ? await sb.from("menu_items").delete().eq("id", it.id) : await sb.from("menu_items").upsert(it);
+      if (r.error) { toast(r.error.message); return false; }
+    } else {
+      var m = A.dbMenu.filter(function (x) { return x.id !== it.id || !del; });
+      store.set("ab_menu", m); A.dbMenu = m;
+    }
+    state.menu = A.dbMenu.length ? A.dbMenu.slice() : DEFAULT_MENU.slice(); renderMenu();
+    return true;
+  }
+  async function renderMenuMgr() {
+    abody.innerHTML = '<p class="x-note">Loading menu…</p>';
+    try { A.dbMenu = await getAdminMenu(); } catch (e) { abody.innerHTML = '<p class="x-warn">' + esc(e.message) + "</p>"; return; }
+    if (LIVE && !A.dbMenu.length) {
+      abody.innerHTML = '<div class="x-panel x-glass"><h3 class="x-serif" style="font-size:22px">The menu table is empty</h3><p class="x-note" style="margin:8px 0 16px">The public site shows the default menu until you load it here.</p><button class="x-btn x-btn--gold" id="x-seed" type="button">Load default menu into database</button></div>';
+      $("#x-seed").addEventListener("click", async function () { this.disabled = true; var r = await sb.from("menu_items").insert(DEFAULT_MENU); if (r.error) { toast(r.error.message); this.disabled = false; return; } toast("Default menu loaded"); renderMenuMgr(); loadMenu(); });
+      return;
+    }
+    var cats = CATS.slice(); A.dbMenu.forEach(function (m) { if (cats.indexOf(m.category) < 0) cats.push(m.category); });
+    var h = '<form class="x-glass" id="x-addf" style="padding:14px;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));align-items:end"><label class="x-field" style="margin:0">Category<select name="cat">' + cats.map(function (c) { return "<option>" + esc(c) + "</option>"; }).join("") + '</select></label><label class="x-field" style="margin:0">Name<input name="name" required></label><label class="x-field" style="margin:0">Price ₹<input name="price" type="number" min="0" required></label><label class="x-switch"><input type="checkbox" name="veg"> Veg</label><button class="x-btn x-btn--gold" type="submit">Add item</button></form>';
+    h += '<div class="x-scroll"><table class="x-mtable"><thead><tr><th>Name</th><th style="width:100px">Price ₹</th><th>Veg</th><th>Available</th><th></th></tr></thead><tbody>';
+    cats.forEach(function (c) {
+      var rows = A.dbMenu.filter(function (m) { return m.category === c; }); if (!rows.length) return;
+      h += '<tr><th colspan="5">' + esc(c) + "</th></tr>";
+      rows.forEach(function (m) { h += '<tr data-mid="' + esc(m.id) + '"><td><input type="text" data-f="name" value="' + esc(m.name) + '" aria-label="Name"></td><td><input type="number" min="0" data-f="price" value="' + m.price + '" aria-label="Price"></td><td><input type="checkbox" data-f="veg"' + (m.veg ? " checked" : "") + ' aria-label="Veg"></td><td><input type="checkbox" data-f="available"' + (m.available ? " checked" : "") + ' aria-label="Available"></td><td><button class="x-btn x-btn--sm" type="button" data-del="' + esc(m.id) + '">Delete</button></td></tr>'; });
+    });
+    abody.innerHTML = h + "</tbody></table></div>";
+    $("#x-addf").addEventListener("submit", async function (e) {
+      e.preventDefault(); var f = this, name = f.name.value.trim(), price = Number(f.price.value);
+      if (!name || !(price >= 0) || f.price.value === "") { toast("Enter a name and price."); return; }
+      var id = slug(name), n = 2; while (A.dbMenu.some(function (m) { return m.id === id; })) id = slug(name) + "-" + n++;
+      var it = { id: id, category: f.cat.value, name: name, price: price, veg: f.veg.checked, available: true, sort: A.dbMenu.reduce(function (a, m) { return Math.max(a, m.sort || 0); }, 0) + 1 };
+      A.dbMenu.push(it); if (await saveMenuItem(it)) { toast("Added " + name); renderMenuMgr(); }
+    });
+  }
+  abody.addEventListener("change", async function (e) {
+    var f = e.target.getAttribute("data-f"), tr = e.target.closest("[data-mid]"); if (!f || !tr) return;
+    var it = A.dbMenu.filter(function (m) { return m.id === tr.getAttribute("data-mid"); })[0]; if (!it) return;
+    it[f] = e.target.type === "checkbox" ? e.target.checked : f === "price" ? Number(e.target.value) || 0 : e.target.value.trim() || it.name;
+    if (await saveMenuItem(it)) toast("Saved");
+  });
+  abody.addEventListener("click", async function (e) {
+    var d = e.target.closest("[data-del]"); if (!d) return;
+    var it = A.dbMenu.filter(function (m) { return m.id === d.getAttribute("data-del"); })[0];
+    if (it && confirm("Delete " + it.name + "?")) { A.dbMenu = A.dbMenu.filter(function (m) { return m !== it; }); if (LIVE) await saveMenuItem(it, true); else { store.set("ab_menu", A.dbMenu); state.menu = A.dbMenu.slice(); renderMenu(); } renderMenuMgr(); }
+  });
+
+  /* settings */
+  function renderSettings() {
+    var s = state.settings;
+    abody.innerHTML = '<form class="x-panel x-glass" id="x-setf"><h3 class="x-serif" style="font-size:22px;margin-bottom:14px">Settings</h3>' +
+      '<label class="x-switch" style="margin-bottom:14px"><input type="checkbox" name="accepting"' + (s.accepting !== false ? " checked" : "") + "> Accepting online orders</label>" +
+      '<div class="x-row2"><label class="x-field">Delivery fee ₹<input type="number" min="0" name="fee" value="' + (Number(s.delivery_fee) || 0) + '"></label><label class="x-field">Minimum order ₹<input type="number" min="0" name="min" value="' + (Number(s.min_order) || 0) + '"></label></div>' +
+      '<label class="x-field">Announcement banner (blank to hide)<input name="ann" maxlength="160" value="' + esc(s.announcement || "") + '"></label>' +
+      '<button class="x-btn x-btn--gold" type="submit" style="width:100%">Save settings</button></form>';
+    $("#x-setf").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      var n = { accepting: this.accepting.checked, delivery_fee: Math.max(0, Number(this.fee.value) || 0), min_order: Math.max(0, Number(this.min.value) || 0), announcement: this.ann.value.trim() };
+      if (LIVE) { var r = await sb.from("settings").upsert(Object.keys(n).map(function (k) { return { key: k, value: n[k] }; })); if (r.error) { toast(r.error.message); return; } }
+      else store.set("ab_settings", n);
+      state.settings = n; paintLive(); paintAnn(); paintCartBar(); toast("Settings saved");
+    });
+  }
+  function renderSetup() {
+    abody.innerHTML = '<div class="x-panel x-glass" style="max-width:720px"><h3 class="x-serif" style="font-size:22px">Go live with real orders</h3><p class="x-note" style="margin:6px 0 10px">Right now orders are saved only in this browser (demo mode).</p><ol class="x-ol">' +
+      '<li>Create a free project at <a class="x-gold" href="https://supabase.com" target="_blank" rel="noopener">supabase.com</a>.</li>' +
+      "<li>Open <b>SQL Editor</b>, paste the contents of <code>supabase.sql</code> and press Run.</li>" +
+      "<li>Under <b>Authentication → Users</b>, add an admin user (email + password) for each staff login.</li>" +
+      "<li>In <b>Project Settings → API</b>, copy the Project URL and the anon public key into <code>config.js</code>.</li>" +
+      "<li>Push the site to GitHub (Pages). Staff log in at <code>yoursite/#admin</code>.</li></ol></div>";
+  }
+  route();
+
+  renderMenu(); paintCartBar(); paintLive(); reveal(document);
+  loadSettings(); loadMenu();
+  setInterval(paintLive, 60000);
+})();
+    </script>
+  </body>
+</html>
