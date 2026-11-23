@@ -118,15 +118,53 @@
       .x-plate { width: 64px; height: 64px; flex: none; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, rgb(217 166 65 / .2), transparent 70%); }
       .x-plate img { width: 64px; height: 64px; object-fit: contain; animation: x-spin 18s linear infinite; }
       .x-plate svg { width: 34px; height: 34px; color: var(--x-gold2); }
-      .x-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; perspective: 900px; }
-      .x-item { position: relative; display: grid; grid-template-columns: auto 1fr auto; gap: 6px 12px; align-items: center; padding: 16px; border-radius: var(--r-m); background: linear-gradient(160deg, var(--x-card), var(--x-night2)); border: 1px solid var(--x-line); transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .3s var(--ease-out), box-shadow .3s; overflow: hidden; }
+      .x-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; perspective: 900px; }
+      @media (max-width: 1024px) { .x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+      @media (max-width: 640px) { .x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
+      .x-item { position: relative; display: flex; flex-direction: column; border-radius: var(--r-m); background: linear-gradient(160deg, var(--x-card), var(--x-night2)); border: 1px solid var(--x-line); transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .3s var(--ease-out), box-shadow .3s; overflow: hidden; }
+      .x-item[hidden] { display: none; }
       .x-item:hover { box-shadow: 0 16px 40px rgb(0 0 0 / .45); }
       .x-item::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgb(243 210 122 / .14), transparent 60%); opacity: 0; transition: opacity .3s; }
       .x-item:hover::after { opacity: 1; }
+      .x-item__ph { position: relative; display: block; width: 100%; aspect-ratio: 4 / 3; padding: 0; margin: 0; border: 0; background: var(--x-night); cursor: zoom-in; overflow: hidden; }
+      .x-item__ph img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease-out), filter .3s; }
+      .x-item__ph img.is-plate { object-fit: contain; padding: 12%; box-sizing: border-box; }
+      .x-item__ph::after { content: ""; position: absolute; inset: auto 0 0; height: 40%; background: linear-gradient(transparent, rgb(12 18 16 / .45)); pointer-events: none; }
+      .x-item:hover .x-item__ph img { transform: scale(1.07); }
+      .x-item__ph .x-vd { position: absolute; top: 10px; left: 10px; z-index: 1; background: rgb(255 255 255 / .94); box-shadow: 0 2px 8px rgb(0 0 0 / .35); }
+      .x-rib { position: absolute; z-index: 1; top: 10px; right: 0; padding: 6px 10px 6px 12px; border-radius: var(--r-pill) 0 0 var(--r-pill); background: var(--x-gold2) linear-gradient(135deg, var(--x-gold2), var(--x-gold)); color: #1d1405; font: 600 12px/1 var(--x-ui); letter-spacing: .03em; box-shadow: 0 4px 14px rgb(0 0 0 / .35); }
+      .x-rib--chef { background: var(--x-crimson); color: #fff; }
+      .x-out { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; }
+      .x-out span { padding: 7px 14px; border-radius: var(--r-pill); background: rgb(12 18 16 / .82); border: 1px solid var(--x-line); color: var(--x-cream); font: 600 13px/1 var(--x-ui); }
+      .x-item.is-out .x-item__ph img, .x-sheet__ph.is-out { filter: grayscale(1) brightness(.6); }
+      .x-item__body { display: flex; flex-direction: column; gap: 6px; flex: 1; padding: 12px 14px 14px; }
       .x-item h4 { margin: 0; font: 500 15px/1.3 var(--x-ui); }
-      .x-item .x-price { color: var(--x-gold2); font-weight: 600; font-size: 15px; grid-column: 2; }
-      .x-item .x-ctl { grid-row: 1 / span 2; grid-column: 3; }
-      .x-item.is-out { opacity: .45; filter: grayscale(1); }
+      .x-desc { margin: 0; color: var(--x-muted); font-size: 13px; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+      .x-item__foot { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+      .x-item .x-price { margin: 0; color: var(--x-gold2); font-weight: 600; font-size: 16px; }
+      .x-item .x-ctl { margin-left: auto; }
+      @media (max-width: 640px) {
+        .x-item__body { padding: 10px; gap: 4px; }
+        .x-item h4 { font-size: 13px; }
+        .x-desc { font-size: 12px; }
+        .x-item .x-price { font-size: 14px; }
+        .x-item .x-add { min-width: 64px; }
+        .x-rib { top: 8px; padding: 5px 8px 5px 10px; }
+        .x-item__ph .x-vd { top: 8px; left: 8px; }
+      }
+      /* dish sheet */
+      .x-sheet__ph { display: block; width: 100%; aspect-ratio: 4 / 3; max-height: 46svh; object-fit: cover; border-radius: var(--r-m); border: 1px solid var(--x-line); }
+      .x-sheet__tags { display: flex; align-items: center; gap: 10px; margin: 14px 0 8px; font-size: 13px; color: var(--x-muted); }
+      .x-sheet__tags .x-rib { position: static; border-radius: var(--r-pill); box-shadow: none; }
+      .x-sheet__desc { color: var(--x-muted); font-size: 15px; line-height: 1.55; margin: 0 0 14px; }
+      .x-sheet__buy { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+      .x-sheet__price { color: var(--x-gold2); font: 600 24px var(--x-ui); margin: 0; }
+      /* cart + admin thumbnails */
+      .x-thumb { position: relative; width: 52px; height: 52px; border-radius: 10px; overflow: hidden; flex: none; background: var(--x-night); }
+      .x-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .x-thumb .x-vd { position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; background: rgb(255 255 255 / .94); }
+      .x-thumb .x-vd::after { width: 6px; height: 6px; }
+      .x-mthumb { width: 56px; height: 42px; border-radius: 8px; object-fit: cover; display: block; background: var(--x-night); border: 1px solid var(--x-line); }
       .x-vd { width: 16px; height: 16px; border: 2px solid var(--x-nonveg); border-radius: 3px; display: grid; place-items: center; flex: none; }
       .x-vd::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--x-nonveg); }
       .x-vd.is-veg { border-color: var(--x-veg); }
@@ -246,6 +284,8 @@
       .x-mtable th, .x-mtable td { padding: 6px; border-bottom: 1px solid var(--x-line); text-align: left; }
       .x-mtable th[colspan] { color: var(--x-gold2); font: 700 18px var(--x-serif); padding-top: 18px; }
       .x-mtable input[type=text], .x-mtable input[type=number] { min-height: 40px; border-radius: 10px; border: 1px solid var(--x-line); background: var(--x-night); color: var(--x-cream); padding: 0 10px; font: 14px var(--x-ui); width: 100%; box-sizing: border-box; }
+      .x-mtable textarea { min-height: 40px; min-width: 200px; border-radius: 10px; border: 1px solid var(--x-line); background: var(--x-night); color: var(--x-cream); padding: 8px 10px; font: 13px/1.4 var(--x-ui); width: 100%; box-sizing: border-box; resize: vertical; }
+      .x-mtable td { vertical-align: top; }
       .x-mtable input[type=checkbox] { width: 20px; height: 20px; accent-color: var(--x-emerald2); }
       .x-scroll { overflow-x: auto; }
       .x-ol { padding-left: 20px; line-height: 1.7; }
@@ -333,6 +373,50 @@
           </div>
         </div>
         <div class="x-wrap" id="x-menu"></div>
+        <div id="x-photos" hidden>
+          <img data-f="d-buffalo-biryani.jpg" src="d-buffalo-biryani.jpg" alt="" />
+          <img data-f="d-buffalo-fried-rice.jpg" src="d-buffalo-fried-rice.jpg" alt="" />
+          <img data-f="d-buffalo-schezwan.jpg" src="d-buffalo-schezwan.jpg" alt="" />
+          <img data-f="d-butter-kulcha.jpg" src="d-butter-kulcha.jpg" alt="" />
+          <img data-f="d-butter-roti.jpg" src="d-butter-roti.jpg" alt="" />
+          <img data-f="d-cheese-naan.jpg" src="d-cheese-naan.jpg" alt="" />
+          <img data-f="d-chicken-biryani.jpg" src="d-chicken-biryani.jpg" alt="" />
+          <img data-f="d-chicken-crispy.jpg" src="d-chicken-crispy.jpg" alt="" />
+          <img data-f="d-chicken-fried-rice.jpg" src="d-chicken-fried-rice.jpg" alt="" />
+          <img data-f="d-chicken-garlic.jpg" src="d-chicken-garlic.jpg" alt="" />
+          <img data-f="d-chicken-gravy.jpg" src="d-chicken-gravy.jpg" alt="" />
+          <img data-f="d-chicken-kadhai.jpg" src="d-chicken-kadhai.jpg" alt="" />
+          <img data-f="d-chicken-lollipop.jpg" src="d-chicken-lollipop.jpg" alt="" />
+          <img data-f="d-chicken-peshawari.jpg" src="d-chicken-peshawari.jpg" alt="" />
+          <img data-f="d-chicken-satay.jpg" src="d-chicken-satay.jpg" alt="" />
+          <img data-f="d-chicken-tandoori.jpg" src="d-chicken-tandoori.jpg" alt="" />
+          <img data-f="d-china-town.jpg" src="d-china-town.jpg" alt="" />
+          <img data-f="d-curd-rice.jpg" src="d-curd-rice.jpg" alt="" />
+          <img data-f="d-dal-fry.jpg" src="d-dal-fry.jpg" alt="" />
+          <img data-f="d-dal-tadka.jpg" src="d-dal-tadka.jpg" alt="" />
+          <img data-f="d-egg-biryani.jpg" src="d-egg-biryani.jpg" alt="" />
+          <img data-f="d-egg-fried-rice.jpg" src="d-egg-fried-rice.jpg" alt="" />
+          <img data-f="d-egg-gravy.jpg" src="d-egg-gravy.jpg" alt="" />
+          <img data-f="d-garlic-cheese-naan.jpg" src="d-garlic-cheese-naan.jpg" alt="" />
+          <img data-f="d-ghee-rice.jpg" src="d-ghee-rice.jpg" alt="" />
+          <img data-f="d-jeera-rice.jpg" src="d-jeera-rice.jpg" alt="" />
+          <img data-f="d-jeera-soda.jpg" src="d-jeera-soda.jpg" alt="" />
+          <img data-f="d-kaju-masala.jpg" src="d-kaju-masala.jpg" alt="" />
+          <img data-f="d-kaju-paneer.jpg" src="d-kaju-paneer.jpg" alt="" />
+          <img data-f="d-kerala-paratha.jpg" src="d-kerala-paratha.jpg" alt="" />
+          <img data-f="d-mix-veg.jpg" src="d-mix-veg.jpg" alt="" />
+          <img data-f="d-mutton-gravy.jpg" src="d-mutton-gravy.jpg" alt="" />
+          <img data-f="d-naan.jpg" src="d-naan.jpg" alt="" />
+          <img data-f="d-paneer-masala.jpg" src="d-paneer-masala.jpg" alt="" />
+          <img data-f="d-plain-kulcha.jpg" src="d-plain-kulcha.jpg" alt="" />
+          <img data-f="d-roti.jpg" src="d-roti.jpg" alt="" />
+          <img data-f="d-schezwan-fried-rice.jpg" src="d-schezwan-fried-rice.jpg" alt="" />
+          <img data-f="d-steamed-rice.jpg" src="d-steamed-rice.jpg" alt="" />
+          <img data-f="d-veg-biryani.jpg" src="d-veg-biryani.jpg" alt="" />
+          <img data-f="d-veg-fried-rice.jpg" src="d-veg-fried-rice.jpg" alt="" />
+          <img data-f="d-wings-crispy.jpg" src="d-wings-crispy.jpg" alt="" />
+          <img data-f="d-wings-kabab.jpg" src="d-wings-kabab.jpg" alt="" />
+        </div>
       </section>
 
       <section class="x-sec" id="about">
@@ -461,21 +545,76 @@
   if (!LIVE) $("#x-ribbon").hidden = false;
 
   /* ---------- default menu ---------- */
+  /* [name, price, veg, img, desc, tag] */
+  var BS = "Bestseller", CS = "Chef's special";
   var RAW = [
-    ["Rice & Biryani", [["Chicken Dum Biryani", 255], ["Chicken Dum Biryani Quarter", 210], ["Veg Biryani", 240, 1], ["Egg Biryani (2 Eggs)", 215], ["Buffalo Biryani", 245], ["Curd Rice", 210, 1], ["Ghee Rice", 225, 1], ["Steamed Rice", 70, 1], ["Jeera Rice", 205, 1]]],
-    ["Chicken Starters", [["Chicken Tandoori", 345], ["Chicken Lollipop", 166], ["Chicken China Town (8 pcs)", 399], ["Chicken Crispy", 339], ["Chicken Garlic", 329], ["Chicken Satay (5 pcs)", 399], ["Chicken Wings Crispy (4 pcs)", 219], ["Chicken Wings Kabab (4 pcs)", 219]]],
-    ["Veg Main Course", [["Dal Tadka", 244, 1], ["Dal Fry", 210, 1], ["Kaju Masala", 345, 1], ["Kaju Paneer Masala", 355, 1], ["Paneer Masala", 345, 1], ["Mix Veg Gravy", 245, 1]]],
-    ["Egg Main Course", [["Egg Gravy (2 Whole Eggs)", 258]]],
-    ["Chicken & Mutton Main Course", [["Chicken Gravy", 319], ["Mutton Gravy", 381], ["Chicken Peshawari", 250], ["Chicken Kadhai", 250]]],
-    ["Breads", [["Roti", 35, 1], ["Butter Roti", 47, 1], ["Plain Kulcha", 60, 1], ["Butter Kulcha", 75, 1], ["Plain Naan", 60, 1], ["Butter Naan", 68, 1], ["Cheese Naan", 102, 1], ["Garlic Cheese Naan", 112, 1], ["Kerala Paratha", 45, 1]]],
-    ["Fried Rice", [["Veg Fried Rice", 244, 1], ["Egg Fried Rice", 248], ["Chicken Fried Rice", 261], ["Chicken Schezwan Fried Rice", 271], ["Buffalo Fried Rice", 230], ["Buffalo Schezwan Fried Rice", 235]]],
-    ["Beverages", [["Jeera Soda", 25, 1]]]
+    ["Rice & Biryani", [
+      ["Chicken Dum Biryani", 255, 0, "d-chicken-biryani.jpg", "Slow-cooked dum biryani with tender chicken, long-grain basmati, saffron and fried onions, served with raita.", BS],
+      ["Chicken Dum Biryani Quarter", 210, 0, "d-chicken-biryani.jpg", "A lighter portion of our signature chicken dum biryani — perfect for one."],
+      ["Veg Biryani", 240, 1, "d-veg-biryani.jpg", "Fragrant basmati layered with garden vegetables, paneer, mint and saffron."],
+      ["Egg Biryani (2 Eggs)", 215, 0, "d-egg-biryani.jpg", "Spiced biryani rice crowned with two masala-roasted boiled eggs."],
+      ["Buffalo Biryani", 245, 0, "d-buffalo-biryani.jpg", "Rich, spicy biryani with tender buffalo meat cooked dum-style.", CS],
+      ["Curd Rice", 210, 1, "d-curd-rice.jpg", "Cool, creamy curd rice tempered with mustard, curry leaves and green chilli."],
+      ["Ghee Rice", 225, 1, "d-ghee-rice.jpg", "Basmati cooked in pure ghee with whole spices, cashews and golden onions."],
+      ["Steamed Rice", 70, 1, "d-steamed-rice.jpg", "Plain, fluffy steamed basmati — the perfect partner for any gravy."],
+      ["Jeera Rice", 205, 1, "d-jeera-rice.jpg", "Basmati tossed with ghee-roasted cumin and fresh coriander."]]],
+    ["Chicken Starters", [
+      ["Chicken Tandoori", 345, 0, "d-chicken-tandoori.jpg", "Chicken marinated in yogurt and tandoori masala, char-grilled in the clay oven. Served with mint chutney.", BS],
+      ["Chicken Lollipop", 166, 0, "d-chicken-lollipop.jpg", "Frenched chicken wings fried crisp and tossed in fiery schezwan glaze."],
+      ["Chicken China Town (8 pcs)", 399, 0, "d-china-town.jpg", "Indo-Chinese chicken tossed with chilli, garlic, capsicum and spring onion.", CS],
+      ["Chicken Crispy", 339, 0, "d-chicken-crispy.jpg", "Golden, crunchy chicken strips with a sticky sweet-chilli coating and sesame."],
+      ["Chicken Garlic", 329, 0, "d-chicken-garlic.jpg", "Juicy chicken in a glossy, garlicky sauce with crisp fried garlic."],
+      ["Chicken Satay (5 pcs)", 399, 0, "d-chicken-satay.jpg", "Grilled chicken skewers with a rich peanut dipping sauce."],
+      ["Chicken Wings Crispy (4 pcs)", 219, 0, "d-wings-crispy.jpg", "Crunchy fried chicken wings with a creamy dip."],
+      ["Chicken Wings Kabab (4 pcs)", 219, 0, "d-wings-kabab.jpg", "Tandoori-marinated wings, smoky and charred, with onion rings and chutney."]]],
+    ["Veg Main Course", [
+      ["Dal Tadka", 244, 1, "d-dal-tadka.jpg", "Yellow lentils finished with a sizzling tadka of ghee, cumin, garlic and red chilli."],
+      ["Dal Fry", 210, 1, "d-dal-fry.jpg", "Home-style toor dal cooked with onion, tomato and mild spices."],
+      ["Kaju Masala", 345, 1, "d-kaju-masala.jpg", "Roasted cashews simmered in a rich, creamy tomato-cashew gravy."],
+      ["Kaju Paneer Masala", 355, 1, "d-kaju-paneer.jpg", "Soft paneer and roasted cashews in a velvety Mughlai gravy.", BS],
+      ["Paneer Masala", 345, 1, "d-paneer-masala.jpg", "Cottage cheese cubes in a buttery, mildly spiced tomato gravy."],
+      ["Mix Veg Gravy", 245, 1, "d-mix-veg.jpg", "Seasonal vegetables and paneer cooked in a spiced onion-tomato gravy."]]],
+    ["Egg Main Course", [
+      ["Egg Gravy (2 Whole Eggs)", 258, 0, "d-egg-gravy.jpg", "Two whole boiled eggs in a spicy, home-style onion-tomato masala."]]],
+    ["Chicken & Mutton Main Course", [
+      ["Chicken Gravy", 319, 0, "d-chicken-gravy.jpg", "Classic chicken curry in a robust red masala."],
+      ["Mutton Gravy", 381, 0, "d-mutton-gravy.jpg", "Tender bone-in mutton slow-cooked in a dark, aromatic gravy.", CS],
+      ["Chicken Peshawari", 250, 0, "d-chicken-peshawari.jpg", "Mildly spiced chicken in a rich cream and nut gravy, Peshawar style."],
+      ["Chicken Kadhai", 250, 0, "d-chicken-kadhai.jpg", "Chicken tossed in the kadhai with capsicum, onion and freshly ground spices."]]],
+    ["Breads", [
+      ["Roti", 35, 1, "d-roti.jpg", "Whole-wheat flatbread baked fresh in the tandoor."],
+      ["Butter Roti", 47, 1, "d-butter-roti.jpg", "Tandoori roti brushed with melted butter."],
+      ["Plain Kulcha", 60, 1, "d-plain-kulcha.jpg", "Soft, leavened tandoor-baked kulcha."],
+      ["Butter Kulcha", 75, 1, "d-butter-kulcha.jpg", "Fluffy kulcha glazed with butter and coriander."],
+      ["Plain Naan", 60, 1, "d-naan.jpg", "Classic soft naan, fresh from the clay oven."],
+      ["Butter Naan", 68, 1, "d-naan.jpg", "Soft naan finished with a generous brush of butter."],
+      ["Cheese Naan", 102, 1, "d-cheese-naan.jpg", "Naan stuffed with melting cheese."],
+      ["Garlic Cheese Naan", 112, 1, "d-garlic-cheese-naan.jpg", "Cheese-stuffed naan topped with garlic and coriander.", BS],
+      ["Kerala Paratha", 45, 1, "d-kerala-paratha.jpg", "Flaky, layered Malabar parotta."]]],
+    ["Fried Rice", [
+      ["Veg Fried Rice", 244, 1, "d-veg-fried-rice.jpg", "Wok-tossed rice with crunchy vegetables and spring onion."],
+      ["Egg Fried Rice", 248, 0, "d-egg-fried-rice.jpg", "Wok-fried rice with scrambled egg and spring onion."],
+      ["Chicken Fried Rice", 261, 0, "d-chicken-fried-rice.jpg", "Wok-tossed rice with chicken, egg and vegetables."],
+      ["Chicken Schezwan Fried Rice", 271, 0, "d-schezwan-fried-rice.jpg", "Spicy schezwan fried rice loaded with chicken.", BS],
+      ["Buffalo Fried Rice", 230, 0, "d-buffalo-fried-rice.jpg", "Wok-fried rice with tender buffalo meat and vegetables."],
+      ["Buffalo Schezwan Fried Rice", 235, 0, "d-buffalo-schezwan.jpg", "Fiery schezwan fried rice with buffalo meat."]]],
+    ["Beverages", [
+      ["Jeera Soda", 25, 1, "d-jeera-soda.jpg", "Chilled fizzy soda with roasted cumin, lemon and mint."]]]
   ];
   var CATS = RAW.map(function (c) { return c[0]; });
   var CAT_IMG = { "Rice & Biryani": "biryani", "Chicken Starters": "tandoori", "Veg Main Course": "paneer", "Egg Main Course": "biryani", "Chicken & Mutton Main Course": "paneer", "Breads": "naan", "Fried Rice": "friedrice" };
   function slug(s) { return s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
   var DEFAULT_MENU = [];
-  RAW.forEach(function (c) { c[1].forEach(function (it) { DEFAULT_MENU.push({ id: slug(it[0]), category: c[0], name: it[0], price: it[1], veg: !!it[2], available: true, sort: DEFAULT_MENU.length }); }); });
+  RAW.forEach(function (c) { c[1].forEach(function (it) { DEFAULT_MENU.push({ id: slug(it[0]), category: c[0], name: it[0], price: it[1], veg: !!it[2], available: true, sort: DEFAULT_MENU.length, img: it[3] || "", desc: it[4] || "", tag: it[5] || "" }); }); });
+  var DEF_BY_ID = {}; DEFAULT_MENU.forEach(function (m) { DEF_BY_ID[m.id] = m; });
+  /* DB rows use `description`; the app uses `desc`. Missing img/desc fall back to the default item by id. */
+  function fromDb(r) {
+    var d = DEF_BY_ID[r.id] || {}, m = Object.assign({}, r);
+    m.desc = r.desc || r.description || d.desc || ""; m.img = r.img || d.img || ""; m.tag = r.tag || d.tag || "";
+    delete m.description; return m;
+  }
+  function toDb(m) { return { id: m.id, category: m.category, name: m.name, price: m.price, veg: !!m.veg, available: m.available !== false, sort: m.sort || 0, description: m.desc || null, img: m.img || null }; }
+  function toDbBasic(m) { var o = toDb(m); delete o.description; delete o.img; return o; }
   var DEF_SETTINGS = { accepting: true, delivery_fee: 0, min_order: 0, announcement: "" };
 
   var state = { menu: DEFAULT_MENU.slice(), settings: Object.assign({}, DEF_SETTINGS), cart: store.get("ab_cart", {}) };
@@ -484,6 +623,9 @@
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function inr(n) { return "₹" + Math.round(Number(n) || 0).toLocaleString("en-IN"); }
   function imgSrc(k) { var i = document.getElementById("img-" + k); return i ? i.src : ""; }
+  var PHOTOS = {}; $$("#x-photos img").forEach(function (i) { PHOTOS[i.getAttribute("data-f")] = i.src; });
+  function photo(f) { f = String(f || "").trim(); return f ? PHOTOS[f] || f : ""; }
+  function dishSrc(m) { return photo(m.img) || imgSrc(CAT_IMG[m.category] || "biryani"); }
   function istMinutes() { var d = new Date(); return (d.getUTCHours() * 60 + d.getUTCMinutes() + 330) % 1440; }
   function isOpen() { var m = istMinutes(); return m >= 660 && m < 1380; }
   function canOrder() { return isOpen() && state.settings.accepting !== false; }
@@ -538,7 +680,7 @@
     store.set("ab_cart", state.cart); paintCtls(); paintCartBar();
     if ($("#x-drawer").classList.contains("is-on") && drawerView === "cart") renderCart();
   }
-  function cartLines() { return Object.keys(state.cart).map(function (id) { var it = byId(id); return it && it.available ? { id: id, name: it.name, price: Number(it.price), qty: state.cart[id], veg: it.veg } : null; }).filter(Boolean); }
+  function cartLines() { return Object.keys(state.cart).map(function (id) { var it = byId(id); return it && it.available ? { id: id, name: it.name, price: Number(it.price), qty: state.cart[id], veg: it.veg, src: dishSrc(it) } : null; }).filter(Boolean); }
   function totals(type) {
     var lines = cartLines(), sub = lines.reduce(function (a, l) { return a + l.price * l.qty; }, 0);
     var fee = type === "delivery" && sub ? Number(state.settings.delivery_fee) || 0 : 0;
@@ -612,7 +754,15 @@
       tabs += '<a href="#' + catId(c) + '" data-tab="' + catId(c) + '">' + esc(c) + "</a>";
       html += '<section class="x-cat" id="' + catId(c) + '"><div class="x-cat__head"><span class="x-plate">' + icon + "</span><div><h3>" + esc(c) + "</h3><small>" + items.length + (items.length === 1 ? " dish" : " dishes") + '</small></div></div><div class="x-grid">';
       items.forEach(function (m) {
-        html += '<article class="x-item' + (m.available ? "" : " is-out") + '" data-name="' + esc(m.name.toLowerCase()) + '" data-veg="' + (m.veg ? 1 : 0) + '"><span class="x-vd' + (m.veg ? " is-veg" : "") + '" role="img" aria-label="' + (m.veg ? "Veg" : "Non-veg") + '"></span><h4>' + esc(m.name) + '</h4><div class="x-ctl" data-ctl="' + m.id + '">' + ctlHTML(m.id) + '</div><p class="x-price">' + inr(m.price) + "</p></article>";
+        var own = !!photo(m.img);
+        html += '<article class="x-item' + (m.available ? "" : " is-out") + '" data-q="' + esc((m.name + " " + (m.desc || "")).toLowerCase()) + '" data-veg="' + (m.veg ? 1 : 0) + '">' +
+          '<button class="x-item__ph" type="button" data-open="' + esc(m.id) + '" aria-label="View ' + esc(m.name) + '">' +
+          '<img src="' + esc(dishSrc(m)) + '" alt="' + esc(m.name) + '" loading="lazy" decoding="async"' + (own ? "" : ' class="is-plate"') + " />" +
+          '<span class="x-vd' + (m.veg ? " is-veg" : "") + '" role="img" aria-label="' + (m.veg ? "Veg" : "Non-veg") + '"></span>' +
+          (m.tag ? '<span class="x-rib' + (/chef/i.test(m.tag) ? " x-rib--chef" : "") + '">' + esc(m.tag) + "</span>" : "") +
+          (m.available ? "" : '<span class="x-out"><span>Sold out</span></span>') + "</button>" +
+          '<div class="x-item__body"><h4>' + esc(m.name) + "</h4>" + (m.desc ? '<p class="x-desc">' + esc(m.desc) + "</p>" : "") +
+          '<div class="x-item__foot"><p class="x-price">' + inr(m.price) + '</p><div class="x-ctl" data-ctl="' + m.id + '">' + ctlHTML(m.id) + "</div></div></div></article>";
       });
       html += "</div></section>";
     });
@@ -624,7 +774,7 @@
     var q = $("#x-q").value.trim().toLowerCase(), veg = $("#x-vegonly").checked, any = false;
     $$(".x-cat").forEach(function (sec) {
       var vis = 0;
-      $$(".x-item", sec).forEach(function (it) { var ok = (!q || it.getAttribute("data-name").indexOf(q) > -1) && (!veg || it.getAttribute("data-veg") === "1"); it.hidden = !ok; if (ok) vis++; });
+      $$(".x-item", sec).forEach(function (it) { var ok = (!q || it.getAttribute("data-q").indexOf(q) > -1) && (!veg || it.getAttribute("data-veg") === "1"); it.hidden = !ok; if (ok) vis++; });
       sec.hidden = !vis; var tab = $('[data-tab="' + sec.id + '"]'); if (tab) tab.hidden = !vis; if (vis) any = true;
     });
     $("#x-noresults").hidden = any;
@@ -661,7 +811,26 @@
   var drawerView = "cart", form = { type: "delivery", payment: "cod" };
   function openDrawer(view) { drawerView = view || "cart"; render(); $("#x-drawer").classList.add("is-on"); $("#x-scrim").classList.add("is-on"); document.body.style.overflow = "hidden"; setTimeout(function () { var f = $("#x-drawer .x-x"); if (f) f.focus(); }, 50); }
   function closeDrawer() { $("#x-drawer").classList.remove("is-on"); $("#x-scrim").classList.remove("is-on"); document.body.style.overflow = ""; }
-  function render() { if (drawerView === "cart") renderCart(); else if (drawerView === "checkout") renderCheckout(); }
+  function render() { if (drawerView === "cart") renderCart(); else if (drawerView === "checkout") renderCheckout(); else if (drawerView === "dish") renderDish(); }
+  /* dish detail sheet */
+  var sheet = { id: null, q: 1 };
+  function openDish(id) { if (!byId(id)) return; sheet.id = id; sheet.q = 1; openDrawer("dish"); }
+  function renderDish() {
+    var m = byId(sheet.id), d = $("#x-drawer"); if (!m) { closeDrawer(); return; }
+    var h = head(esc(m.name)) + '<img class="x-sheet__ph' + (m.available ? "" : " is-out") + '" src="' + esc(dishSrc(m)) + '" alt="' + esc(m.name) + '" decoding="async">' +
+      '<div class="x-sheet__tags"><span class="x-vd' + (m.veg ? " is-veg" : "") + '"></span><span>' + (m.veg ? "Veg" : "Non-veg") + " · " + esc(m.category) + "</span>" +
+      (m.tag ? '<span class="x-rib' + (/chef/i.test(m.tag) ? " x-rib--chef" : "") + '">' + esc(m.tag) + "</span>" : "") + "</div>" +
+      (m.desc ? '<p class="x-sheet__desc">' + esc(m.desc) + "</p>" : "");
+    if (!m.available) h += '<div class="x-sheet__buy"><p class="x-sheet__price">' + inr(m.price) + '</p><span class="x-sold">Sold out</span></div>';
+    else {
+      var inCart = qty(m.id);
+      h += '<div class="x-sheet__buy"><p class="x-sheet__price">' + inr(m.price) + '</p><span class="x-step"><button type="button" data-sq="-1" aria-label="One less">−</button><span id="x-sqn" aria-live="polite">' + sheet.q + '</span><button type="button" data-sq="1" aria-label="One more">+</button></span></div>' +
+        '<button class="x-btn x-btn--gold" type="button" style="width:100%" data-sadd>Add ' + sheet.q + " · " + inr(m.price * sheet.q) + "</button>" +
+        (inCart ? '<p class="x-note" style="text-align:center;margin-top:10px">' + inCart + " already in your cart</p>" : "");
+    }
+    d.innerHTML = h;
+  }
+  $("#x-menu").addEventListener("click", function (e) { var o = e.target.closest("[data-open]"); if (o) openDish(o.getAttribute("data-open")); });
   function blockMsg() {
     if (!isOpen()) return "We're closed right now. Online orders open daily 11:00 AM – 11:00 PM.";
     if (state.settings.accepting === false) return "Online orders are paused right now. Please call " + PHONE + ".";
@@ -675,7 +844,7 @@
     var t = totals(form.type), d = $("#x-drawer"), msg = blockMsg(), min = Number(state.settings.min_order) || 0;
     if (!t.count) { d.innerHTML = head("Your cart") + '<p class="x-empty">Your cart is empty.</p><a class="x-btn x-btn--gold" style="width:100%" href="#menu" data-close>Browse the menu</a>'; return; }
     var h = head("Your cart");
-    t.lines.forEach(function (l) { h += '<div class="x-line"><span class="x-vd' + (l.veg ? " is-veg" : "") + '"></span><div>' + esc(l.name) + "<small>" + inr(l.price) + " × " + l.qty + " = " + inr(l.price * l.qty) + '</small></div><div data-ctl="' + l.id + '">' + ctlHTML(l.id) + "</div></div>"; });
+    t.lines.forEach(function (l) { h += '<div class="x-line"><span class="x-thumb"><img src="' + esc(l.src) + '" alt="" decoding="async"><span class="x-vd' + (l.veg ? " is-veg" : "") + '" role="img" aria-label="' + (l.veg ? "Veg" : "Non-veg") + '"></span></span><div>' + esc(l.name) + "<small>" + inr(l.price) + " × " + l.qty + " = " + inr(l.price * l.qty) + '</small></div><div data-ctl="' + l.id + '">' + ctlHTML(l.id) + "</div></div>"; });
     h += sumHTML(t, form.type === "delivery") + '<p class="x-note">Delivery charges confirmed on call.</p>';
     if (msg) h += '<p class="x-warn" style="margin-top:12px">' + esc(msg) + "</p>";
     else if (t.sub < min) h += '<p class="x-warn" style="margin-top:12px">Minimum order is ' + inr(min) + ". Add " + inr(min - t.sub) + " more.</p>";
@@ -702,6 +871,9 @@
   drawer.addEventListener("click", function (e) {
     var go = e.target.closest("[data-go]"); if (go) { grab(); drawerView = go.getAttribute("data-go"); render(); }
     if (e.target.closest("[data-close]")) closeDrawer();
+    var sq = e.target.closest("[data-sq]");
+    if (sq) { sheet.q = Math.max(1, Math.min(50, sheet.q + Number(sq.getAttribute("data-sq")))); renderDish(); var f = $('#x-drawer [data-sq="' + sq.getAttribute("data-sq") + '"]'); if (f) f.focus(); }
+    if (e.target.closest("[data-sadd]")) { var m = byId(sheet.id); if (m && m.available) { setQty(m.id, qty(m.id) + sheet.q); closeDrawer(); toast("Added " + sheet.q + " × " + m.name); } }
   });
   drawer.addEventListener("submit", function (e) { e.preventDefault(); grab(); placeOrder(); });
   $("#x-scrim").addEventListener("click", closeDrawer);
@@ -795,8 +967,8 @@
   }
   async function loadMenu() {
     if (LIVE) {
-      try { var r = await sb.from("menu_items").select("*").order("sort"); if (!r.error && r.data && r.data.length) state.menu = r.data; else state.menu = DEFAULT_MENU.slice(); } catch (e) {}
-    } else state.menu = store.get("ab_menu", null) || DEFAULT_MENU.slice();
+      try { var r = await sb.from("menu_items").select("*").order("sort"); if (!r.error && r.data && r.data.length) state.menu = r.data.map(fromDb); else state.menu = DEFAULT_MENU.slice(); } catch (e) {}
+    } else { var lm = store.get("ab_menu", null); state.menu = lm ? lm.map(fromDb) : DEFAULT_MENU.slice(); }
     renderMenu(); paintCartBar();
   }
 
@@ -965,13 +1137,15 @@
 
   /* menu manager */
   async function getAdminMenu() {
-    if (!LIVE) return store.get("ab_menu", null) || DEFAULT_MENU.map(function (m) { return Object.assign({}, m); });
+    if (!LIVE) { var lm = store.get("ab_menu", null); return lm ? lm.map(fromDb) : DEFAULT_MENU.map(function (m) { return Object.assign({}, m); }); }
     var r = await sb.from("menu_items").select("*").order("sort");
-    if (r.error) throw r.error; return r.data || [];
+    if (r.error) throw r.error; return (r.data || []).map(fromDb);
   }
+  function noCols(err) { return err && /description|img|column/i.test(err.message || ""); }
   async function saveMenuItem(it, del) {
     if (LIVE) {
-      var r = del ? await sb.from("menu_items").delete().eq("id", it.id) : await sb.from("menu_items").upsert(it);
+      var r = del ? await sb.from("menu_items").delete().eq("id", it.id) : await sb.from("menu_items").upsert(toDb(it));
+      if (!del && noCols(r.error)) { r = await sb.from("menu_items").upsert(toDbBasic(it)); if (!r.error) toast("Saved, but run the new supabase.sql lines to store description and image."); }
       if (r.error) { toast(r.error.message); return false; }
     } else {
       var m = A.dbMenu.filter(function (x) { return x.id !== it.id || !del; });
@@ -985,30 +1159,31 @@
     try { A.dbMenu = await getAdminMenu(); } catch (e) { abody.innerHTML = '<p class="x-warn">' + esc(e.message) + "</p>"; return; }
     if (LIVE && !A.dbMenu.length) {
       abody.innerHTML = '<div class="x-panel x-glass"><h3 class="x-serif" style="font-size:22px">The menu table is empty</h3><p class="x-note" style="margin:8px 0 16px">The public site shows the default menu until you load it here.</p><button class="x-btn x-btn--gold" id="x-seed" type="button">Load default menu into database</button></div>';
-      $("#x-seed").addEventListener("click", async function () { this.disabled = true; var r = await sb.from("menu_items").insert(DEFAULT_MENU); if (r.error) { toast(r.error.message); this.disabled = false; return; } toast("Default menu loaded"); renderMenuMgr(); loadMenu(); });
+      $("#x-seed").addEventListener("click", async function () { this.disabled = true; var r = await sb.from("menu_items").insert(DEFAULT_MENU.map(toDb)); if (noCols(r.error)) r = await sb.from("menu_items").insert(DEFAULT_MENU.map(toDbBasic)); if (r.error) { toast(r.error.message); this.disabled = false; return; } toast("Default menu loaded"); renderMenuMgr(); loadMenu(); });
       return;
     }
     var cats = CATS.slice(); A.dbMenu.forEach(function (m) { if (cats.indexOf(m.category) < 0) cats.push(m.category); });
-    var h = '<form class="x-glass" id="x-addf" style="padding:14px;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));align-items:end"><label class="x-field" style="margin:0">Category<select name="cat">' + cats.map(function (c) { return "<option>" + esc(c) + "</option>"; }).join("") + '</select></label><label class="x-field" style="margin:0">Name<input name="name" required></label><label class="x-field" style="margin:0">Price ₹<input name="price" type="number" min="0" required></label><label class="x-switch"><input type="checkbox" name="veg"> Veg</label><button class="x-btn x-btn--gold" type="submit">Add item</button></form>';
-    h += '<div class="x-scroll"><table class="x-mtable"><thead><tr><th>Name</th><th style="width:100px">Price ₹</th><th>Veg</th><th>Available</th><th></th></tr></thead><tbody>';
+    var h = '<form class="x-glass" id="x-addf" style="padding:14px;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));align-items:end"><label class="x-field" style="margin:0">Category<select name="cat">' + cats.map(function (c) { return "<option>" + esc(c) + "</option>"; }).join("") + '</select></label><label class="x-field" style="margin:0">Name<input name="name" required></label><label class="x-field" style="margin:0">Price ₹<input name="price" type="number" min="0" required></label><label class="x-field" style="margin:0">Description<input name="desc"></label><label class="x-field" style="margin:0">Image filename or URL<input name="img" placeholder="d-chicken-biryani.jpg"></label><label class="x-switch"><input type="checkbox" name="veg"> Veg</label><button class="x-btn x-btn--gold" type="submit">Add item</button></form>';
+    h += '<div class="x-scroll"><table class="x-mtable"><thead><tr><th>Photo</th><th>Name</th><th>Description</th><th>Image filename / URL</th><th style="width:100px">Price ₹</th><th>Veg</th><th>Available</th><th></th></tr></thead><tbody>';
     cats.forEach(function (c) {
       var rows = A.dbMenu.filter(function (m) { return m.category === c; }); if (!rows.length) return;
-      h += '<tr><th colspan="5">' + esc(c) + "</th></tr>";
-      rows.forEach(function (m) { h += '<tr data-mid="' + esc(m.id) + '"><td><input type="text" data-f="name" value="' + esc(m.name) + '" aria-label="Name"></td><td><input type="number" min="0" data-f="price" value="' + m.price + '" aria-label="Price"></td><td><input type="checkbox" data-f="veg"' + (m.veg ? " checked" : "") + ' aria-label="Veg"></td><td><input type="checkbox" data-f="available"' + (m.available ? " checked" : "") + ' aria-label="Available"></td><td><button class="x-btn x-btn--sm" type="button" data-del="' + esc(m.id) + '">Delete</button></td></tr>'; });
+      h += '<tr><th colspan="8">' + esc(c) + "</th></tr>";
+      rows.forEach(function (m) { h += '<tr data-mid="' + esc(m.id) + '"><td><img class="x-mthumb" src="' + esc(dishSrc(m)) + '" alt="" loading="lazy" decoding="async"></td><td><input type="text" data-f="name" value="' + esc(m.name) + '" aria-label="Name"></td><td><textarea data-f="desc" rows="2" aria-label="Description">' + esc(m.desc || "") + '</textarea></td><td><input type="text" data-f="img" value="' + esc(m.img || "") + '" aria-label="Image filename or URL" style="min-width:170px"></td><td><input type="number" min="0" data-f="price" value="' + m.price + '" aria-label="Price"></td><td><input type="checkbox" data-f="veg"' + (m.veg ? " checked" : "") + ' aria-label="Veg"></td><td><input type="checkbox" data-f="available"' + (m.available ? " checked" : "") + ' aria-label="Available"></td><td><button class="x-btn x-btn--sm" type="button" data-del="' + esc(m.id) + '">Delete</button></td></tr>'; });
     });
     abody.innerHTML = h + "</tbody></table></div>";
     $("#x-addf").addEventListener("submit", async function (e) {
       e.preventDefault(); var f = this, name = f.name.value.trim(), price = Number(f.price.value);
       if (!name || !(price >= 0) || f.price.value === "") { toast("Enter a name and price."); return; }
       var id = slug(name), n = 2; while (A.dbMenu.some(function (m) { return m.id === id; })) id = slug(name) + "-" + n++;
-      var it = { id: id, category: f.cat.value, name: name, price: price, veg: f.veg.checked, available: true, sort: A.dbMenu.reduce(function (a, m) { return Math.max(a, m.sort || 0); }, 0) + 1 };
+      var it = { id: id, category: f.cat.value, name: name, price: price, veg: f.veg.checked, available: true, desc: f.desc.value.trim(), img: f.img.value.trim(), sort: A.dbMenu.reduce(function (a, m) { return Math.max(a, m.sort || 0); }, 0) + 1 };
       A.dbMenu.push(it); if (await saveMenuItem(it)) { toast("Added " + name); renderMenuMgr(); }
     });
   }
   abody.addEventListener("change", async function (e) {
     var f = e.target.getAttribute("data-f"), tr = e.target.closest("[data-mid]"); if (!f || !tr) return;
     var it = A.dbMenu.filter(function (m) { return m.id === tr.getAttribute("data-mid"); })[0]; if (!it) return;
-    it[f] = e.target.type === "checkbox" ? e.target.checked : f === "price" ? Number(e.target.value) || 0 : e.target.value.trim() || it.name;
+    it[f] = e.target.type === "checkbox" ? e.target.checked : f === "price" ? Number(e.target.value) || 0 : f === "desc" || f === "img" ? e.target.value.trim() : e.target.value.trim() || it.name;
+    if (f === "img") { var th = tr.querySelector(".x-mthumb"); if (th) th.src = dishSrc(it); }
     if (await saveMenuItem(it)) toast("Saved");
   });
   abody.addEventListener("click", async function (e) {

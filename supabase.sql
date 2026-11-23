@@ -18,6 +18,9 @@ create table if not exists public.menu_items (
   price numeric not null, veg boolean not null default false,
   available boolean not null default true, sort int not null default 0
 );
+-- Menu photos and descriptions (the site maps desc <-> description)
+alter table public.menu_items add column if not exists description text;
+alter table public.menu_items add column if not exists img text;
 create table if not exists public.settings (key text primary key, value jsonb);
 
 alter table public.orders enable row level security;
